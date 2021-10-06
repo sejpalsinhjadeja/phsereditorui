@@ -2,13 +2,13 @@
 window.addEventListener('load', function () {
 
 	var game = new Phaser.Game({
-		width: 800,
-		height: 600,
 		type: Phaser.AUTO,
         backgroundColor: "#242424",
 		scale: {
-			mode: Phaser.Scale.FIT,
-			autoCenter: Phaser.Scale.CENTER_BOTH
+			mode: Phaser.WIDTH_CONTROLS_HEIGHT,
+			autoCenter: Phaser.Scale.CENTER_BOTH,
+			width:  window.screen.availWidth * window.devicePixelRatio,
+     		height: window.screen.availHeight * window.devicePixelRatio,
 		}
 	});
 	
