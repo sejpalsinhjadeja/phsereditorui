@@ -1,0 +1,248 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/Sprites/New_Theme_Back-Button.png",
+                "type": "image",
+                "key": "New_Theme_Back-Button"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Back-Icon.png",
+                "type": "image",
+                "key": "New_Theme_Back-Icon"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Blanck-Baar.png",
+                "type": "image",
+                "key": "New_Theme_Blanck-Baar"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Green-Baar.png",
+                "type": "image",
+                "key": "New_Theme_Green-Baar"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Joind-Game-Box.png",
+                "type": "image",
+                "key": "New_Theme_Joind-Game-Box"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_MSG_Yellow-Boxes.png",
+                "type": "image",
+                "key": "New_Theme_MSG_Yellow-Boxes"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Pencil-Icon.png",
+                "type": "image",
+                "key": "New_Theme_Pencil-Icon"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Prof_Profile-box.png",
+                "type": "image",
+                "key": "New_Theme_Prof_Profile-box"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Prof_White-Fill-Box.png",
+                "type": "image",
+                "key": "New_Theme_Prof_White-Fill-Box"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Prof_Yellow-Hooder-Box.png",
+                "type": "image",
+                "key": "New_Theme_Prof_Yellow-Hooder-Box"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Tourna_Blue-Ui.png",
+                "type": "image",
+                "key": "New_Theme_Tourna_Blue-Ui"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Tourna_Ribin.png",
+                "type": "image",
+                "key": "New_Theme_Tourna_Ribin"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Tourna_Trophy.png",
+                "type": "image",
+                "key": "New_Theme_Tourna_Trophy"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Tourna_Yellow_Trophy.png",
+                "type": "image",
+                "key": "New_Theme_Tourna_Yellow_Trophy"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Tourna_Yellow-Ui.png",
+                "type": "image",
+                "key": "New_Theme_Tourna_Yellow-Ui"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Uper-Amount.png",
+                "type": "image",
+                "key": "New_Theme_Uper-Amount"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Uper-Hood.png",
+                "type": "image",
+                "key": "New_Theme_Uper-Hood"
+            },
+            {
+                "url": "assets/Sprites/New_Theme_Yellow_Round-Button.png",
+                "type": "image",
+                "key": "New_Theme_Yellow_Round-Button"
+            },
+            {
+                "url": "assets/Sprites/TH_02_Tour_Ticket-Icon.png",
+                "type": "image",
+                "key": "TH_02_Tour_Ticket-Icon"
+            },
+            {
+                "url": "assets/Sprites/TH02_Chatur_Strip.png",
+                "type": "image",
+                "key": "TH02_Chatur_Strip"
+            },
+            {
+                "url": "assets/Sprites/TH02_Golden-Ring.png",
+                "type": "image",
+                "key": "TH02_Golden-Ring"
+            },
+            {
+                "url": "assets/Sprites/TH02_Icon.png",
+                "type": "image",
+                "key": "TH02_Icon"
+            },
+            {
+                "url": "assets/Sprites/TH02_Join_Blue-Shadow.png",
+                "type": "image",
+                "key": "TH02_Join_Blue-Shadow"
+            },
+            {
+                "url": "assets/Sprites/TH02_Join_Small-Table.png",
+                "type": "image",
+                "key": "TH02_Join_Small-Table"
+            },
+            {
+                "url": "assets/Sprites/TH02_Lobby_Trophy.png",
+                "type": "image",
+                "key": "TH02_Lobby_Trophy"
+            },
+            {
+                "url": "assets/Sprites/TH02_Lock-Icon.png",
+                "type": "image",
+                "key": "TH02_Lock-Icon"
+            },
+            {
+                "url": "assets/Sprites/TH02_Login_strip.png",
+                "type": "image",
+                "key": "TH02_Login_strip"
+            },
+            {
+                "url": "assets/Sprites/TH02_Messge-Box-Icon.png",
+                "type": "image",
+                "key": "TH02_Messge-Box-Icon"
+            },
+            {
+                "url": "assets/Sprites/TH02_Money-Icon.png",
+                "type": "image",
+                "key": "TH02_Money-Icon"
+            },
+            {
+                "url": "assets/Sprites/TH02_Privare-Table-Button.png",
+                "type": "image",
+                "key": "TH02_Privare-Table-Button"
+            },
+            {
+                "url": "assets/Sprites/TH02_Private_Cancel-Button.png",
+                "type": "image",
+                "key": "TH02_Private_Cancel-Button"
+            },
+            {
+                "url": "assets/Sprites/TH02_Private_Small-Box.png",
+                "type": "image",
+                "key": "TH02_Private_Small-Box"
+            },
+            {
+                "url": "assets/Sprites/TH02_Private_Yellow-Dull-Button.png",
+                "type": "image",
+                "key": "TH02_Private_Yellow-Dull-Button"
+            },
+            {
+                "url": "assets/Sprites/TH02_Res_Card-Behind-strip.png",
+                "type": "image",
+                "key": "TH02_Res_Card-Behind-strip"
+            },
+            {
+                "url": "assets/Sprites/TH02_Res_Crown-Ico.png",
+                "type": "image",
+                "key": "TH02_Res_Crown-Ico"
+            },
+            {
+                "url": "assets/Sprites/TH02_Rounded_Box.png",
+                "type": "image",
+                "key": "TH02_Rounded_Box"
+            },
+            {
+                "url": "assets/Sprites/TH02_Splash_BG_Half.png",
+                "type": "image",
+                "key": "TH02_Splash_BG_Half"
+            },
+            {
+                "url": "assets/Sprites/TH02_Splash_Stage.png",
+                "type": "image",
+                "key": "TH02_Splash_Stage"
+            },
+            {
+                "url": "assets/Sprites/TH02_Table.png",
+                "type": "image",
+                "key": "TH02_Table"
+            },
+            {
+                "url": "assets/Sprites/TH02_Table_BG.png",
+                "type": "image",
+                "key": "TH02_Table_BG"
+            },
+            {
+                "url": "assets/Sprites/TH02_Theme_Icon.png",
+                "type": "image",
+                "key": "TH02_Theme_Icon"
+            },
+            {
+                "url": "assets/Sprites/TH02_Theme_Sel_Chatur.png",
+                "type": "image",
+                "key": "TH02_Theme_Sel_Chatur"
+            },
+            {
+                "url": "assets/Sprites/TH02_Theme_Sel_Old.png",
+                "type": "image",
+                "key": "TH02_Theme_Sel_Old"
+            },
+            {
+                "url": "assets/Sprites/TH02_Triangle_Part.png",
+                "type": "image",
+                "key": "TH02_Triangle_Part"
+            },
+            {
+                "url": "assets/Sprites/TH02_White_Button.png",
+                "type": "image",
+                "key": "TH02_White_Button"
+            },
+            {
+                "url": "assets/Sprites/TH02_White-Baar.png",
+                "type": "image",
+                "key": "TH02_White-Baar"
+            },
+            {
+                "url": "assets/Sprites/TH02_Yellow-Box-Ui.png",
+                "type": "image",
+                "key": "TH02_Yellow-Box-Ui"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}
