@@ -7,8 +7,9 @@ window.addEventListener('load', function () {
 		scale: {
 			mode: Phaser.WIDTH_CONTROLS_HEIGHT,
 			autoCenter: Phaser.Scale.CENTER_BOTH,
-			width:  window.screen.availWidth * window.devicePixelRatio,
-     		height: window.screen.availHeight * window.devicePixelRatio,
+			parent:'phaser-game',
+			width:  1920,
+     		height: 1080,
 		}
 	});
 	
