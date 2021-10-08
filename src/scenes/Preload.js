@@ -31,7 +31,7 @@ class Preload extends Phaser.Scene {
 		const progress = this.add.text(400, 349, "", {});
 		progress.setOrigin(0.5, 0.5);
 		progress.text = "0%";
-		progress.setStyle({ "fontSize": "30px" });
+		progress.setStyle({"fontSize":"30px"});
 
 		// progress (components)
 		new PreloadText(progress);
