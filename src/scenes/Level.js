@@ -35,26 +35,35 @@ class Level extends Phaser.Scene {
 		// Header
 		const header = this.add.container(0, 0);
 
-		// new_Theme_Uper_Hood
-		const new_Theme_Uper_Hood = this.add.image(960, 0, "New_Theme_Uper-Hood");
-		new_Theme_Uper_Hood.scaleX = 15;
-		new_Theme_Uper_Hood.setOrigin(0.5, 0);
-		header.add(new_Theme_Uper_Hood);
+		// header_bg_img
+		const header_bg_img = this.add.image(960, 0, "New_Theme_Uper-Hood");
+		header_bg_img.scaleX = 15;
+		header_bg_img.setOrigin(0.5, 0);
+		header.add(header_bg_img);
+
+		// Profile
+		const profile = this.add.container(140, 70);
+		header.add(profile);
 
 		// white_border
-		const white_border = this.add.image(141, 70, "White-border");
+		const white_border = this.add.image(0, 0, "White-border");
 		white_border.scaleX = 0.7;
 		white_border.scaleY = 0.7;
-		header.add(white_border);
+		profile.add(white_border);
 
-		// defaultProfile
-		const defaultProfile = this.add.image(141, 70, "defaultProfile");
-		defaultProfile.scaleX = 0.7;
-		defaultProfile.scaleY = 0.7;
-		header.add(defaultProfile);
+		// default_profile
+		const default_profile = this.add.image(0, 0, "defaultProfile");
+		default_profile.scaleX = 0.7;
+		default_profile.scaleY = 0.7;
+		profile.add(default_profile);
+
+		this.header = header;
 
 		this.events.emit("scene-awake");
 	}
+
+	/** @type {Phaser.GameObjects.Container} */
+	header;
 
 	/* START-USER-CODE */
 

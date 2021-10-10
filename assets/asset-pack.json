@@ -17,6 +17,13 @@
                 "key": "circle"
             },
             {
+                "url": [
+                    "src/components/Component.js"
+                ],
+                "type": "scripts",
+                "key": "Component"
+            },
+            {
                 "url": "assets/Sprites/defaultProfile.png",
                 "type": "image",
                 "key": "defaultProfile"

@@ -54,12 +54,15 @@
             "type": "Container",
             "id": "e7f38fd9-cd29-4431-a6f5-dcc7369cb5b7",
             "label": "Header",
-            "components": [],
+            "scope": "CLASS",
+            "components": [
+                "HeaderUi"
+            ],
             "list": [
                 {
                     "type": "Image",
                     "id": "5089248a-261f-4c94-9de4-8e0522e1d480",
-                    "label": "new_Theme_Uper_Hood",
+                    "label": "header_bg_img",
                     "components": [],
                     "texture": {
                         "key": "New_Theme_Uper-Hood"
@@ -69,30 +72,36 @@
                     "originY": 0
                 },
                 {
-                    "type": "Image",
-                    "id": "a0150ced-7d17-4de7-86ad-c692e127e6c7",
-                    "label": "white_border",
+                    "type": "Container",
+                    "id": "78106024-5d77-4d90-b5ad-13c16412f47f",
+                    "label": "Profile",
                     "components": [],
-                    "texture": {
-                        "key": "White-border"
-                    },
-                    "x": 141,
+                    "x": 140,
                     "y": 70,
-                    "scaleX": 0.7,
-                    "scaleY": 0.7
-                },
-                {
-                    "type": "Image",
-                    "id": "046b0a68-4e68-4a86-9134-c14fa67f8d65",
-                    "label": "defaultProfile",
-                    "components": [],
-                    "texture": {
-                        "key": "defaultProfile"
-                    },
-                    "x": 141,
-                    "y": 70,
-                    "scaleX": 0.7,
-                    "scaleY": 0.7
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "a0150ced-7d17-4de7-86ad-c692e127e6c7",
+                            "label": "white_border",
+                            "components": [],
+                            "texture": {
+                                "key": "White-border"
+                            },
+                            "scaleX": 0.7,
+                            "scaleY": 0.7
+                        },
+                        {
+                            "type": "Image",
+                            "id": "046b0a68-4e68-4a86-9134-c14fa67f8d65",
+                            "label": "default_profile",
+                            "components": [],
+                            "texture": {
+                                "key": "defaultProfile"
+                            },
+                            "scaleX": 0.7,
+                            "scaleY": 0.7
+                        }
+                    ]
                 }
             ]
         }
