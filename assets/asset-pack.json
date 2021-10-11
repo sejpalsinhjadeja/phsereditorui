@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/Sprites/AddCash.png",
+                "type": "image",
+                "key": "AddCash"
+            },
+            {
                 "url": "assets/Sprites/BGPattern.png",
                 "type": "image",
                 "key": "BGPattern"
@@ -17,13 +22,6 @@
                 "key": "circle"
             },
             {
-                "url": [
-                    "src/components/Component.js"
-                ],
-                "type": "scripts",
-                "key": "Component"
-            },
-            {
                 "url": "assets/Sprites/defaultProfile.png",
                 "type": "image",
                 "key": "defaultProfile"
@@ -32,6 +30,11 @@
                 "url": "assets/Sprites/Disconnection Setting.png",
                 "type": "image",
                 "key": "Disconnection Setting"
+            },
+            {
+                "url": "src/scripts/GameManager.js",
+                "type": "script",
+                "key": "GameManager"
             },
             {
                 "url": "assets/Sprites/mask.png",
@@ -47,6 +50,16 @@
                 "url": "assets/Sprites/Menu-icon.png",
                 "type": "image",
                 "key": "Menu-icon"
+            },
+            {
+                "url": "src/scripts/MyClass.js",
+                "type": "script",
+                "key": "MyClass"
+            },
+            {
+                "url": "assets/Sprites/Network.png",
+                "type": "image",
+                "key": "Network"
             },
             {
                 "url": "assets/Sprites/New_Theme_Blanck-Baar.png",
@@ -104,6 +117,23 @@
                 "key": "On"
             },
             {
+                "url": "assets/Sprites/Player-table-Glow.png",
+                "type": "image",
+                "key": "Player-table-Glow"
+            },
+            {
+                "url": [
+                    "src/prefabs/PlayerProfileForTable.js"
+                ],
+                "type": "scripts",
+                "key": "PlayerProfileForTable_1"
+            },
+            {
+                "url": "assets/Sprites/preview.PNG",
+                "type": "image",
+                "key": "preview"
+            },
+            {
                 "url": "assets/Sprites/profileMask.png",
                 "type": "image",
                 "key": "profileMask"
@@ -117,6 +147,11 @@
                 "url": "assets/Sprites/TH02_Golden-Ring.png",
                 "type": "image",
                 "key": "TH02_Golden-Ring"
+            },
+            {
+                "url": "assets/Sprites/TH02_Join_Small-Table.png",
+                "type": "image",
+                "key": "TH02_Join_Small-Table"
             },
             {
                 "url": "assets/Sprites/TH02_Privare-Table-Button.png",
@@ -167,6 +202,11 @@
                 "url": "assets/Sprites/TH02_White-Baar.png",
                 "type": "image",
                 "key": "TH02_White-Baar"
+            },
+            {
+                "url": "assets/Sprites/TH02_White-ui-box.png",
+                "type": "image",
+                "key": "TH02_White-ui-box"
             },
             {
                 "url": "assets/Sprites/TH02_Yellow-Box-Ui.png",

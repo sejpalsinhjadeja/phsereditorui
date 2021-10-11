@@ -8,8 +8,8 @@ window.addEventListener('load', function () {
 			mode: Phaser.WIDTH_CONTROLS_HEIGHT,
 			autoCenter: Phaser.Scale.CENTER_BOTH,
 			parent:'phaser-game',
-			width:  1920,
-     		height: 1080,
+			width:  2050,
+     		height: 1120,
 		}
 	});
 	

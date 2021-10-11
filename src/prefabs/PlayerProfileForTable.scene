@@ -1,0 +1,72 @@
+{
+    "id": "1b6608c4-1709-4587-be1a-b2580392c5c9",
+    "settings": {
+        "createMethodName": "",
+        "preloadMethodName": "",
+        "compilerOutputLanguage": "JAVA_SCRIPT",
+        "exportClass": false,
+        "autoImport": false,
+        "generateAwakeHandler": false,
+        "compilerInsertSpaces": false,
+        "compilerTabSize": 4,
+        "borderWidth": 1920,
+        "borderHeight": 1080,
+        "borderX": 0,
+        "borderY": 0
+    },
+    "sceneType": "PREFAB",
+    "displayList": [
+        {
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "type": "Container",
+            "id": "74068768-9deb-485e-837d-20ce2115e985",
+            "label": "TablePlayerProfile",
+            "components": [],
+            "x": 0,
+            "y": 0,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "e7587276-a176-4df5-b37d-37e6bef6ca2b",
+                    "label": "defaultProfile_1",
+                    "components": [],
+                    "texture": {
+                        "key": "defaultProfile"
+                    },
+                    "scaleX": 1.6,
+                    "scaleY": 1.6
+                },
+                {
+                    "type": "Image",
+                    "id": "262292dc-a788-4598-8d2b-9e83f5fc99bc",
+                    "label": "profileMask",
+                    "components": [],
+                    "texture": {
+                        "key": "profileMask"
+                    },
+                    "scaleX": 1.6,
+                    "scaleY": 1.6
+                },
+                {
+                    "type": "Image",
+                    "id": "9378452d-e439-48c3-9951-b65ed21b6ee1",
+                    "label": "tH02_Golden_Ring_1",
+                    "components": [],
+                    "texture": {
+                        "key": "TH02_Golden-Ring"
+                    },
+                    "scaleX": 1.6,
+                    "scaleY": 1.6
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

@@ -5,19 +5,10 @@
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
         "sceneKey": "Level",
-        "borderWidth": 1920,
-        "borderHeight": 1080
+        "borderWidth": 2050,
+        "borderHeight": 1120
     },
     "displayList": [
-        {
-            "type": "Container",
-            "id": "9bda62b1-3a69-4cde-8e2a-f3954caa85ee",
-            "label": "Footer",
-            "components": [],
-            "x": 960,
-            "y": 1080,
-            "list": []
-        },
         {
             "type": "Container",
             "id": "36ada30d-0aee-4340-a4b9-08d82837e935",
@@ -32,8 +23,8 @@
                     "texture": {
                         "key": "TH02_Table_BG"
                     },
-                    "x": 960,
-                    "y": 600
+                    "x": 1031,
+                    "y": 605
                 },
                 {
                     "type": "Image",
@@ -43,51 +34,167 @@
                     "texture": {
                         "key": "TH02_Table"
                     },
-                    "x": 960,
-                    "y": 700,
-                    "scaleX": 0.8,
-                    "scaleY": 0.8
+                    "x": 1025,
+                    "y": 647,
+                    "scaleX": 0.95,
+                    "scaleY": 0.9
                 },
                 {
-                    "type": "Container",
+                    "prefabId": "1b6608c4-1709-4587-be1a-b2580392c5c9",
                     "id": "aa1265ed-c9d0-4e41-b099-4a5d62a8cb37",
-                    "label": "TablePlayerProfile",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "MyPlayer",
+                    "scope": "PUBLIC",
                     "components": [],
-                    "x": 956,
-                    "y": 954,
+                    "x": 1030,
+                    "y": 943,
+                    "nestedPrefabs": []
+                },
+                {
+                    "prefabId": "1b6608c4-1709-4587-be1a-b2580392c5c9",
+                    "id": "29b208ab-e82b-4352-9a80-cb90f3983eb3",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible",
+                        "scaleX",
+                        "scaleY"
+                    ],
+                    "label": "MyPlayer_1",
+                    "scope": "PUBLIC",
+                    "components": [],
+                    "x": 1030,
+                    "y": 208,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8,
+                    "nestedPrefabs": []
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "9bda62b1-3a69-4cde-8e2a-f3954caa85ee",
+            "label": "Footer",
+            "components": [],
+            "x": 960,
+            "y": 1080,
+            "list": [
+                {
+                    "type": "Container",
+                    "id": "931bf4cc-db93-448c-a109-ed69749c2665",
+                    "label": "Add_table_button",
+                    "components": [],
+                    "x": -844,
+                    "y": -43,
                     "list": [
                         {
                             "type": "Image",
-                            "id": "e7587276-a176-4df5-b37d-37e6bef6ca2b",
-                            "label": "defaultProfile_1",
+                            "id": "596dc4ae-f846-4abe-866b-02355d965ae2",
+                            "label": "tH02_Join_Small_Table_1",
                             "components": [],
                             "texture": {
-                                "key": "defaultProfile"
+                                "key": "TH02_Join_Small-Table"
                             },
-                            "scaleX": 1.6,
-                            "scaleY": 1.6
+                            "scaleX": 0.85,
+                            "scaleY": 0.85
+                        },
+                        {
+                            "type": "Text",
+                            "id": "b2967c7c-a40d-4c99-9a98-af6bf836c6dd",
+                            "label": "text",
+                            "components": [],
+                            "x": -44,
+                            "originX": 0,
+                            "text": "New",
+                            "fontSize": "25px",
+                            "fontStyle": "bold"
                         },
                         {
                             "type": "Image",
-                            "id": "262292dc-a788-4598-8d2b-9e83f5fc99bc",
-                            "label": "profileMask",
+                            "id": "f1a20773-fff3-4408-8491-28f3d305534c",
+                            "label": "circle",
                             "components": [],
                             "texture": {
-                                "key": "profileMask"
+                                "key": "circle"
                             },
-                            "scaleX": 1.6,
-                            "scaleY": 1.6
+                            "x": 43,
+                            "scaleX": 0.17,
+                            "scaleY": 0.17
                         },
                         {
                             "type": "Image",
-                            "id": "9378452d-e439-48c3-9951-b65ed21b6ee1",
-                            "label": "tH02_Golden_Ring_1",
+                            "id": "d87a7357-741d-4fb5-a0fc-a2ca96e45946",
+                            "label": "addCash",
                             "components": [],
                             "texture": {
-                                "key": "TH02_Golden-Ring"
+                                "key": "AddCash"
                             },
-                            "scaleX": 1.6,
-                            "scaleY": 1.6
+                            "x": 43,
+                            "scaleX": 0.26,
+                            "scaleY": 0.26,
+                            "tintTopLeft": "#000000",
+                            "tintTopRight": "#000000",
+                            "tintBottomLeft": "#000000",
+                            "tintBottomRight": "#000000"
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "41ad0f7d-5223-43e8-9161-0b494ef0cb2e",
+                    "label": "table_button",
+                    "components": [],
+                    "x": -625,
+                    "y": -43,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "9780da95-225b-4db4-b923-a7e7a59477e9",
+                            "label": "tH02_Join_Small_Table",
+                            "components": [],
+                            "texture": {
+                                "key": "TH02_Join_Small-Table"
+                            },
+                            "scaleX": 0.8,
+                            "scaleY": 0.7
+                        },
+                        {
+                            "type": "Text",
+                            "id": "459ad9c6-6796-4c42-98a6-09c8dde03d9a",
+                            "label": "text_1",
+                            "components": [],
+                            "x": 1,
+                            "text": "point",
+                            "fontSize": "25px",
+                            "fontStyle": "bold"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "722424e7-89cf-4d5b-b602-362cce72ac35",
+                            "label": "lower_circle",
+                            "components": [],
+                            "texture": {
+                                "key": "circle"
+                            },
+                            "y": 37,
+                            "scaleX": 0.08,
+                            "scaleY": 0.08
+                        },
+                        {
+                            "type": "Image",
+                            "id": "2c5dd06b-9f0d-4672-82a5-101325b4c399",
+                            "label": "upper_circle",
+                            "components": [],
+                            "texture": {
+                                "key": "circle"
+                            },
+                            "y": -37,
+                            "scaleX": 0.08,
+                            "scaleY": 0.08
                         }
                     ]
                 }
@@ -108,35 +215,132 @@
                     "texture": {
                         "key": "New_Theme_Uper-Hood"
                     },
-                    "x": 960,
-                    "scaleX": 15,
+                    "x": 1025,
+                    "scaleX": 16,
+                    "scaleY": 0.7,
                     "originY": 0
                 },
                 {
-                    "type": "Image",
-                    "id": "046b0a68-4e68-4a86-9134-c14fa67f8d65",
-                    "label": "defaultProfile",
+                    "type": "Container",
+                    "id": "9459fc0c-bd53-4599-9490-6fa6677c3e11",
+                    "label": "MenuButton",
                     "components": [],
-                    "texture": {
-                        "key": "defaultProfile"
-                    },
-                    "x": 142,
-                    "y": 70,
-                    "scaleX": 0.7,
-                    "scaleY": 0.7
+                    "x": 1863,
+                    "y": 50,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "703f681e-9fa6-4cac-a563-f8c62ab80910",
+                            "label": "tH02_Yellow_Box_Ui_1",
+                            "components": [],
+                            "texture": {
+                                "key": "TH02_Yellow-Box-Ui"
+                            },
+                            "x": 3,
+                            "scaleX": 2,
+                            "scaleY": 2
+                        },
+                        {
+                            "type": "Image",
+                            "id": "260578d2-9f30-436b-8795-44d885c4ed58",
+                            "label": "menu_icon",
+                            "components": [],
+                            "texture": {
+                                "key": "Menu-icon"
+                            },
+                            "scaleX": 0.2,
+                            "scaleY": 0.2
+                        }
+                    ]
                 },
                 {
-                    "type": "Image",
-                    "id": "a0150ced-7d17-4de7-86ad-c692e127e6c7",
-                    "label": "white_border",
+                    "type": "Container",
+                    "id": "f7451f77-9fed-42fb-9b9d-7896d5c79205",
+                    "label": "RefreshButton",
                     "components": [],
-                    "texture": {
-                        "key": "White-border"
-                    },
-                    "x": 143,
-                    "y": 70,
-                    "scaleX": 0.7,
-                    "scaleY": 0.7
+                    "x": 1971,
+                    "y": 50,
+                    "scaleX": 0.6,
+                    "scaleY": 0.6,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "9093bbcf-6849-4801-ba44-71fd67833b0f",
+                            "label": "tH02_Yellow_Box_Ui",
+                            "components": [],
+                            "texture": {
+                                "key": "TH02_Yellow-Box-Ui"
+                            },
+                            "x": 2,
+                            "y": 3,
+                            "scaleX": 2,
+                            "scaleY": 2
+                        },
+                        {
+                            "type": "Image",
+                            "id": "41d417eb-a92b-4c68-aaae-225558dfa810",
+                            "label": "reload",
+                            "components": [],
+                            "texture": {
+                                "key": "reload"
+                            },
+                            "scaleX": 0.3,
+                            "scaleY": 0.3
+                        }
+                    ]
+                },
+                {
+                    "type": "Text",
+                    "id": "341cef8e-870b-48c4-b1a7-30232a6544bc",
+                    "label": "oDecktext_1",
+                    "components": [],
+                    "x": 1408,
+                    "y": 35,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "₹ 0.01",
+                    "fontSize": "30px"
+                },
+                {
+                    "type": "Text",
+                    "id": "b4fd733c-ff4f-41c6-816b-7c81cee76a1f",
+                    "label": "oDecktext",
+                    "components": [],
+                    "x": 1007,
+                    "y": 35,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "Point Rummy- 2 Deck ",
+                    "fontSize": "30px",
+                    "fontStyle": "bold"
+                },
+                {
+                    "type": "Text",
+                    "id": "6af56fe8-5d99-4d2f-9876-17b25597d9d5",
+                    "label": "oTableId",
+                    "components": [],
+                    "x": 643,
+                    "y": 35,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "Table Id:#46274f1a",
+                    "fontSize": "30px",
+                    "fontStyle": "bold"
+                },
+                {
+                    "type": "Text",
+                    "id": "0d6a8d13-b63c-41f8-8f89-cc4a8978ad45",
+                    "label": "balancetxt",
+                    "components": [],
+                    "x": 437,
+                    "y": 35,
+                    "originX": 0,
+                    "originY": 0,
+                    "text": "212.54",
+                    "fontSize": "35px",
+                    "fontStyle": "bold"
                 },
                 {
                     "type": "Image",
@@ -146,60 +350,8 @@
                     "texture": {
                         "key": "Cash-icon"
                     },
-                    "x": 490,
-                    "y": 76,
-                    "scaleX": 0.4,
-                    "scaleY": 0.4
-                },
-                {
-                    "type": "Image",
-                    "id": "9093bbcf-6849-4801-ba44-71fd67833b0f",
-                    "label": "tH02_Yellow_Box_Ui",
-                    "components": [],
-                    "texture": {
-                        "key": "TH02_Yellow-Box-Ui"
-                    },
-                    "x": 1805,
-                    "y": 70,
-                    "scaleX": 2,
-                    "scaleY": 2
-                },
-                {
-                    "type": "Image",
-                    "id": "703f681e-9fa6-4cac-a563-f8c62ab80910",
-                    "label": "tH02_Yellow_Box_Ui_1",
-                    "components": [],
-                    "texture": {
-                        "key": "TH02_Yellow-Box-Ui"
-                    },
-                    "x": 1659,
-                    "y": 69,
-                    "scaleX": 2,
-                    "scaleY": 2
-                },
-                {
-                    "type": "Image",
-                    "id": "260578d2-9f30-436b-8795-44d885c4ed58",
-                    "label": "menu_icon",
-                    "components": [],
-                    "texture": {
-                        "key": "Menu-icon"
-                    },
-                    "x": 1656,
-                    "y": 69,
-                    "scaleX": 0.2,
-                    "scaleY": 0.2
-                },
-                {
-                    "type": "Image",
-                    "id": "41d417eb-a92b-4c68-aaae-225558dfa810",
-                    "label": "reload",
-                    "components": [],
-                    "texture": {
-                        "key": "reload"
-                    },
-                    "x": 1803,
-                    "y": 67,
+                    "x": 406,
+                    "y": 49,
                     "scaleX": 0.3,
                     "scaleY": 0.3
                 },
@@ -208,49 +360,67 @@
                     "id": "42871bde-6b21-4b94-943a-ede94c4b6fe1",
                     "label": "playerNametxt",
                     "components": [],
-                    "x": 224,
-                    "y": 60,
+                    "x": 101,
+                    "y": 35,
                     "originX": 0,
                     "originY": 0,
-                    "text": "playername",
-                    "fontSize": "20px",
-                    "fontStyle": "italic"
+                    "text": "sejsinh01",
+                    "fontSize": "30px",
+                    "fontStyle": "bold"
                 },
                 {
-                    "type": "Text",
-                    "id": "0d6a8d13-b63c-41f8-8f89-cc4a8978ad45",
-                    "label": "balancetxt",
+                    "type": "Container",
+                    "id": "5a7a65f2-559b-4a17-a775-7507fc3c4d15",
+                    "label": "Player_Profile",
                     "components": [],
-                    "x": 541,
-                    "y": 69,
-                    "originX": 0,
-                    "originY": 0,
-                    "text": "128.49",
-                    "fontSize": "20px"
+                    "x": 54,
+                    "y": 50,
+                    "scaleX": 0.75,
+                    "scaleY": 0.75,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "046b0a68-4e68-4a86-9134-c14fa67f8d65",
+                            "label": "defaultProfile",
+                            "components": [],
+                            "texture": {
+                                "key": "defaultProfile"
+                            },
+                            "scaleX": 0.7,
+                            "scaleY": 0.7
+                        },
+                        {
+                            "type": "Image",
+                            "id": "a0150ced-7d17-4de7-86ad-c692e127e6c7",
+                            "label": "white_border",
+                            "components": [],
+                            "texture": {
+                                "key": "White-border"
+                            },
+                            "x": 1,
+                            "scaleX": 0.7,
+                            "scaleY": 0.7
+                        }
+                    ]
                 },
                 {
-                    "type": "Text",
-                    "id": "6af56fe8-5d99-4d2f-9876-17b25597d9d5",
-                    "label": "oTableId",
+                    "type": "Image",
+                    "id": "7fef341f-e8fa-4b37-b68f-ab8067c75da1",
+                    "label": "preview",
                     "components": [],
-                    "x": 730,
-                    "y": 72,
-                    "originX": 0,
-                    "originY": 0,
-                    "text": "Table Id:#46274f1a",
-                    "fontSize": "20px"
-                },
-                {
-                    "type": "Text",
-                    "id": "b4fd733c-ff4f-41c6-816b-7c81cee76a1f",
-                    "label": "oDecktext",
-                    "components": [],
-                    "x": 967,
-                    "y": 71,
-                    "originX": 0,
-                    "originY": 0,
-                    "text": "Point Rummy- 2 Deck ",
-                    "fontSize": "20px"
+                    "texture": {
+                        "key": "preview"
+                    },
+                    "x": 1032,
+                    "y": 550,
+                    "scaleX": 1.256467453503484,
+                    "scaleY": 1.1807109727293363,
+                    "visible": false,
+                    "alpha": 0.6,
+                    "alphaTopLeft": 0.6,
+                    "alphaTopRight": 0.6,
+                    "alphaBottomLeft": 0.6,
+                    "alphaBottomRight": 0.6
                 }
             ]
         }
