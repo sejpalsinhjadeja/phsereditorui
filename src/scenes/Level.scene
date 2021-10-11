@@ -49,70 +49,47 @@
                     "scaleY": 0.8
                 },
                 {
-                    "type": "Image",
-                    "id": "e7587276-a176-4df5-b37d-37e6bef6ca2b",
-                    "label": "defaultProfile_1",
+                    "type": "Container",
+                    "id": "aa1265ed-c9d0-4e41-b099-4a5d62a8cb37",
+                    "label": "TablePlayerProfile",
                     "components": [],
-                    "texture": {
-                        "key": "defaultProfile"
-                    },
                     "x": 956,
-                    "y": 954
-                },
-                {
-                    "type": "Image",
-                    "id": "262292dc-a788-4598-8d2b-9e83f5fc99bc",
-                    "label": "profileMask",
-                    "components": [],
-                    "texture": {
-                        "key": "profileMask"
-                    },
-                    "x": 959,
-                    "y": 954
-                },
-                {
-                    "type": "Image",
-                    "id": "9378452d-e439-48c3-9951-b65ed21b6ee1",
-                    "label": "tH02_Golden_Ring_1",
-                    "components": [],
-                    "texture": {
-                        "key": "TH02_Golden-Ring"
-                    },
-                    "x": 958,
-                    "y": 955
-                },
-                {
-                    "type": "Image",
-                    "id": "4915d7ec-20af-4a07-9f05-f88e797ffe29",
-                    "label": "defaultProfile_2",
-                    "components": [],
-                    "texture": {
-                        "key": "defaultProfile"
-                    },
-                    "x": 957,
-                    "y": 329
-                },
-                {
-                    "type": "Image",
-                    "id": "acac5280-4a27-47e7-9b88-c7ce9508fe38",
-                    "label": "profileMask_2",
-                    "components": [],
-                    "texture": {
-                        "key": "profileMask"
-                    },
-                    "x": 961,
-                    "y": 329
-                },
-                {
-                    "type": "Image",
-                    "id": "90b3859e-833b-4b7d-938d-290adebbca54",
-                    "label": "tH02_Golden_Ring",
-                    "components": [],
-                    "texture": {
-                        "key": "TH02_Golden-Ring"
-                    },
-                    "x": 962,
-                    "y": 333
+                    "y": 954,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "e7587276-a176-4df5-b37d-37e6bef6ca2b",
+                            "label": "defaultProfile_1",
+                            "components": [],
+                            "texture": {
+                                "key": "defaultProfile"
+                            },
+                            "scaleX": 1.6,
+                            "scaleY": 1.6
+                        },
+                        {
+                            "type": "Image",
+                            "id": "262292dc-a788-4598-8d2b-9e83f5fc99bc",
+                            "label": "profileMask",
+                            "components": [],
+                            "texture": {
+                                "key": "profileMask"
+                            },
+                            "scaleX": 1.6,
+                            "scaleY": 1.6
+                        },
+                        {
+                            "type": "Image",
+                            "id": "9378452d-e439-48c3-9951-b65ed21b6ee1",
+                            "label": "tH02_Golden_Ring_1",
+                            "components": [],
+                            "texture": {
+                                "key": "TH02_Golden-Ring"
+                            },
+                            "scaleX": 1.6,
+                            "scaleY": 1.6
+                        }
+                    ]
                 }
             ]
         },
