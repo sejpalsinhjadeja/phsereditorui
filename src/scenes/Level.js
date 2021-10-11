@@ -32,8 +32,32 @@ class Level extends Phaser.Scene {
 		tH02_Table.scaleY = 0.8;
 		body.add(tH02_Table);
 
+		// defaultProfile_1
+		const defaultProfile_1 = this.add.image(956, 954, "defaultProfile");
+		body.add(defaultProfile_1);
+
+		// profileMask
+		const profileMask = this.add.image(959, 954, "profileMask");
+		body.add(profileMask);
+
+		// tH02_Golden_Ring_1
+		const tH02_Golden_Ring_1 = this.add.image(958, 955, "TH02_Golden-Ring");
+		body.add(tH02_Golden_Ring_1);
+
+		// defaultProfile_2
+		const defaultProfile_2 = this.add.image(957, 329, "defaultProfile");
+		body.add(defaultProfile_2);
+
+		// profileMask_2
+		const profileMask_2 = this.add.image(961, 329, "profileMask");
+		body.add(profileMask_2);
+
+		// tH02_Golden_Ring
+		const tH02_Golden_Ring = this.add.image(962, 333, "TH02_Golden-Ring");
+		body.add(tH02_Golden_Ring);
+
 		// Header
-		const header = this.add.container(0, 0);
+		const header = this.add.container(0, -1);
 
 		// header_bg_img
 		const header_bg_img = this.add.image(960, 0, "New_Theme_Uper-Hood");
