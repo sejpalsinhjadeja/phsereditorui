@@ -144,6 +144,11 @@
                 "key": "reload"
             },
             {
+                "url": "assets/Sprites/Start-new-round.png",
+                "type": "image",
+                "key": "Start-new-round"
+            },
+            {
                 "url": "assets/Sprites/TH02_Golden-Ring.png",
                 "type": "image",
                 "key": "TH02_Golden-Ring"

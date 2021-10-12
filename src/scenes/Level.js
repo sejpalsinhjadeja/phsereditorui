@@ -16,32 +16,8 @@ class Level extends Phaser.Scene {
 	/** @returns {void} */
 	editorCreate() {
 
-		// Body
-		const body = this.add.container(0, 0);
-
-		// tH02_Table_BG
-		const tH02_Table_BG = this.add.image(1031, 605, "TH02_Table_BG");
-		body.add(tH02_Table_BG);
-
-		// MyPlayer
-		const myPlayer = new PlayerProfileForTable(this, 1030, 943);
-		body.add(myPlayer);
-
-		// MyPlayer_1
-		const myPlayer_1 = new PlayerProfileForTable(this, 1030, 208);
-		myPlayer_1.scaleX = 0.8;
-		myPlayer_1.scaleY = 0.8;
-		body.add(myPlayer_1);
-
-		// container_1
-		const container_1 = this.add.container(1025, 647);
-		body.add(container_1);
-
-		// tH02_Table
-		const tH02_Table = this.add.image(0, 0, "TH02_Table");
-		tH02_Table.scaleX = 0.95;
-		tH02_Table.scaleY = 0.9;
-		container_1.add(tH02_Table);
+		// background_img
+		this.add.image(1031, 605, "TH02_Table_BG");
 
 		// Footer
 		const footer = this.add.container(960, 1080);
@@ -79,34 +55,73 @@ class Level extends Phaser.Scene {
 		addCash.tintBottomRight = 0;
 		add_table_button.add(addCash);
 
-		// table_button
-		const table_button = this.add.container(-625, -43);
-		footer.add(table_button);
+		// table_button_1
+		const table_button_1 = this.add.container(-625, -43);
+		footer.add(table_button_1);
 
 		// tH02_Join_Small_Table
 		const tH02_Join_Small_Table = this.add.image(0, 0, "TH02_Join_Small-Table");
 		tH02_Join_Small_Table.scaleX = 0.8;
 		tH02_Join_Small_Table.scaleY = 0.7;
-		table_button.add(tH02_Join_Small_Table);
+		table_button_1.add(tH02_Join_Small_Table);
 
 		// text_1
 		const text_1 = this.add.text(1, 0, "", {});
 		text_1.setOrigin(0.5, 0.5);
 		text_1.text = "point";
 		text_1.setStyle({"fontSize":"25px","fontStyle":"bold"});
-		table_button.add(text_1);
+		table_button_1.add(text_1);
 
 		// lower_circle
 		const lower_circle = this.add.image(0, 37, "circle");
 		lower_circle.scaleX = 0.08;
 		lower_circle.scaleY = 0.08;
-		table_button.add(lower_circle);
+		table_button_1.add(lower_circle);
 
 		// upper_circle
 		const upper_circle = this.add.image(0, -37, "circle");
 		upper_circle.scaleX = 0.08;
 		upper_circle.scaleY = 0.08;
-		table_button.add(upper_circle);
+		table_button_1.add(upper_circle);
+
+		// Body
+		const body = this.add.container(0, 0);
+
+		// game_table
+		const game_table = this.add.container(1025, 647);
+		body.add(game_table);
+
+		// table_img
+		const table_img = this.add.image(0, 0, "TH02_Table");
+		table_img.scaleX = 0.95;
+		table_img.scaleY = 0.9;
+		game_table.add(table_img);
+
+		// table_info_lable
+		const table_info_lable = this.add.container(0, -120);
+		game_table.add(table_info_lable);
+
+		// start_new_round
+		const start_new_round = this.add.image(0, 0, "Start-new-round");
+		start_new_round.scaleX = 1.5;
+		table_info_lable.add(start_new_round);
+
+		// text_2
+		const text_2 = this.add.text(0, 0, "", {});
+		text_2.setOrigin(0.5, 0.5);
+		text_2.text = "WAITING FOR OTHER PLAYER(S)";
+		text_2.setStyle({"align":"center","fontFamily":"OswaldBold","fontSize":"20px"});
+		table_info_lable.add(text_2);
+
+		// MyPlayer
+		const myPlayer = new PlayerProfileForTable(this, 0, 250);
+		game_table.add(myPlayer);
+
+		// MyPlayer_1
+		const myPlayer_1 = new PlayerProfileForTable(this, 0, -430);
+		myPlayer_1.scaleX = 0.8;
+		myPlayer_1.scaleY = 0.8;
+		game_table.add(myPlayer_1);
 
 		// Header
 		const header = this.add.container(0, -1);
@@ -157,25 +172,25 @@ class Level extends Phaser.Scene {
 		// oDecktext_1
 		const oDecktext_1 = this.add.text(1408, 35, "", {});
 		oDecktext_1.text = "₹ 0.01";
-		oDecktext_1.setStyle({"fontSize":"30px"});
+		oDecktext_1.setStyle({"fontFamily":"OswaldSemiBold","fontSize":"30px"});
 		header.add(oDecktext_1);
 
 		// oDecktext
 		const oDecktext = this.add.text(1007, 35, "", {});
 		oDecktext.text = "Point Rummy- 2 Deck ";
-		oDecktext.setStyle({"fontSize":"30px","fontStyle":"bold"});
+		oDecktext.setStyle({"fontFamily":"OswaldMedium","fontSize":"30px"});
 		header.add(oDecktext);
 
 		// oTableId
 		const oTableId = this.add.text(643, 35, "", {});
 		oTableId.text = "Table Id:#46274f1a";
-		oTableId.setStyle({"fontSize":"30px","fontStyle":"bold"});
+		oTableId.setStyle({"fontFamily":"OswaldRegular","fontSize":"30px"});
 		header.add(oTableId);
 
 		// balancetxt
 		const balancetxt = this.add.text(437, 35, "", {});
 		balancetxt.text = "212.54";
-		balancetxt.setStyle({"fontSize":"35px","fontStyle":"bold"});
+		balancetxt.setStyle({"fontFamily":"OswaldLight","fontSize":"35px"});
 		header.add(balancetxt);
 
 		// cash_icon
@@ -187,7 +202,7 @@ class Level extends Phaser.Scene {
 		// playerNametxt
 		const playerNametxt = this.add.text(101, 35, "", {});
 		playerNametxt.text = "sejsinh01";
-		playerNametxt.setStyle({"fontSize":"30px","fontStyle":"bold"});
+		playerNametxt.setStyle({"fontFamily":"OswaldExtraLight","fontSize":"30px"});
 		header.add(playerNametxt);
 
 		// Player_Profile
