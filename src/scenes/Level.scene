@@ -27,19 +27,6 @@
                     "y": 605
                 },
                 {
-                    "type": "Image",
-                    "id": "6c74c68d-41ce-411c-9b59-c44e9c0b4524",
-                    "label": "tH02_Table",
-                    "components": [],
-                    "texture": {
-                        "key": "TH02_Table"
-                    },
-                    "x": 1025,
-                    "y": 647,
-                    "scaleX": 0.95,
-                    "scaleY": 0.9
-                },
-                {
                     "prefabId": "1b6608c4-1709-4587-be1a-b2580392c5c9",
                     "id": "aa1265ed-c9d0-4e41-b099-4a5d62a8cb37",
                     "unlock": [
@@ -72,6 +59,27 @@
                     "scaleX": 0.8,
                     "scaleY": 0.8,
                     "nestedPrefabs": []
+                },
+                {
+                    "type": "Container",
+                    "id": "36703503-e1f0-478a-9f94-45ca3340a0d3",
+                    "label": "container_1",
+                    "components": [],
+                    "x": 1025,
+                    "y": 647,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "6c74c68d-41ce-411c-9b59-c44e9c0b4524",
+                            "label": "tH02_Table",
+                            "components": [],
+                            "texture": {
+                                "key": "TH02_Table"
+                            },
+                            "scaleX": 0.95,
+                            "scaleY": 0.9
+                        }
+                    ]
                 }
             ]
         },

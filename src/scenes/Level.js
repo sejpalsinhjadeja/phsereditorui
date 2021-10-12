@@ -23,12 +23,6 @@ class Level extends Phaser.Scene {
 		const tH02_Table_BG = this.add.image(1031, 605, "TH02_Table_BG");
 		body.add(tH02_Table_BG);
 
-		// tH02_Table
-		const tH02_Table = this.add.image(1025, 647, "TH02_Table");
-		tH02_Table.scaleX = 0.95;
-		tH02_Table.scaleY = 0.9;
-		body.add(tH02_Table);
-
 		// MyPlayer
 		const myPlayer = new PlayerProfileForTable(this, 1030, 943);
 		body.add(myPlayer);
@@ -38,6 +32,16 @@ class Level extends Phaser.Scene {
 		myPlayer_1.scaleX = 0.8;
 		myPlayer_1.scaleY = 0.8;
 		body.add(myPlayer_1);
+
+		// container_1
+		const container_1 = this.add.container(1025, 647);
+		body.add(container_1);
+
+		// tH02_Table
+		const tH02_Table = this.add.image(0, 0, "TH02_Table");
+		tH02_Table.scaleX = 0.95;
+		tH02_Table.scaleY = 0.9;
+		container_1.add(tH02_Table);
 
 		// Footer
 		const footer = this.add.container(960, 1080);
