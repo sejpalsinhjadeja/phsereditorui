@@ -47,6 +47,73 @@
                     },
                     "scaleX": 1.6,
                     "scaleY": 1.6
+                },
+                {
+                    "type": "Container",
+                    "id": "859c6d41-62b7-4fad-9e33-f396efa2667b",
+                    "label": "player_point_bg",
+                    "components": [],
+                    "x": -1,
+                    "y": 104,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "0859b70a-df45-48c0-8f7f-5b0b7ac9a5d4",
+                            "label": "rounded_Rectangle_4_2x",
+                            "components": [],
+                            "texture": {
+                                "key": "Rounded Rectangle 4@2x"
+                            },
+                            "scaleX": 0.578589498693684,
+                            "scaleY": 0.5467859441883341
+                        },
+                        {
+                            "type": "Text",
+                            "id": "62e4bc3e-47d3-41cf-9156-4ec4d734763e",
+                            "label": "text",
+                            "components": [],
+                            "text": "100",
+                            "align": "justify",
+                            "fontFamily": "OswaldRegular",
+                            "fontSize": "27px"
+                        }
+                    ]
+                },
+                {
+                    "type": "Text",
+                    "id": "78f1b96e-58dd-42ed-a0d8-a19ca4763a6b",
+                    "label": "player_status_txt",
+                    "components": [],
+                    "y": 65,
+                    "visible": false,
+                    "text": "playing",
+                    "align": "justify",
+                    "fontFamily": "OswaldRegular",
+                    "fontSize": "15px"
+                },
+                {
+                    "type": "Text",
+                    "id": "31153c47-ab50-4fef-91f6-1720e5bed39d",
+                    "label": "you_txt",
+                    "components": [],
+                    "y": 40,
+                    "visible": false,
+                    "text": "YOU",
+                    "align": "justify",
+                    "fontFamily": "OswaldRegular",
+                    "fontSize": "25px"
+                },
+                {
+                    "type": "Text",
+                    "id": "7458ffac-98f0-4ab6-bdf4-08c42e340387",
+                    "label": "opp_status_txt",
+                    "components": [],
+                    "y": 55,
+                    "visible": false,
+                    "text": "playing",
+                    "align": "justify",
+                    "fontFamily": "OswaldRegular",
+                    "fontSize": "25px"
                 }
             ]
         }

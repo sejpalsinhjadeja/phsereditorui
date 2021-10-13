@@ -149,6 +149,11 @@
                 "key": "reload"
             },
             {
+                "url": "assets/Sprites/Rounded Rectangle 4@2x.png",
+                "type": "image",
+                "key": "Rounded Rectangle 4@2x"
+            },
+            {
                 "url": "src/scripts/SocketHndler.js",
                 "type": "script",
                 "key": "SocketHndler"
@@ -227,6 +232,11 @@
                 "url": "assets/Sprites/TH02_Yellow-Box-Ui.png",
                 "type": "image",
                 "key": "TH02_Yellow-Box-Ui"
+            },
+            {
+                "url": "assets/Sprites/Time-counter.png",
+                "type": "image",
+                "key": "Time-counter"
             },
             {
                 "url": "assets/Sprites/White-border.png",

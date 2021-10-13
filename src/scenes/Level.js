@@ -114,7 +114,7 @@ class Level extends Phaser.Scene {
 		table_info_lable.add(text_2);
 
 		// our_player
-		const our_player = new PlayerProfileForTable(this, 0, 250);
+		const our_player = new PlayerProfileForTable(this, 7, 299);
 		game_table.add(our_player);
 
 		// opp_1
@@ -197,33 +197,33 @@ class Level extends Phaser.Scene {
 		reload.scaleY = 0.3;
 		refreshButton.add(reload);
 
-		// oDecktext_1
-		const oDecktext_1 = this.add.text(1408, 50, "", {});
-		oDecktext_1.setOrigin(0, 0.5);
-		oDecktext_1.text = "₹ 0.01";
-		oDecktext_1.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
-		header.add(oDecktext_1);
+		// point_in_rupee_txt
+		const point_in_rupee_txt = this.add.text(1408, 50, "", {});
+		point_in_rupee_txt.setOrigin(0, 0.5);
+		point_in_rupee_txt.text = "₹ 0.01";
+		point_in_rupee_txt.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
+		header.add(point_in_rupee_txt);
 
-		// oDecktext
-		const oDecktext = this.add.text(1007, 50, "", {});
-		oDecktext.setOrigin(0, 0.5);
-		oDecktext.text = "Point Rummy- 2 Deck ";
-		oDecktext.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
-		header.add(oDecktext);
+		// game_type_txt
+		const game_type_txt = this.add.text(1007, 50, "", {});
+		game_type_txt.setOrigin(0, 0.5);
+		game_type_txt.text = "Point Rummy- 2 Deck ";
+		game_type_txt.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
+		header.add(game_type_txt);
 
-		// oTableId
-		const oTableId = this.add.text(643, 50, "", {});
-		oTableId.setOrigin(0, 0.5);
-		oTableId.text = "Table Id:#46274f1a";
-		oTableId.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
-		header.add(oTableId);
+		// table_id_txt
+		const table_id_txt = this.add.text(643, 50, "", {});
+		table_id_txt.setOrigin(0, 0.5);
+		table_id_txt.text = "Table Id:#46274f1a";
+		table_id_txt.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
+		header.add(table_id_txt);
 
-		// balancetxt
-		const balancetxt = this.add.text(437, 50, "", {});
-		balancetxt.setOrigin(0, 0.5);
-		balancetxt.text = "212.54";
-		balancetxt.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
-		header.add(balancetxt);
+		// player_balance_txt
+		const player_balance_txt = this.add.text(437, 50, "", {});
+		player_balance_txt.setOrigin(0, 0.5);
+		player_balance_txt.text = "212.54";
+		player_balance_txt.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
+		header.add(player_balance_txt);
 
 		// cash_icon
 		const cash_icon = this.add.image(406, 50, "Cash-icon");
@@ -231,13 +231,13 @@ class Level extends Phaser.Scene {
 		cash_icon.scaleY = 0.3;
 		header.add(cash_icon);
 
-		// playerNametxt
-		const playerNametxt = this.add.text(101, 50, "", {});
-		playerNametxt.setOrigin(0, 0.5);
-		playerNametxt.text = "sejsinh01";
-		playerNametxt.setStyle({"fixedWidth":200,"fontFamily":"grandnationalsuperital","fontSize":"30px"});
-		playerNametxt.setWordWrapWidth(12);
-		header.add(playerNametxt);
+		// player_name_txt
+		const player_name_txt = this.add.text(101, 50, "", {});
+		player_name_txt.setOrigin(0, 0.5);
+		player_name_txt.text = "sejsinh01";
+		player_name_txt.setStyle({"fixedWidth":200,"fontFamily":"grandnationalsuperital","fontSize":"30px"});
+		player_name_txt.setWordWrapWidth(12);
+		header.add(player_name_txt);
 
 		// Player_Profile
 		const player_Profile = this.add.container(54, 50);
@@ -245,11 +245,11 @@ class Level extends Phaser.Scene {
 		player_Profile.scaleY = 0.75;
 		header.add(player_Profile);
 
-		// defaultProfile
-		const defaultProfile = this.add.image(0, 0, "defaultProfile");
-		defaultProfile.scaleX = 0.7;
-		defaultProfile.scaleY = 0.7;
-		player_Profile.add(defaultProfile);
+		// player_profile_img
+		const player_profile_img = this.add.image(0, 0, "defaultProfile");
+		player_profile_img.scaleX = 0.7;
+		player_profile_img.scaleY = 0.7;
+		player_Profile.add(player_profile_img);
 
 		// white_border
 		const white_border = this.add.image(1, 0, "White-border");
@@ -294,22 +294,11 @@ class Level extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
-	// Write more your code here
+	// Write your code here
 
 	create() {
+
 		this.editorCreate();
-		this.oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
-		this.oPlayerManager = new PlayerManager(this.oPlayerList,3);
-		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0MDk3MTc2fQ.OChStcbFA9_-7_iD7EVg4rs5bnPSoGVrpsjb40YaAag";
-		this.sTableId = "61665df2d811ba3dc561616d";
-		console.log(sRootUrl);
-		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
-		console.log("Level Create");
-
-	}
-
-	testingGame(msgData){
-		console.log("Working now "+msgData);
 	}
 
 	/* END-USER-CODE */

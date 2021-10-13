@@ -1,4 +1,34 @@
 @font-face {
+    font-family: OswaldExtraLight;
+    src: url('../Font/0_Oswald-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: OswaldLight;
+    src: url('../Font/1_Oswald-Light.ttf');
+}
+
+@font-face {
+    font-family: OswaldRegular;
+    src: url('../Font/2_Oswald-Regular.ttf');
+}
+
+@font-face {
+    font-family: OswaldMedium;
+    src: url('../Font/3_Oswald-Medium.ttf');
+}
+
+@font-face {
+    font-family: OswaldSemiBold;
+    src: url('../Font/4_Oswald-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: OswaldBold;
+    src: url('../Font/5_Oswald-Bold.ttf');
+}
+
+@font-face {
     font-family: grandnational;
     src: url('../Font/grandnational.ttf');
 }

@@ -57,13 +57,14 @@ class SocketHandler {
         this.oTableSocketConn.on("resGameState", (resGameState) => {
             // Set user profile and user name
             // Set player icon on tale
+            this.oGameObj.gameStateDataRecived(resGameState);
             console.log("Table resGameState",resGameState);
         });
         this.oTableSocketConn.on("resSeatChange", (resSeatChange) => {
             //console.log("Table resSeatChange",resSeatChange);
         });
         this.oTableSocketConn.on("resGameInitilizeTimer", (resGameInitilizeTimer) => {
-            //console.log("Table resGameInitilizeTimer",resGameInitilizeTimer);
+            console.log("Table resGameInitilizeTimer",resGameInitilizeTimer);
         });
         this.oTableSocketConn.on("resHand", (resHand) => {
             //console.log("Table resHand",resHand);
@@ -72,7 +73,7 @@ class SocketHandler {
             //console.log("Table resAutoDiscard",resAutoDiscard);
         });
         this.oTableSocketConn.on("resPlayersState", (resPlayersState) => {
-            //console.log("Table resPlayersState",resPlayersState);
+            console.log("Table resPlayersState",resPlayersState);
         });
         this.oTableSocketConn.on("resHighCards", (resHighCards) => {
             //console.log("Table resHighCards",resHighCards);
@@ -87,7 +88,7 @@ class SocketHandler {
             //console.log("Table resPlayerTurn",resPlayerTurn);
         });
         this.oTableSocketConn.on("resCreditBalance", (resCreditBalance) => {
-            //console.log("Table resCreditBalance",resCreditBalance);
+            console.log("Table resCreditBalance",resCreditBalance);
         });
         this.oTableSocketConn.on("resOpenedDeck", (resOpenedDeck) => {
             //console.log("Table resOpenedDeck",resOpenedDeck);

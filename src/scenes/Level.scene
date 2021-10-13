@@ -210,7 +210,8 @@
                             "label": "our_player",
                             "scope": "PUBLIC",
                             "components": [],
-                            "y": 250,
+                            "x": 7,
+                            "y": 299,
                             "nestedPrefabs": []
                         },
                         {
@@ -409,7 +410,7 @@
                 {
                     "type": "Text",
                     "id": "341cef8e-870b-48c4-b1a7-30232a6544bc",
-                    "label": "oDecktext_1",
+                    "label": "point_in_rupee_txt",
                     "components": [],
                     "x": 1408,
                     "y": 50,
@@ -421,7 +422,7 @@
                 {
                     "type": "Text",
                     "id": "b4fd733c-ff4f-41c6-816b-7c81cee76a1f",
-                    "label": "oDecktext",
+                    "label": "game_type_txt",
                     "components": [],
                     "x": 1007,
                     "y": 50,
@@ -433,7 +434,7 @@
                 {
                     "type": "Text",
                     "id": "6af56fe8-5d99-4d2f-9876-17b25597d9d5",
-                    "label": "oTableId",
+                    "label": "table_id_txt",
                     "components": [],
                     "x": 643,
                     "y": 50,
@@ -445,7 +446,7 @@
                 {
                     "type": "Text",
                     "id": "0d6a8d13-b63c-41f8-8f89-cc4a8978ad45",
-                    "label": "balancetxt",
+                    "label": "player_balance_txt",
                     "components": [],
                     "x": 437,
                     "y": 50,
@@ -470,7 +471,7 @@
                 {
                     "type": "Text",
                     "id": "42871bde-6b21-4b94-943a-ede94c4b6fe1",
-                    "label": "playerNametxt",
+                    "label": "player_name_txt",
                     "components": [],
                     "x": 101,
                     "y": 50,
@@ -494,7 +495,7 @@
                         {
                             "type": "Image",
                             "id": "046b0a68-4e68-4a86-9134-c14fa67f8d65",
-                            "label": "defaultProfile",
+                            "label": "player_profile_img",
                             "components": [],
                             "texture": {
                                 "key": "defaultProfile"
