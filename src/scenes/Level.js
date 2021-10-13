@@ -251,9 +251,17 @@ class Level extends Phaser.Scene {
 	// Write more your code here
 
 	create() {
-
 		this.editorCreate();
+		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0MDk3MTc2fQ.OChStcbFA9_-7_iD7EVg4rs5bnPSoGVrpsjb40YaAag";
+		this.sTableId = "61665df2d811ba3dc561616d";
+		console.log(sRootUrl);
+		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
+		console.log("Level Create");
 
+	}
+
+	testingGame(msgData){
+		console.log("Working now "+msgData);
 	}
 
 	/* END-USER-CODE */

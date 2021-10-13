@@ -144,6 +144,11 @@
                 "key": "reload"
             },
             {
+                "url": "src/scripts/SocketHndler.js",
+                "type": "script",
+                "key": "SocketHndler"
+            },
+            {
                 "url": "assets/Sprites/Start-new-round.png",
                 "type": "image",
                 "key": "Start-new-round"
