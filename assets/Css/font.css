@@ -1,29 +1,75 @@
 @font-face {
-    font-family: OswaldExtraLight;
-    src: url('../Font/0_Oswald-ExtraLight.ttf');
+    font-family: grandnational;
+    src: url('../Font/grandnational.ttf');
 }
 
 @font-face {
-    font-family: OswaldLight;
-    src: url('../Font/1_Oswald-Light.ttf');
+    font-family: grandnationalcond;
+    src: url('../Font/grandnationalcond.ttf');
 }
 
 @font-face {
-    font-family: OswaldRegular;
-    src: url('../Font/2_Oswald-Regular.ttf');
+    font-family: grandnationalcondital;
+    src: url('../Font/grandnationalcondital.ttf');
 }
 
 @font-face {
-    font-family: OswaldMedium;
-    src: url('../Font/3_Oswald-Medium.ttf');
+    font-family: grandnationalsemital;
+    src: url('../Font/grandnationalsemital.ttf');
 }
 
 @font-face {
-    font-family: OswaldSemiBold;
-    src: url('../Font/4_Oswald-SemiBold.ttf');
+    font-family: grandnationalsuperital;
+    src: url('../Font/grandnationalsuperital.ttf');
 }
 
 @font-face {
-    font-family: OswaldBold;
-    src: url('../Font/5_Oswald-Bold.ttf');
+    font-family: Roboto-Black;
+    src: url('../Font/Roboto-Black.ttf');
 }
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('../Font/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Italic;
+    src: url('../Font/Roboto-Italic.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url('../Font/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url('../Font/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../Font/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: Titillium-Black;
+    src: url('../Font/Titillium-Black.otf');
+}
+
+@font-face {
+    font-family: Titillium-Bold;
+    src: url('../Font/Titillium-Bold.otf');
+}
+
+@font-face {
+    font-family: Titillium-BoldItalic;
+    src: url('../Font/Titillium-BoldItalic.otf');
+}
+
+@font-face {
+    font-family: Titillium-Regular;
+    src: url('../Font/Titillium-Regular.otf');
+}
+

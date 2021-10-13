@@ -27,12 +27,26 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		this.add(tH02_Golden_Ring_1);
 
 		/* START-USER-CTR-CODE */
+		this.oSceneObj = scene;
+		this.showTimerCountDown();
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
-
+	showTimerCountDown(timeLeft){
+		timeLeft = 275;
+		console.log("updateValue Done......",timeLeft);
+		if(this.oLoadeGraphics !=null){
+			this.oLoadeGraphics.clear();
+		}
+		this.oLoadeGraphics = this.oSceneObj.add.graphics();
+		this.oLoadeGraphics.lineStyle(10, 0x00FF00, 1);
+		this.oLoadeGraphics.beginPath();  
+		this.oLoadeGraphics.arc(0, 0, 100, Phaser.Math.DegToRad(timeLeft), Phaser.Math.DegToRad(-90), true);
+		this.oLoadeGraphics.strokePath();
+		this.add(this.oLoadeGraphics);
+	}
 	// Write your code here.
 
 	/* END-USER-CODE */

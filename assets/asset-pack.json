@@ -122,6 +122,11 @@
                 "key": "Player-table-Glow"
             },
             {
+                "url": "src/scripts/PlayerManager.js",
+                "type": "script",
+                "key": "PlayerManager"
+            },
+            {
                 "url": [
                     "src/prefabs/PlayerProfileForTable.js"
                 ],

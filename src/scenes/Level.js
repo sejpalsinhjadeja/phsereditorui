@@ -110,18 +110,46 @@ class Level extends Phaser.Scene {
 		const text_2 = this.add.text(0, 0, "", {});
 		text_2.setOrigin(0.5, 0.5);
 		text_2.text = "WAITING FOR OTHER PLAYER(S)";
-		text_2.setStyle({"align":"center","fontFamily":"OswaldBold","fontSize":"20px"});
+		text_2.setStyle({"align":"center","fontFamily":"Roboto-Regular","fontSize":"20px"});
 		table_info_lable.add(text_2);
 
-		// MyPlayer
-		const myPlayer = new PlayerProfileForTable(this, 0, 250);
-		game_table.add(myPlayer);
+		// our_player
+		const our_player = new PlayerProfileForTable(this, 0, 250);
+		game_table.add(our_player);
 
-		// MyPlayer_1
-		const myPlayer_1 = new PlayerProfileForTable(this, 0, -430);
-		myPlayer_1.scaleX = 0.8;
-		myPlayer_1.scaleY = 0.8;
-		game_table.add(myPlayer_1);
+		// opp_1
+		const opp_1 = new PlayerProfileForTable(this, 0, -430);
+		opp_1.scaleX = 0.8;
+		opp_1.scaleY = 0.8;
+		game_table.add(opp_1);
+
+		// opp_2
+		const opp_2 = new PlayerProfileForTable(this, -870, -120);
+		opp_2.scaleX = 0.8;
+		opp_2.scaleY = 0.8;
+		opp_2.visible = false;
+		game_table.add(opp_2);
+
+		// opp_3
+		const opp_3 = new PlayerProfileForTable(this, 870, -120);
+		opp_3.scaleX = 0.8;
+		opp_3.scaleY = 0.8;
+		opp_3.visible = false;
+		game_table.add(opp_3);
+
+		// opp_4
+		const opp_4 = new PlayerProfileForTable(this, -640, -400);
+		opp_4.scaleX = 0.8;
+		opp_4.scaleY = 0.8;
+		opp_4.visible = false;
+		game_table.add(opp_4);
+
+		// opp_5
+		const opp_5 = new PlayerProfileForTable(this, 640, -400);
+		opp_5.scaleX = 0.8;
+		opp_5.scaleY = 0.8;
+		opp_5.visible = false;
+		game_table.add(opp_5);
 
 		// Header
 		const header = this.add.container(0, -1);
@@ -170,39 +198,45 @@ class Level extends Phaser.Scene {
 		refreshButton.add(reload);
 
 		// oDecktext_1
-		const oDecktext_1 = this.add.text(1408, 35, "", {});
+		const oDecktext_1 = this.add.text(1408, 50, "", {});
+		oDecktext_1.setOrigin(0, 0.5);
 		oDecktext_1.text = "₹ 0.01";
-		oDecktext_1.setStyle({"fontFamily":"OswaldSemiBold","fontSize":"30px"});
+		oDecktext_1.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
 		header.add(oDecktext_1);
 
 		// oDecktext
-		const oDecktext = this.add.text(1007, 35, "", {});
+		const oDecktext = this.add.text(1007, 50, "", {});
+		oDecktext.setOrigin(0, 0.5);
 		oDecktext.text = "Point Rummy- 2 Deck ";
-		oDecktext.setStyle({"fontFamily":"OswaldMedium","fontSize":"30px"});
+		oDecktext.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
 		header.add(oDecktext);
 
 		// oTableId
-		const oTableId = this.add.text(643, 35, "", {});
+		const oTableId = this.add.text(643, 50, "", {});
+		oTableId.setOrigin(0, 0.5);
 		oTableId.text = "Table Id:#46274f1a";
-		oTableId.setStyle({"fontFamily":"OswaldRegular","fontSize":"30px"});
+		oTableId.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
 		header.add(oTableId);
 
 		// balancetxt
-		const balancetxt = this.add.text(437, 35, "", {});
+		const balancetxt = this.add.text(437, 50, "", {});
+		balancetxt.setOrigin(0, 0.5);
 		balancetxt.text = "212.54";
-		balancetxt.setStyle({"fontFamily":"OswaldLight","fontSize":"35px"});
+		balancetxt.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
 		header.add(balancetxt);
 
 		// cash_icon
-		const cash_icon = this.add.image(406, 49, "Cash-icon");
+		const cash_icon = this.add.image(406, 50, "Cash-icon");
 		cash_icon.scaleX = 0.3;
 		cash_icon.scaleY = 0.3;
 		header.add(cash_icon);
 
 		// playerNametxt
-		const playerNametxt = this.add.text(101, 35, "", {});
+		const playerNametxt = this.add.text(101, 50, "", {});
+		playerNametxt.setOrigin(0, 0.5);
 		playerNametxt.text = "sejsinh01";
-		playerNametxt.setStyle({"fontFamily":"OswaldExtraLight","fontSize":"30px"});
+		playerNametxt.setStyle({"fixedWidth":200,"fontFamily":"grandnationalsuperital","fontSize":"30px"});
+		playerNametxt.setWordWrapWidth(12);
 		header.add(playerNametxt);
 
 		// Player_Profile
@@ -235,16 +269,28 @@ class Level extends Phaser.Scene {
 		preview.alphaBottomRight = 0.6;
 		header.add(preview);
 
-		this.myPlayer = myPlayer;
-		this.myPlayer_1 = myPlayer_1;
+		this.our_player = our_player;
+		this.opp_1 = opp_1;
+		this.opp_2 = opp_2;
+		this.opp_3 = opp_3;
+		this.opp_4 = opp_4;
+		this.opp_5 = opp_5;
 
 		this.events.emit("scene-awake");
 	}
 
 	/** @type {PlayerProfileForTable} */
-	myPlayer;
+	our_player;
 	/** @type {PlayerProfileForTable} */
-	myPlayer_1;
+	opp_1;
+	/** @type {PlayerProfileForTable} */
+	opp_2;
+	/** @type {PlayerProfileForTable} */
+	opp_3;
+	/** @type {PlayerProfileForTable} */
+	opp_4;
+	/** @type {PlayerProfileForTable} */
+	opp_5;
 
 	/* START-USER-CODE */
 
@@ -252,6 +298,8 @@ class Level extends Phaser.Scene {
 
 	create() {
 		this.editorCreate();
+		this.oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
+		this.oPlayerManager = new PlayerManager(this.oPlayerList,3);
 		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0MDk3MTc2fQ.OChStcbFA9_-7_iD7EVg4rs5bnPSoGVrpsjb40YaAag";
 		this.sTableId = "61665df2d811ba3dc561616d";
 		console.log(sRootUrl);

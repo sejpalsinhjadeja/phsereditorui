@@ -194,7 +194,7 @@
                                     "components": [],
                                     "text": "WAITING FOR OTHER PLAYER(S)",
                                     "align": "center",
-                                    "fontFamily": "OswaldBold",
+                                    "fontFamily": "Roboto-Regular",
                                     "fontSize": "20px"
                                 }
                             ]
@@ -207,7 +207,7 @@
                                 "y",
                                 "visible"
                             ],
-                            "label": "MyPlayer",
+                            "label": "our_player",
                             "scope": "PUBLIC",
                             "components": [],
                             "y": 250,
@@ -223,12 +223,92 @@
                                 "scaleX",
                                 "scaleY"
                             ],
-                            "label": "MyPlayer_1",
+                            "label": "opp_1",
                             "scope": "PUBLIC",
                             "components": [],
                             "y": -430,
                             "scaleX": 0.8,
                             "scaleY": 0.8,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "1b6608c4-1709-4587-be1a-b2580392c5c9",
+                            "id": "8dc9d45d-7559-4d62-8e2c-b7b051977986",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "visible",
+                                "scaleX",
+                                "scaleY"
+                            ],
+                            "label": "opp_2",
+                            "scope": "PUBLIC",
+                            "components": [],
+                            "x": -870,
+                            "y": -120,
+                            "scaleX": 0.8,
+                            "scaleY": 0.8,
+                            "visible": false,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "1b6608c4-1709-4587-be1a-b2580392c5c9",
+                            "id": "55168760-8e5c-48e3-9757-12e6f3b110e6",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "visible",
+                                "scaleX",
+                                "scaleY"
+                            ],
+                            "label": "opp_3",
+                            "scope": "PUBLIC",
+                            "components": [],
+                            "x": 870,
+                            "y": -120,
+                            "scaleX": 0.8,
+                            "scaleY": 0.8,
+                            "visible": false,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "1b6608c4-1709-4587-be1a-b2580392c5c9",
+                            "id": "854ce41f-9934-4e41-8840-e54dd686701b",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "visible",
+                                "scaleX",
+                                "scaleY"
+                            ],
+                            "label": "opp_4",
+                            "scope": "PUBLIC",
+                            "components": [],
+                            "x": -640,
+                            "y": -400,
+                            "scaleX": 0.8,
+                            "scaleY": 0.8,
+                            "visible": false,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "1b6608c4-1709-4587-be1a-b2580392c5c9",
+                            "id": "d9d755c0-6c46-45df-b567-1789bb9d9787",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "visible",
+                                "scaleX",
+                                "scaleY"
+                            ],
+                            "label": "opp_5",
+                            "scope": "PUBLIC",
+                            "components": [],
+                            "x": 640,
+                            "y": -400,
+                            "scaleX": 0.8,
+                            "scaleY": 0.8,
+                            "visible": false,
                             "nestedPrefabs": []
                         }
                     ]
@@ -332,11 +412,10 @@
                     "label": "oDecktext_1",
                     "components": [],
                     "x": 1408,
-                    "y": 35,
+                    "y": 50,
                     "originX": 0,
-                    "originY": 0,
                     "text": "₹ 0.01",
-                    "fontFamily": "OswaldSemiBold",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": "30px"
                 },
                 {
@@ -345,11 +424,10 @@
                     "label": "oDecktext",
                     "components": [],
                     "x": 1007,
-                    "y": 35,
+                    "y": 50,
                     "originX": 0,
-                    "originY": 0,
                     "text": "Point Rummy- 2 Deck ",
-                    "fontFamily": "OswaldMedium",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": "30px"
                 },
                 {
@@ -358,11 +436,10 @@
                     "label": "oTableId",
                     "components": [],
                     "x": 643,
-                    "y": 35,
+                    "y": 50,
                     "originX": 0,
-                    "originY": 0,
                     "text": "Table Id:#46274f1a",
-                    "fontFamily": "OswaldRegular",
+                    "fontFamily": "Roboto-Regular",
                     "fontSize": "30px"
                 },
                 {
@@ -371,12 +448,11 @@
                     "label": "balancetxt",
                     "components": [],
                     "x": 437,
-                    "y": 35,
+                    "y": 50,
                     "originX": 0,
-                    "originY": 0,
                     "text": "212.54",
-                    "fontFamily": "OswaldLight",
-                    "fontSize": "35px"
+                    "fontFamily": "Roboto-Regular",
+                    "fontSize": "30px"
                 },
                 {
                     "type": "Image",
@@ -387,7 +463,7 @@
                         "key": "Cash-icon"
                     },
                     "x": 406,
-                    "y": 49,
+                    "y": 50,
                     "scaleX": 0.3,
                     "scaleY": 0.3
                 },
@@ -397,12 +473,13 @@
                     "label": "playerNametxt",
                     "components": [],
                     "x": 101,
-                    "y": 35,
+                    "y": 50,
                     "originX": 0,
-                    "originY": 0,
                     "text": "sejsinh01",
-                    "fontFamily": "OswaldExtraLight",
-                    "fontSize": "30px"
+                    "fixedWidth": 200,
+                    "fontFamily": "grandnationalsuperital",
+                    "fontSize": "30px",
+                    "wordWrapWidth": 12
                 },
                 {
                     "type": "Container",
