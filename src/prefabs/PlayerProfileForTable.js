@@ -73,8 +73,8 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		this.player_status_txt = player_status_txt;
 		this.you_txt = you_txt;
 		this.defaultProfile_1 = defaultProfile_1;
-
-		this.showTimerCountDown();
+		this.profileMask = profileMask;
+		//this.showTimerCountDown();
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}

@@ -252,8 +252,14 @@ class Level extends Phaser.Scene {
 		player_profile_img.scaleY = 0.7;
 		player_Profile.add(player_profile_img);
 
+		// mask
+		const mask = this.add.image(1, 0, "profileMask");
+		mask.scaleX = 0.7675169577654787;
+		mask.scaleY = 0.7675169577654787;
+		player_Profile.add(mask);
+
 		// white_border
-		const white_border = this.add.image(1, 0, "White-border");
+		const white_border = this.add.image(0, 0, "White-border");
 		white_border.scaleX = 0.7;
 		white_border.scaleY = 0.7;
 		player_Profile.add(white_border);
@@ -283,6 +289,7 @@ class Level extends Phaser.Scene {
 		this.table_id_txt = table_id_txt;
 		this.point_in_rupee_txt = point_in_rupee_txt;
 		this.game_type_txt = game_type_txt;
+		this.maskImg = mask;
 
 		this.table_info_txt = table_info_txt;
 		this.table_info_lable = table_info_lable;
@@ -312,7 +319,7 @@ class Level extends Phaser.Scene {
 
 		this.editorCreate();
 		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0MTg0NjQ5fQ.JGB4H4AbnbPrMZ9vc7Lkxl8OxHybWy_UWOJtDzUmuGo";
-		this.sTableId = "6167cef6d811ba3dc56174b9";
+		this.sTableId = "6167d261d811ba3dc561764c";
 		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
 		let oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
 		this.oPlayerManager = new PlayerManager(oPlayerList,2);
@@ -326,6 +333,7 @@ class Level extends Phaser.Scene {
 		this.table_id_txt = table_id_txt;
 		this.point_in_rupee_txt = point_in_rupee_txt;
 		this.game_type_txt = game_type_txt;
+		this.maskImg = mask;
 
 		this.table_info_txt = table_info_txt;
 		this.table_info_lable = table_info_lable;
@@ -351,6 +359,7 @@ class Level extends Phaser.Scene {
 	}
 
 	setHeaderUserProfileImage(sPlayerId){
+		// Mask Logic
 		this.player_profile_img.setTexture(sPlayerId).setScale(0.17);
 	}
 

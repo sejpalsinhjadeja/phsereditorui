@@ -507,13 +507,24 @@
                         },
                         {
                             "type": "Image",
+                            "id": "35c5e649-478b-48b8-9bae-347d8b1a30e5",
+                            "label": "mask",
+                            "components": [],
+                            "texture": {
+                                "key": "profileMask"
+                            },
+                            "x": 1,
+                            "scaleX": 0.7675169577654787,
+                            "scaleY": 0.7675169577654787
+                        },
+                        {
+                            "type": "Image",
                             "id": "a0150ced-7d17-4de7-86ad-c692e127e6c7",
                             "label": "white_border",
                             "components": [],
                             "texture": {
                                 "key": "White-border"
                             },
-                            "x": 1,
                             "scaleX": 0.7,
                             "scaleY": 0.7
                         }
