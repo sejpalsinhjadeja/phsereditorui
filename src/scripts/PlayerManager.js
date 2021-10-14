@@ -23,4 +23,16 @@ class PlayerManager{
             }
         }
     }
+
+    setPlayerState(oOwnPlayerData,oAllUserData){
+        var nTempCounter = 1;
+        for(var i=0; i<PlayerManager.playerList.length; i++){
+            if(oAllUserData[i].iUserId == oOwnPlayerData.iUserId){
+                nTempCounter = 0;
+                PlayerManager.playerList[0].setPlayerData(oAllUserData[i].eState,true);
+            }else{
+                PlayerManager.playerList[i+nTempCounter].setPlayerData(oAllUserData[i].eState,false);
+            }
+        }
+    }
 }

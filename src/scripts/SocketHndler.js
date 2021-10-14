@@ -15,6 +15,7 @@ class SocketHandler {
 
         // Root Socket Connection Events - Start
         this.oRootSocketConn.on('connect', () => {
+            this.oGameObj.showTableInfo("Waiting for player(s)");
             console.log("Connected to Socket",this.oRootSocketConn.id);
         });
         this.oRootSocketConn.on("error", (error) => {
@@ -50,7 +51,7 @@ class SocketHandler {
 
         //  General Gameplay Events
         this.oTableSocketConn.on("resUserJoined", (resUserJoined) => {
-            //console.log("Table resUserJoined",resUserJoined);
+            console.log("Table resUserJoined",resUserJoined);
         });
         this.oTableSocketConn.on("resGameState", (resGameState) => {
             // Set user profile and user name

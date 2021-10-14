@@ -72,6 +72,7 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		this.opp_status_txt = opp_status_txt;
 		this.player_status_txt = player_status_txt;
 		this.you_txt = you_txt;
+		this.defaultProfile_1 = defaultProfile_1;
 
 		this.showTimerCountDown();
 		// Write your code here.
@@ -104,8 +105,26 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		this.you_txt.visible = true;
 	}
 
-	setUserProfilePic(sProfileImageUrl){
+	setUserProfilePic(sProfileImageUrl,sPlayerId,bIsOwnPlayer){
+		this.oSceneObj.load.image(sPlayerId,sProfileImageUrl).on('filecomplete', function () {
+            console.log("Player Profile Loaded");
+            this.defaultProfile_1.setTexture(sPlayerId).setScale(0.3);
+			if(bIsOwnPlayer)
+			{
+				this.oSceneObj.setHeaderUserProfileImage(sPlayerId);
+			}
+        }, this);
+        this.oSceneObj.load.start();
+	}
 
+	setPlayerState(eState,bIsOwnPlayer){
+		if(bIsOwnPlayer)
+		{
+			this.setStatusForPlayer(eState);
+		}
+		else{
+			this.setStatusForOpp(eState);
+		}
 	}
 
 	setPlayerData(sPlayerId,eState,sAvtar,sUserName,bIsOwnPlayer){
@@ -117,7 +136,8 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		else{
 			this.setStatusForOpp(eState);
 		}
-		this.setUserProfilePic(sAvtar);
+		this.setUserProfilePic(sAvtar,sPlayerId,bIsOwnPlayer);
+		
 	}
 	// Write your code here.
 

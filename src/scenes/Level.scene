@@ -176,6 +176,7 @@
                             "label": "table_info_lable",
                             "components": [],
                             "y": -120,
+                            "visible": false,
                             "list": [
                                 {
                                     "type": "Image",
@@ -190,7 +191,7 @@
                                 {
                                     "type": "Text",
                                     "id": "e31df715-3e55-48ad-9c57-186284fe1e46",
-                                    "label": "text_2",
+                                    "label": "table_info_txt",
                                     "components": [],
                                     "text": "WAITING FOR OTHER PLAYER(S)",
                                     "align": "center",
