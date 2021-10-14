@@ -35,7 +35,6 @@ class SocketHandler {
         // Table Socket Connection Events - Start
         this.oTableSocketConn.on('connect', () => {
             console.log("Table ScoketConnection Done",this.oTableSocketConn.id);
-            this.oGameObj.testingGame(this.oTableSocketConn.id);
         });
         this.oTableSocketConn.on("reconnect", (attempt) => {
             console.log("Table Connection reconnect");
@@ -57,7 +56,7 @@ class SocketHandler {
         this.oTableSocketConn.on("resGameState", (resGameState) => {
             // Set user profile and user name
             // Set player icon on tale
-            this.oGameObj.gameStateDataRecived(resGameState);
+            this.oGameObj.gameStateDataHandler(resGameState);
             console.log("Table resGameState",resGameState);
         });
         this.oTableSocketConn.on("resSeatChange", (resSeatChange) => {

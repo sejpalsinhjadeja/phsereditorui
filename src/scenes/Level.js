@@ -276,6 +276,13 @@ class Level extends Phaser.Scene {
 		this.opp_4 = opp_4;
 		this.opp_5 = opp_5;
 
+		this.player_name_txt = player_name_txt;
+		this.player_profile_img = player_profile_img;
+		this.player_balance_txt = player_balance_txt;
+		this.table_id_txt = table_id_txt;
+		this.point_in_rupee_txt = point_in_rupee_txt;
+		this.game_type_txt = game_type_txt;
+
 		this.events.emit("scene-awake");
 	}
 
@@ -298,7 +305,44 @@ class Level extends Phaser.Scene {
 
 	create() {
 
+
 		this.editorCreate();
+		sAuthToken = "";
+		sTableId = "";
+		this.oSocketConnection = new SocketHandler(this,sAuthToken,sTableId,sRootUrl);
+		oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
+		this.oPlayerManager = new PlayerManager(oPlayerList);
+
+	}
+
+	tempSave(){
+		this.player_name_txt = player_name_txt;
+		this.player_profile_img = player_profile_img;
+		this.player_balance_txt = player_balance_txt;
+		this.table_id_txt = table_id_txt;
+		this.point_in_rupee_txt = point_in_rupee_txt;
+		this.game_type_txt = game_type_txt;
+	}
+
+	setHeaderData(sUserName,sTableId,sUserBalance,sPoints,sGameType){
+		this.player_name_txt.text = sUserName;
+		this.player_balance_txt.text = sUserBalance;
+		this.table_id_txt.text = sTableId;
+		this.point_in_rupee_txt.text = sPoints;
+		this.game_type_txt.text = sGameType;
+	}
+
+
+	setHeaderUserProfileImage(sAvtar){
+		console.log(sAvtar);
+		//this.player_profile_img
+	}
+
+
+	gameStateDataHandler(oGameStateData){
+		this.oPlayerManager.setPlayerData(oGameStateData.participant,oGameStateData.participants);
+		oOwnPlayerData = oGameStateData.participant;
+		this.setHeaderData(oOwnPlayerData.sUserName,oOwnPlayerData.sTableId,oOwnPlayerData.sTableId)
 	}
 
 	/* END-USER-CODE */
