@@ -105,10 +105,11 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 	}
 
 	setUserProfilePic(sProfileImageUrl){
-		
+
 	}
 
 	setPlayerData(sPlayerId,eState,sAvtar,sUserName,bIsOwnPlayer){
+		console.log("Here in setPlayerData");
 		if(bIsOwnPlayer)
 		{
 			this.setStatusForPlayer(eState);
@@ -116,7 +117,7 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		else{
 			this.setStatusForOpp(eState);
 		}
-		setUserProfilePic(sAvtar);
+		this.setUserProfilePic(sAvtar);
 	}
 	// Write your code here.
 

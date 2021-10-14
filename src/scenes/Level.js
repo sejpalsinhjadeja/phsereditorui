@@ -214,8 +214,8 @@ class Level extends Phaser.Scene {
 		// table_id_txt
 		const table_id_txt = this.add.text(643, 50, "", {});
 		table_id_txt.setOrigin(0, 0.5);
-		table_id_txt.text = "Table Id:#46274f1a";
-		table_id_txt.setStyle({"fontFamily":"Roboto-Regular","fontSize":"30px"});
+		table_id_txt.text = "Table Id:#46274f1ab";
+		table_id_txt.setStyle({"fixedWidth":300,"fontFamily":"Roboto-Regular","fontSize":"30px"});
 		header.add(table_id_txt);
 
 		// player_balance_txt
@@ -275,14 +275,12 @@ class Level extends Phaser.Scene {
 		this.opp_3 = opp_3;
 		this.opp_4 = opp_4;
 		this.opp_5 = opp_5;
-
 		this.player_name_txt = player_name_txt;
 		this.player_profile_img = player_profile_img;
 		this.player_balance_txt = player_balance_txt;
 		this.table_id_txt = table_id_txt;
 		this.point_in_rupee_txt = point_in_rupee_txt;
 		this.game_type_txt = game_type_txt;
-
 		this.events.emit("scene-awake");
 	}
 
@@ -307,11 +305,11 @@ class Level extends Phaser.Scene {
 
 
 		this.editorCreate();
-		sAuthToken = "";
-		sTableId = "";
-		this.oSocketConnection = new SocketHandler(this,sAuthToken,sTableId,sRootUrl);
-		oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
-		this.oPlayerManager = new PlayerManager(oPlayerList);
+		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0MTg0NjQ5fQ.JGB4H4AbnbPrMZ9vc7Lkxl8OxHybWy_UWOJtDzUmuGo";
+		this.sTableId = "6167b277d811ba3dc5616db2";
+		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
+		let oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
+		this.oPlayerManager = new PlayerManager(oPlayerList,2);
 
 	}
 
@@ -324,7 +322,7 @@ class Level extends Phaser.Scene {
 		this.game_type_txt = game_type_txt;
 	}
 
-	setHeaderData(sUserName,sTableId,sUserBalance,sPoints,sGameType){
+	setHeaderData(sUserName,sUserBalance,sTableId,sGameType,sPoints){
 		this.player_name_txt.text = sUserName;
 		this.player_balance_txt.text = sUserBalance;
 		this.table_id_txt.text = sTableId;
@@ -341,8 +339,8 @@ class Level extends Phaser.Scene {
 
 	gameStateDataHandler(oGameStateData){
 		this.oPlayerManager.setPlayerData(oGameStateData.participant,oGameStateData.participants);
-		oOwnPlayerData = oGameStateData.participant;
-		this.setHeaderData(oOwnPlayerData.sUserName,oOwnPlayerData.sTableId,oOwnPlayerData.sTableId)
+		let oOwnPlayerData = oGameStateData.participant;
+		this.setHeaderData(oOwnPlayerData.sUserName,149.24,"Table Id : #"+oOwnPlayerData.iTableId.substring(0,9),"Point Rummy- 2 Deck ","₹ "+oOwnPlayerData.nBalance);
 	}
 
 	/* END-USER-CODE */

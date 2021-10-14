@@ -439,7 +439,8 @@
                     "x": 643,
                     "y": 50,
                     "originX": 0,
-                    "text": "Table Id:#46274f1a",
+                    "text": "Table Id:#46274f1ab",
+                    "fixedWidth": 300,
                     "fontFamily": "Roboto-Regular",
                     "fontSize": "30px"
                 },

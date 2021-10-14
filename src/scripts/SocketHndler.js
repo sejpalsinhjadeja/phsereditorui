@@ -16,7 +16,6 @@ class SocketHandler {
         // Root Socket Connection Events - Start
         this.oRootSocketConn.on('connect', () => {
             console.log("Connected to Socket",this.oRootSocketConn.id);
-            this.oGameObj.testingGame(this.oRootSocketConn.id);
         });
         this.oRootSocketConn.on("error", (error) => {
             console.log("Connection error",error);
