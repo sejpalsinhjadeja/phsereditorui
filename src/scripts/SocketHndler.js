@@ -52,6 +52,7 @@ class SocketHandler {
         //  General Gameplay Events
         this.oTableSocketConn.on("resUserJoined", (resUserJoined) => {
             console.log("Table resUserJoined",resUserJoined);
+            this.oGameObj.hideTableInfo();
         });
         this.oTableSocketConn.on("resGameState", (resGameState) => {
             // Set user profile and user name
@@ -64,6 +65,7 @@ class SocketHandler {
         });
         this.oTableSocketConn.on("resGameInitilizeTimer", (resGameInitilizeTimer) => {
             console.log("Table resGameInitilizeTimer",resGameInitilizeTimer);
+            this.oGameObj.showInitilizeTimer(resGameInitilizeTimer);
         });
         this.oTableSocketConn.on("resHand", (resHand) => {
             //console.log("Table resHand",resHand);

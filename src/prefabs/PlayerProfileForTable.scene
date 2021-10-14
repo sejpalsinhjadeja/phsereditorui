@@ -17,6 +17,17 @@
             "list": [
                 {
                     "type": "Image",
+                    "id": "6ccb6309-6865-407c-9fad-010e0bb65092",
+                    "label": "circle",
+                    "components": [],
+                    "texture": {
+                        "key": "circle"
+                    },
+                    "scaleX": 0.73,
+                    "scaleY": 0.73
+                },
+                {
+                    "type": "Image",
                     "id": "e7587276-a176-4df5-b37d-37e6bef6ca2b",
                     "label": "defaultProfile_1",
                     "components": [],

@@ -8,6 +8,12 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 	constructor(scene, x, y) {
 		super(scene, x ?? 0, y ?? 0);
 
+		// circle
+		const circle = scene.add.image(0, 0, "circle");
+		circle.scaleX = 0.73;
+		circle.scaleY = 0.73;
+		this.add(circle);
+
 		// defaultProfile_1
 		const defaultProfile_1 = scene.add.image(0, 0, "defaultProfile");
 		defaultProfile_1.scaleX = 1.6;
@@ -137,7 +143,6 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 			this.setStatusForOpp(eState);
 		}
 		this.setUserProfilePic(sAvtar,sPlayerId,bIsOwnPlayer);
-		
 	}
 	// Write your code here.
 

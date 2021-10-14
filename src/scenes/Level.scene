@@ -496,6 +496,17 @@
                     "list": [
                         {
                             "type": "Image",
+                            "id": "26b23840-8196-4171-93b6-27155b8259ab",
+                            "label": "circle_bg",
+                            "components": [],
+                            "texture": {
+                                "key": "circle"
+                            },
+                            "scaleX": 0.35,
+                            "scaleY": 0.35
+                        },
+                        {
+                            "type": "Image",
                             "id": "046b0a68-4e68-4a86-9134-c14fa67f8d65",
                             "label": "player_profile_img",
                             "components": [],
@@ -507,18 +518,6 @@
                         },
                         {
                             "type": "Image",
-                            "id": "35c5e649-478b-48b8-9bae-347d8b1a30e5",
-                            "label": "mask",
-                            "components": [],
-                            "texture": {
-                                "key": "profileMask"
-                            },
-                            "x": 1,
-                            "scaleX": 0.7675169577654787,
-                            "scaleY": 0.7675169577654787
-                        },
-                        {
-                            "type": "Image",
                             "id": "a0150ced-7d17-4de7-86ad-c692e127e6c7",
                             "label": "white_border",
                             "components": [],
@@ -527,8 +526,32 @@
                             },
                             "scaleX": 0.7,
                             "scaleY": 0.7
+                        },
+                        {
+                            "type": "Image",
+                            "id": "f6ad260f-44fc-4fda-b701-575db8822589",
+                            "label": "profileMask_1",
+                            "components": [],
+                            "texture": {
+                                "key": "profileMask"
+                            },
+                            "scaleX": 0.7,
+                            "scaleY": 0.7
                         }
                     ]
+                },
+                {
+                    "type": "Image",
+                    "id": "35c5e649-478b-48b8-9bae-347d8b1a30e5",
+                    "label": "mask",
+                    "components": [],
+                    "texture": {
+                        "key": "mask 1"
+                    },
+                    "x": 54,
+                    "y": 50,
+                    "scaleX": 0.5,
+                    "scaleY": 0.5
                 },
                 {
                     "type": "Image",

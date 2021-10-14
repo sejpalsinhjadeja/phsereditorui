@@ -246,23 +246,35 @@ class Level extends Phaser.Scene {
 		player_Profile.scaleY = 0.75;
 		header.add(player_Profile);
 
+		// circle_bg
+		const circle_bg = this.add.image(0, 0, "circle");
+		circle_bg.scaleX = 0.35;
+		circle_bg.scaleY = 0.35;
+		player_Profile.add(circle_bg);
+
 		// player_profile_img
 		const player_profile_img = this.add.image(0, 0, "defaultProfile");
 		player_profile_img.scaleX = 0.7;
 		player_profile_img.scaleY = 0.7;
 		player_Profile.add(player_profile_img);
 
-		// mask
-		const mask = this.add.image(1, 0, "profileMask");
-		mask.scaleX = 0.7675169577654787;
-		mask.scaleY = 0.7675169577654787;
-		player_Profile.add(mask);
-
 		// white_border
 		const white_border = this.add.image(0, 0, "White-border");
 		white_border.scaleX = 0.7;
 		white_border.scaleY = 0.7;
 		player_Profile.add(white_border);
+
+		// profileMask_1
+		const profileMask_1 = this.add.image(0, 0, "profileMask");
+		profileMask_1.scaleX = 0.7;
+		profileMask_1.scaleY = 0.7;
+		player_Profile.add(profileMask_1);
+
+		// mask
+		const mask = this.add.image(54, 50, "mask 1");
+		mask.scaleX = 0.5;
+		mask.scaleY = 0.5;
+		header.add(mask);
 
 		// preview
 		const preview = this.add.image(1032, 550, "preview");
@@ -290,6 +302,7 @@ class Level extends Phaser.Scene {
 		this.point_in_rupee_txt = point_in_rupee_txt;
 		this.game_type_txt = game_type_txt;
 		this.maskImg = mask;
+		this.player_Profile = player_Profile;
 
 		this.table_info_txt = table_info_txt;
 		this.table_info_lable = table_info_lable;
@@ -318,8 +331,8 @@ class Level extends Phaser.Scene {
 
 
 		this.editorCreate();
-		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0MTg0NjQ5fQ.JGB4H4AbnbPrMZ9vc7Lkxl8OxHybWy_UWOJtDzUmuGo";
-		this.sTableId = "6167d261d811ba3dc561764c";
+		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0MjE0NDkzfQ.PGxjPuxeFoyD-3Z8Xhk13Eg6M0uKOSXHjr3b9Iiv2A8";
+		this.sTableId = "616836f8d811ba3dc5618530";
 		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
 		let oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
 		this.oPlayerManager = new PlayerManager(oPlayerList,2);
@@ -334,6 +347,7 @@ class Level extends Phaser.Scene {
 		this.point_in_rupee_txt = point_in_rupee_txt;
 		this.game_type_txt = game_type_txt;
 		this.maskImg = mask;
+		this.player_Profile = player_Profile;
 
 		this.table_info_txt = table_info_txt;
 		this.table_info_lable = table_info_lable;
@@ -359,19 +373,29 @@ class Level extends Phaser.Scene {
 	}
 
 	setHeaderUserProfileImage(sPlayerId){
-		// Mask Logic
 		this.player_profile_img.setTexture(sPlayerId).setScale(0.17);
+		this.maskImg.visible = false;
+		const mask = this.maskImg.createBitmapMask();
+        this.player_profile_img.mask = mask;
 	}
 
 
 	gameStateDataHandler(oGameStateData){
 		this.oPlayerManager.setPlayerData(oGameStateData.participant,oGameStateData.participants);
 		let oOwnPlayerData = oGameStateData.participant;
-		this.setHeaderData(oOwnPlayerData.sUserName,149.24,"Table Id : #"+oOwnPlayerData.iTableId.substring(0,9),"Point Rummy- 2 Deck ","₹ "+oOwnPlayerData.nBalance);
+		this.setHeaderData(oOwnPlayerData.sUserName,149.24,"Table Id : #"+oOwnPlayerData.iTableId.substring(0,9),"Point Rummy - 2 Deck ","₹ "+oOwnPlayerData.nBalance);
 	}
 
 	gamePlayerStateDataHandler(oGameStateData){
+		let nTimerVal = parseInt(oGameStateData.value);
+		this.showTableInfo("The game will start in "+nTimerVal+" second(s)");
+		if(nTimerVal<=0){
+			this.hideTableInfo();
+		}
+	}
 
+	showInitilizeTimer(){
+		//showTableInfo();
 	}
 
 	/* END-USER-CODE */
