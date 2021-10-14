@@ -535,8 +535,8 @@
                             "texture": {
                                 "key": "profileMask"
                             },
-                            "scaleX": 0.7,
-                            "scaleY": 0.7
+                            "scaleX": 0.65,
+                            "scaleY": 0.65
                         }
                     ]
                 },
@@ -551,7 +551,8 @@
                     "x": 54,
                     "y": 50,
                     "scaleX": 0.5,
-                    "scaleY": 0.5
+                    "scaleY": 0.5,
+                    "visible": false
                 },
                 {
                     "type": "Image",

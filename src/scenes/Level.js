@@ -266,14 +266,15 @@ class Level extends Phaser.Scene {
 
 		// profileMask_1
 		const profileMask_1 = this.add.image(0, 0, "profileMask");
-		profileMask_1.scaleX = 0.7;
-		profileMask_1.scaleY = 0.7;
+		profileMask_1.scaleX = 0.65;
+		profileMask_1.scaleY = 0.65;
 		player_Profile.add(profileMask_1);
 
 		// mask
 		const mask = this.add.image(54, 50, "mask 1");
 		mask.scaleX = 0.5;
 		mask.scaleY = 0.5;
+		mask.visible = false;
 		header.add(mask);
 
 		// preview
@@ -294,18 +295,6 @@ class Level extends Phaser.Scene {
 		this.opp_3 = opp_3;
 		this.opp_4 = opp_4;
 		this.opp_5 = opp_5;
-
-		this.player_name_txt = player_name_txt;
-		this.player_profile_img = player_profile_img;
-		this.player_balance_txt = player_balance_txt;
-		this.table_id_txt = table_id_txt;
-		this.point_in_rupee_txt = point_in_rupee_txt;
-		this.game_type_txt = game_type_txt;
-		this.maskImg = mask;
-		this.player_Profile = player_Profile;
-
-		this.table_info_txt = table_info_txt;
-		this.table_info_lable = table_info_lable;
 
 		this.events.emit("scene-awake");
 	}
