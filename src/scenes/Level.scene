@@ -312,6 +312,13 @@
                             "scaleY": 0.8,
                             "visible": false,
                             "nestedPrefabs": []
+                        },
+                        {
+                            "type": "Container",
+                            "id": "7eccc758-1c8d-48db-aac5-c80dcfcc0adf",
+                            "label": "userhand",
+                            "components": [],
+                            "list": []
                         }
                     ]
                 }
@@ -591,19 +598,6 @@
                     "alphaTopRight": 0.6,
                     "alphaBottomLeft": 0.6,
                     "alphaBottomRight": 0.6
-                },
-                {
-                    "prefabId": "666489eb-2bd2-47df-b105-e66ed6ba2dd0",
-                    "id": "7446a224-0330-42ec-883e-6e8a2164b758",
-                    "unlock": [
-                        "x",
-                        "y"
-                    ],
-                    "label": "BaseCard",
-                    "components": [],
-                    "x": 1297,
-                    "y": 692,
-                    "nestedPrefabs": []
                 }
             ]
         }

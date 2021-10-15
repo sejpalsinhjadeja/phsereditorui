@@ -50,25 +50,25 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 
 	/* START-USER-CODE */
 	updateCardUi(){
-		if(eCardType == eCardTypeEnum.Diamond){
+		if(this.eCardType == eCardTypeEnum.Diamond){
 			this.upper_small_img.setTexture('d');
 			this.lower_big_img.setTexture('d');
 		}
-		if(eCardType == eCardTypeEnum.Club){
+		if(this.eCardType == eCardTypeEnum.Club){
 			this.upper_small_img.setTexture('c');
 			this.lower_big_img.setTexture('c');
 		}
-		if(eCardType == eCardTypeEnum.Heart){
+		if(this.eCardType == eCardTypeEnum.Heart){
 			this.upper_small_img.setTexture('h');
 			this.lower_big_img.setTexture('h');
 		}
-		if(eCardType == eCardTypeEnum.Spade){
+		if(this.eCardType == eCardTypeEnum.Spade){
 			this.upper_small_img.setTexture('s');
 			this.lower_big_img.setTexture('s');
 		}
 	}
 
-	setCardValue(nCardVal, eCardType){
+	setCardData(nCardVal, eCardType){
 		this.nCardVal = nCardVal;
 		this.eCardType = eCardType;
 		this.updateCardUi();

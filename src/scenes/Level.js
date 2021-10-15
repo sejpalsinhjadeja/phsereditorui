@@ -152,6 +152,10 @@ class Level extends Phaser.Scene {
 		opp_5.visible = false;
 		game_table.add(opp_5);
 
+		// userhand
+		const userhand = this.add.container(0, 0);
+		game_table.add(userhand);
+
 		// Header
 		const header = this.add.container(0, -1);
 
@@ -301,17 +305,13 @@ class Level extends Phaser.Scene {
 		capture.alphaBottomRight = 0.6;
 		header.add(capture);
 
-		// BaseCard
-		const baseCard = new BaseCardPrefab(this, 1297, 692);
-		header.add(baseCard);
-
 		this.our_player = our_player;
 		this.opp_1 = opp_1;
 		this.opp_2 = opp_2;
 		this.opp_3 = opp_3;
 		this.opp_4 = opp_4;
 		this.opp_5 = opp_5;
-		
+
 		this.player_name_txt = player_name_txt;
 		this.player_profile_img = player_profile_img;
 		this.player_balance_txt = player_balance_txt;
@@ -320,6 +320,7 @@ class Level extends Phaser.Scene {
 		this.game_type_txt = game_type_txt;
 		this.maskImg = mask;
 		this.player_Profile = player_Profile;
+		this.userhand = userhand;
 
 		this.table_info_txt = table_info_txt;
 		this.table_info_lable = table_info_lable;
@@ -343,6 +344,21 @@ class Level extends Phaser.Scene {
 	/* START-USER-CODE */
 
 	// Write your code here
+	createTemp(){
+		this.player_name_txt = player_name_txt;
+		this.player_profile_img = player_profile_img;
+		this.player_balance_txt = player_balance_txt;
+		this.table_id_txt = table_id_txt;
+		this.point_in_rupee_txt = point_in_rupee_txt;
+		this.game_type_txt = game_type_txt;
+		this.maskImg = mask;
+		this.player_Profile = player_Profile;
+		this.userhand = userhand;
+
+		this.table_info_txt = table_info_txt;
+		this.table_info_lable = table_info_lable;
+
+	}
 
 	create() {
 
@@ -354,22 +370,13 @@ class Level extends Phaser.Scene {
 		let oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
 		this.oPlayerManager = new PlayerManager(oPlayerList,2);
 
-	}
-
-	createTemp(){
-		this.player_name_txt = player_name_txt;
-		this.player_profile_img = player_profile_img;
-		this.player_balance_txt = player_balance_txt;
-		this.table_id_txt = table_id_txt;
-		this.point_in_rupee_txt = point_in_rupee_txt;
-		this.game_type_txt = game_type_txt;
-		this.maskImg = mask;
-		this.player_Profile = player_Profile;
-
-		this.table_info_txt = table_info_txt;
-		this.table_info_lable = table_info_lable;
+		this.tempCard = new BaseCardPrefab(this, 0, 0);
+		this.tempCard.setCardData(5,eCardTypeEnum.Spade);
+		this.userhand.add(this.tempCard);
 
 	}
+
+
 
 	setHeaderData(sUserName,sUserBalance,sTableId,sGameType,sPoints){
 		if(sUserName.length > 12)

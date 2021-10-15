@@ -17,6 +17,11 @@
                 "key": "backDeck"
             },
             {
+                "url": "src/prefabs/BaseCardPrefab.js",
+                "type": "script",
+                "key": "BaseCardPrefab"
+            },
+            {
                 "url": "assets/Sprites/BGPattern.png",
                 "type": "image",
                 "key": "BGPattern"
@@ -37,6 +42,16 @@
                 "key": "Card"
             },
             {
+                "url": "src/scripts/CardData.js",
+                "type": "script",
+                "key": "CardData"
+            },
+            {
+                "url": "src/scripts/CardGroup.js",
+                "type": "script",
+                "key": "CardGroup"
+            },
+            {
                 "url": "assets/Sprites/Cash-icon.png",
                 "type": "image",
                 "key": "Cash-icon"
@@ -45,6 +60,11 @@
                 "url": "assets/Sprites/circle.png",
                 "type": "image",
                 "key": "circle"
+            },
+            {
+                "url": "src/scripts/ClosedDeck.js",
+                "type": "script",
+                "key": "ClosedDeck"
             },
             {
                 "url": "assets/Sprites/d.png",
@@ -160,6 +180,11 @@
                 "url": "assets/Sprites/On.png",
                 "type": "image",
                 "key": "On"
+            },
+            {
+                "url": "src/scripts/OpenDeck.js",
+                "type": "script",
+                "key": "OpenDeck"
             },
             {
                 "url": "assets/Sprites/Player-table-Glow.png",
@@ -287,6 +312,11 @@
                 "url": "assets/Sprites/Time-counter.png",
                 "type": "image",
                 "key": "Time-counter"
+            },
+            {
+                "url": "src/scripts/UserHand.js",
+                "type": "script",
+                "key": "UserHand"
             },
             {
                 "url": "assets/Sprites/White-border.png",
