@@ -7,9 +7,34 @@
                 "key": "AddCash"
             },
             {
+                "url": "assets/Sprites/Back.png",
+                "type": "image",
+                "key": "Back"
+            },
+            {
+                "url": "assets/Sprites/backDeck.png",
+                "type": "image",
+                "key": "backDeck"
+            },
+            {
                 "url": "assets/Sprites/BGPattern.png",
                 "type": "image",
                 "key": "BGPattern"
+            },
+            {
+                "url": "assets/Sprites/c.png",
+                "type": "image",
+                "key": "c"
+            },
+            {
+                "url": "assets/Sprites/Capture.PNG",
+                "type": "image",
+                "key": "Capture"
+            },
+            {
+                "url": "assets/Sprites/Card.png",
+                "type": "image",
+                "key": "Card"
             },
             {
                 "url": "assets/Sprites/Cash-icon.png",
@@ -20,6 +45,21 @@
                 "url": "assets/Sprites/circle.png",
                 "type": "image",
                 "key": "circle"
+            },
+            {
+                "url": "assets/Sprites/d.png",
+                "type": "image",
+                "key": "d"
+            },
+            {
+                "url": "assets/Sprites/D-icon.png",
+                "type": "image",
+                "key": "D-icon"
+            },
+            {
+                "url": "assets/Sprites/Deck-Out-Line.png",
+                "type": "image",
+                "key": "Deck-Out-Line"
             },
             {
                 "url": "assets/Sprites/defaultProfile.png",
@@ -37,6 +77,16 @@
                 "key": "GameManager"
             },
             {
+                "url": "assets/Sprites/h.png",
+                "type": "image",
+                "key": "h"
+            },
+            {
+                "url": "assets/Sprites/Joker.png",
+                "type": "image",
+                "key": "Joker"
+            },
+            {
                 "url": "assets/Sprites/mask.png",
                 "type": "image",
                 "key": "mask"
@@ -50,11 +100,6 @@
                 "url": "assets/Sprites/Menu-icon.png",
                 "type": "image",
                 "key": "Menu-icon"
-            },
-            {
-                "url": "src/scripts/MyClass.js",
-                "type": "script",
-                "key": "MyClass"
             },
             {
                 "url": "assets/Sprites/Network.png",
@@ -152,6 +197,11 @@
                 "url": "assets/Sprites/Rounded Rectangle 4@2x.png",
                 "type": "image",
                 "key": "Rounded Rectangle 4@2x"
+            },
+            {
+                "url": "assets/Sprites/s.png",
+                "type": "image",
+                "key": "s"
             },
             {
                 "url": "src/scripts/SocketHndler.js",

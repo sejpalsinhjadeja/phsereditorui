@@ -46,7 +46,7 @@ class SocketHandler {
             console.log("Table disconnect",disconnect);
         });
         this.oTableSocketConn.on("resKickout", (resKickout) => {
-            //console.log("Table resKickout",resKickout);
+            console.log("Table resKickout",resKickout);
         });
 
         //  General Gameplay Events
@@ -68,49 +68,50 @@ class SocketHandler {
             this.oGameObj.showInitilizeTimer(resGameInitilizeTimer);
         });
         this.oTableSocketConn.on("resHand", (resHand) => {
-            //console.log("Table resHand",resHand);
+            console.log("Table resHand",resHand);
         });
         this.oTableSocketConn.on("resAutoDiscard", (resAutoDiscard) => {
-            //console.log("Table resAutoDiscard",resAutoDiscard);
+            console.log("Table resAutoDiscard",resAutoDiscard);
         });
         this.oTableSocketConn.on("resPlayersState", (resPlayersState) => {
             console.log("Table resPlayersState",resPlayersState);
+            this.oGameObj.gamePlayerStateDataHandler(resPlayersState);
         });
         this.oTableSocketConn.on("resHighCards", (resHighCards) => {
-            //console.log("Table resHighCards",resHighCards);
+            console.log("Table resHighCards",resHighCards);
         });
         this.oTableSocketConn.on("resClosedCard", (resClosedCard) => {
-            //console.log("Table resClosedCard",resClosedCard);
+            console.log("Table resClosedCard",resClosedCard);
         });
         this.oTableSocketConn.on("resWildJoker", (resWildJoker) => {
-            //console.log("Table resWildJoker",resWildJoker);
+            console.log("Table resWildJoker",resWildJoker);
         });
         this.oTableSocketConn.on("resPlayerTurn", (resPlayerTurn) => {
-            //console.log("Table resPlayerTurn",resPlayerTurn);
+            console.log("Table resPlayerTurn",resPlayerTurn);
         });
         this.oTableSocketConn.on("resCreditBalance", (resCreditBalance) => {
             console.log("Table resCreditBalance",resCreditBalance);
         });
         this.oTableSocketConn.on("resOpenedDeck", (resOpenedDeck) => {
-            //console.log("Table resOpenedDeck",resOpenedDeck);
+            console.log("Table resOpenedDeck",resOpenedDeck);
         });
         this.oTableSocketConn.on("resMessage", (resMessage) => {
-            //console.log("Table resMessage",resMessage);
+            console.log("Table resMessage",resMessage);
         });
         this.oTableSocketConn.on("resOfError", (resOfError) => {
-            //console.log("Table resOfError",resOfError);
+            console.log("Table resOfError",resOfError);
         });
         this.oTableSocketConn.on("resDeclare", (resDeclare) => {
-            //console.log("Table resDeclare",resDeclare);
+            console.log("Table resDeclare",resDeclare);
         });
         this.oTableSocketConn.on("resDeclareResult", (resDeclareResult) => {
-            //console.log("Table resDeclareResult",resDeclareResult);
+            console.log("Table resDeclareResult",resDeclareResult);
         });
         this.oTableSocketConn.on("resDroppedPlayer", (resDroppedPlayer) => {
-            //console.log("Table resDroppedPlayer",resDroppedPlayer);
+            console.log("Table resDroppedPlayer",resDroppedPlayer);
         });
         this.oTableSocketConn.on("resPlayerLeave", (resPlayerLeave) => {
-            //console.log("Table resPlayerLeave",resPlayerLeave);
+            console.log("Table resPlayerLeave",resPlayerLeave);
         });
         // Table Socket Connection Events - End
 

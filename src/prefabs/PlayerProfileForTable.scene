@@ -65,7 +65,7 @@
                     "label": "player_point_bg",
                     "components": [],
                     "x": -1,
-                    "y": 104,
+                    "y": 120,
                     "list": [
                         {
                             "type": "Image",
@@ -125,6 +125,17 @@
                     "align": "justify",
                     "fontFamily": "OswaldRegular",
                     "fontSize": "25px"
+                },
+                {
+                    "type": "Text",
+                    "id": "a0e541fd-6b8b-48e5-ac03-7856e3e8f1b0",
+                    "label": "opp_name_txt",
+                    "components": [],
+                    "y": -120,
+                    "visible": false,
+                    "text": "sejsinh01",
+                    "fontFamily": "OswaldRegular",
+                    "fontSize": "30px"
                 }
             ]
         }

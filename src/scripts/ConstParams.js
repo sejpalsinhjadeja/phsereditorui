@@ -1,7 +1,7 @@
 window.sRootUrl = "https://stag.rummy24.com";
 
 
-window.eCardType = {
+window.eCardTypeEnum = {
   Diamond: "Diamond",
   Club: "Club",
   Heart: "Heart",

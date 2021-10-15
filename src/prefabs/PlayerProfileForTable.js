@@ -33,7 +33,7 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		this.add(tH02_Golden_Ring_1);
 
 		// player_point_bg
-		const player_point_bg = scene.add.container(-1, 104);
+		const player_point_bg = scene.add.container(-1, 120);
 		this.add(player_point_bg);
 
 		// rounded_Rectangle_4_2x
@@ -73,6 +73,14 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		opp_status_txt.setStyle({"align":"justify","fontFamily":"OswaldRegular","fontSize":"25px"});
 		this.add(opp_status_txt);
 
+		// opp_name_txt
+		const opp_name_txt = scene.add.text(0, -120, "", {});
+		opp_name_txt.setOrigin(0.5, 0.5);
+		opp_name_txt.visible = false;
+		opp_name_txt.text = "sejsinh01";
+		opp_name_txt.setStyle({"fontFamily":"OswaldRegular","fontSize":"30px"});
+		this.add(opp_name_txt);
+
 		/* START-USER-CTR-CODE */
 		this.oSceneObj = scene;
 		this.opp_status_txt = opp_status_txt;
@@ -80,6 +88,7 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		this.you_txt = you_txt;
 		this.defaultProfile_1 = defaultProfile_1;
 		this.profileMask = profileMask;
+		this.opp_name_txt = opp_name_txt;
 		//this.showTimerCountDown();
 		// Write your code here.
 		/* END-USER-CTR-CODE */
@@ -140,6 +149,13 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 			this.setStatusForPlayer(eState);
 		}
 		else{
+
+			if(sUserName.lenght > 8){
+				sUserName = sUserName.substring(0,8) + "..";
+			}
+			this.opp_name_txt.text = sUserName;
+			this.opp_name_txt.visible = true;
+			console.log("sUserName :"+sUserName);
 			this.setStatusForOpp(eState);
 		}
 		this.setUserProfilePic(sAvtar,sPlayerId,bIsOwnPlayer);

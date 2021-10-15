@@ -235,8 +235,8 @@ class Level extends Phaser.Scene {
 		// player_name_txt
 		const player_name_txt = this.add.text(101, 50, "", {});
 		player_name_txt.setOrigin(0, 0.5);
-		player_name_txt.text = "sejsinh01";
-		player_name_txt.setStyle({"fixedWidth":200,"fontFamily":"grandnationalsuperital","fontSize":"30px"});
+		player_name_txt.text = "ajinkyagadan";
+		player_name_txt.setStyle({"fixedWidth":250,"fontFamily":"grandnationalsuperital","fontSize":"30px"});
 		player_name_txt.setWordWrapWidth(12);
 		header.add(player_name_txt);
 
@@ -289,12 +289,40 @@ class Level extends Phaser.Scene {
 		preview.alphaBottomRight = 0.6;
 		header.add(preview);
 
+		// capture
+		const capture = this.add.image(1029, 560, "Capture");
+		capture.scaleX = 1.250639250681945;
+		capture.scaleY = 1.2110077059710849;
+		capture.visible = false;
+		capture.alpha = 0.6;
+		capture.alphaTopLeft = 0.6;
+		capture.alphaTopRight = 0.6;
+		capture.alphaBottomLeft = 0.6;
+		capture.alphaBottomRight = 0.6;
+		header.add(capture);
+
+		// BaseCard
+		const baseCard = new BaseCardPrefab(this, 1297, 692);
+		header.add(baseCard);
+
 		this.our_player = our_player;
 		this.opp_1 = opp_1;
 		this.opp_2 = opp_2;
 		this.opp_3 = opp_3;
 		this.opp_4 = opp_4;
 		this.opp_5 = opp_5;
+		
+		this.player_name_txt = player_name_txt;
+		this.player_profile_img = player_profile_img;
+		this.player_balance_txt = player_balance_txt;
+		this.table_id_txt = table_id_txt;
+		this.point_in_rupee_txt = point_in_rupee_txt;
+		this.game_type_txt = game_type_txt;
+		this.maskImg = mask;
+		this.player_Profile = player_Profile;
+
+		this.table_info_txt = table_info_txt;
+		this.table_info_lable = table_info_lable;
 
 		this.events.emit("scene-awake");
 	}
@@ -320,8 +348,8 @@ class Level extends Phaser.Scene {
 
 
 		this.editorCreate();
-		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0MjE0NDkzfQ.PGxjPuxeFoyD-3Z8Xhk13Eg6M0uKOSXHjr3b9Iiv2A8";
-		this.sTableId = "616836f8d811ba3dc5618530";
+		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0Mjk0MDU2fQ.dlnYEDC_N6ROlvWwvOqmOp003VapRB7_nv4HSmCc48A";
+		this.sTableId = "6169598ad811ba3dc56191b3";
 		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
 		let oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
 		this.oPlayerManager = new PlayerManager(oPlayerList,2);
@@ -344,6 +372,10 @@ class Level extends Phaser.Scene {
 	}
 
 	setHeaderData(sUserName,sUserBalance,sTableId,sGameType,sPoints){
+		if(sUserName.length > 12)
+		{
+			sUserName = sUserName.substring(0,12)+"\n"+sUserName.substring(12,sUserName.length);
+		}
 		this.player_name_txt.text = sUserName;
 		this.player_balance_txt.text = sUserBalance;
 		this.table_id_txt.text = sTableId;
@@ -358,7 +390,7 @@ class Level extends Phaser.Scene {
 	}
 
 	hideTableInfo(){
-		his.table_info_lable.visible = false;
+		this.table_info_lable.visible = false;
 	}
 
 	setHeaderUserProfileImage(sPlayerId){
@@ -375,16 +407,18 @@ class Level extends Phaser.Scene {
 		this.setHeaderData(oOwnPlayerData.sUserName,149.24,"Table Id : #"+oOwnPlayerData.iTableId.substring(0,9),"Point Rummy - 2 Deck ","₹ "+oOwnPlayerData.nBalance);
 	}
 
-	gamePlayerStateDataHandler(oGameStateData){
-		let nTimerVal = parseInt(oGameStateData.value);
+	gamePlayerStateDataHandler(oPlayerStateData){
+		console.log("gamePlayerStateDataHandler");
+		this.oPlayerManager.setPlayerState(oPlayerStateData);
+	}
+
+	showInitilizeTimer(oGameInitilizeTimerData){
+		let nTimerVal = parseInt(oGameInitilizeTimerData.value);
+		console.log("Timer : "+oGameInitilizeTimerData.value);
 		this.showTableInfo("The game will start in "+nTimerVal+" second(s)");
 		if(nTimerVal<=0){
 			this.hideTableInfo();
 		}
-	}
-
-	showInitilizeTimer(){
-		//showTableInfo();
 	}
 
 	/* END-USER-CODE */

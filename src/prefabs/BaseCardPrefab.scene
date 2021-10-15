@@ -1,0 +1,101 @@
+{
+    "id": "666489eb-2bd2-47df-b105-e66ed6ba2dd0",
+    "settings": {
+        "createMethodName": "",
+        "preloadMethodName": "",
+        "compilerOutputLanguage": "JAVA_SCRIPT",
+        "exportClass": false,
+        "autoImport": false,
+        "generateAwakeHandler": false,
+        "compilerInsertSpaces": false,
+        "compilerTabSize": 4,
+        "borderWidth": 2050,
+        "borderHeight": 1120,
+        "borderX": 0,
+        "borderY": 0
+    },
+    "sceneType": "PREFAB",
+    "displayList": [
+        {
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "type": "Container",
+            "id": "4e644662-1700-41db-bbf3-e6c5e46b8877",
+            "label": "BaseCard",
+            "components": [],
+            "x": 0,
+            "y": 0,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "177f2124-ed0f-4539-bcca-94c2a545941f",
+                    "label": "card_bg",
+                    "components": [],
+                    "texture": {
+                        "key": "Card"
+                    },
+                    "scaleX": 1.4064999411287824,
+                    "scaleY": 1.8632437492674367
+                },
+                {
+                    "type": "Image",
+                    "id": "fcd1f0d5-24d6-485a-916a-8ff2eb50c31b",
+                    "label": "upper_small_img",
+                    "components": [],
+                    "texture": {
+                        "key": "d"
+                    },
+                    "x": -57,
+                    "y": -7,
+                    "scaleX": 0.36,
+                    "scaleY": 0.36
+                },
+                {
+                    "type": "Image",
+                    "id": "ba9fca90-e2d4-4dd2-823e-14f45ef318ea",
+                    "label": "lower_big_img",
+                    "components": [],
+                    "texture": {
+                        "key": "d"
+                    },
+                    "x": 32,
+                    "y": 53,
+                    "scaleX": 0.8,
+                    "scaleY": 0.8
+                },
+                {
+                    "type": "Image",
+                    "id": "2dded651-e004-475f-9d42-6436a23af0ff",
+                    "label": "joker_img",
+                    "components": [],
+                    "texture": {
+                        "key": "Joker"
+                    },
+                    "x": -57,
+                    "y": 40,
+                    "scaleX": 0.35,
+                    "scaleY": 0.35
+                },
+                {
+                    "type": "Text",
+                    "id": "b1240107-9c5c-412e-bca4-fd70fbc6095e",
+                    "label": "card_number_txt",
+                    "components": [],
+                    "x": -55,
+                    "y": -75,
+                    "text": "5",
+                    "fontFamily": "ANTONIO-REGULAR_0",
+                    "fontSize": "80px",
+                    "color": "#a30303ff"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

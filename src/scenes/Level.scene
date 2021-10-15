@@ -478,8 +478,8 @@
                     "x": 101,
                     "y": 50,
                     "originX": 0,
-                    "text": "sejsinh01",
-                    "fixedWidth": 200,
+                    "text": "ajinkyagadan",
+                    "fixedWidth": 250,
                     "fontFamily": "grandnationalsuperital",
                     "fontSize": "30px",
                     "wordWrapWidth": 12
@@ -572,6 +572,38 @@
                     "alphaTopRight": 0.6,
                     "alphaBottomLeft": 0.6,
                     "alphaBottomRight": 0.6
+                },
+                {
+                    "type": "Image",
+                    "id": "3c0fdeda-6f8d-4d63-adb4-2b499bd5d886",
+                    "label": "capture",
+                    "components": [],
+                    "texture": {
+                        "key": "Capture"
+                    },
+                    "x": 1029,
+                    "y": 560,
+                    "scaleX": 1.250639250681945,
+                    "scaleY": 1.2110077059710849,
+                    "visible": false,
+                    "alpha": 0.6,
+                    "alphaTopLeft": 0.6,
+                    "alphaTopRight": 0.6,
+                    "alphaBottomLeft": 0.6,
+                    "alphaBottomRight": 0.6
+                },
+                {
+                    "prefabId": "666489eb-2bd2-47df-b105-e66ed6ba2dd0",
+                    "id": "7446a224-0330-42ec-883e-6e8a2164b758",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "BaseCard",
+                    "components": [],
+                    "x": 1297,
+                    "y": 692,
+                    "nestedPrefabs": []
                 }
             ]
         }
