@@ -573,12 +573,7 @@
                     "y": 550,
                     "scaleX": 1.256467453503484,
                     "scaleY": 1.1807109727293363,
-                    "visible": false,
-                    "alpha": 0.6,
-                    "alphaTopLeft": 0.6,
-                    "alphaTopRight": 0.6,
-                    "alphaBottomLeft": 0.6,
-                    "alphaBottomRight": 0.6
+                    "visible": false
                 },
                 {
                     "type": "Image",

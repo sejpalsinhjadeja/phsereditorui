@@ -114,26 +114,31 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		this.opp_status_txt.visible = true;
 	}
 
+	setPlayerInfo(sPlayerId,bIsOwnPlayer){
+		this.sPlayerId = sPlayerId;
+		this.bIsOwnPlayer = bIsOwnPlayer;
+	}
+
 	setStatusForPlayer(sStatus){
 		this.player_status_txt.text = sStatus;
 		this.player_status_txt.visible = true;
 		this.you_txt.visible = true;
 	}
 
-	setUserProfilePic(sProfileImageUrl,sPlayerId,bIsOwnPlayer){
-		this.oSceneObj.load.image(sPlayerId,sProfileImageUrl).on('filecomplete', function () {
+	setUserProfilePic(sProfileImageUrl){
+		this.oSceneObj.load.image(this.sPlayerId,sProfileImageUrl).on('filecomplete', function () {
             console.log("Player Profile Loaded");
-            this.defaultProfile_1.setTexture(sPlayerId).setScale(0.3);
-			if(bIsOwnPlayer)
+            this.defaultProfile_1.setTexture(this.sPlayerId).setScale(0.3);
+			if(this.bIsOwnPlayer)
 			{
-				this.oSceneObj.setHeaderUserProfileImage(sPlayerId);
+				this.oSceneObj.setHeaderUserProfileImage(this.sPlayerId);
 			}
         }, this);
         this.oSceneObj.load.start();
 	}
 
-	setPlayerState(eState,bIsOwnPlayer){
-		if(bIsOwnPlayer)
+	setPlayerState(eState){
+		if(this.bIsOwnPlayer)
 		{
 			this.setStatusForPlayer(eState);
 		}
@@ -142,9 +147,9 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		}
 	}
 
-	setPlayerData(sPlayerId,eState,sAvtar,sUserName,bIsOwnPlayer){
+	setPlayerData(eState,sAvtar,sUserName){
 		console.log("Here in setPlayerData");
-		if(bIsOwnPlayer)
+		if(this.bIsOwnPlayer)
 		{
 			this.setStatusForPlayer(eState);
 		}
@@ -158,7 +163,7 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 			console.log("sUserName :"+sUserName);
 			this.setStatusForOpp(eState);
 		}
-		this.setUserProfilePic(sAvtar,sPlayerId,bIsOwnPlayer);
+		this.setUserProfilePic(sAvtar);
 	}
 	// Write your code here.
 

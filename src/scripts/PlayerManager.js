@@ -1,41 +1,47 @@
 class PlayerManager{
     
-    constructor(oListOfPlayer,nNumberOfPlayer){
-        PlayerManager.playerList = [];
-        PlayerManager.sOwnPlayerId = "";
-        for(var i=0; i<nNumberOfPlayer; i++){
-            this.addPlayerToList(oListOfPlayer[i]);
-        }
+    constructor(oListOfPlayer){
+        PlayerManager.playerList = new Map();
+        PlayerManager.isPlayerAdded = false;
+        this.oListOfPlayer = oListOfPlayer;
     }
 
-    addPlayerToList(oPlayer){
-        PlayerManager.playerList.push(oPlayer);
+    addPlayerToList(sPlayerId,oPlayer){
+        PlayerManager.playerList.set(sPlayerId,oPlayer);
+    }
+
+    getPlayerFromList(sPlayerId){
+        return PlayerManager.playerList.get(sPlayerId);
     }
 
 
     setPlayerData(oOwnPlayerData,oAllUserData){
+        if(PlayerManager.isPlayerAdded == false){
+            this.setPlayerDataToPlayerManager(oOwnPlayerData,oAllUserData);
+        }
+        for(var i=0; i< oAllUserData.length; i++){
+            this.getPlayerFromList(oAllUserData[i].iUserId).setPlayerData(oAllUserData[i].eState,oAllUserData[i].sAvatar,oAllUserData[i].sUserName);
+        }
+    }
+
+    setPlayerDataToPlayerManager(oOwnPlayerData,oAllUserData){
+        PlayerManager.isPlayerAdded = true;
         var nTempCounter = 1;
         for(var i=0; i< oAllUserData.length; i++){
             if(oAllUserData[i].iUserId == oOwnPlayerData.iUserId){
+                this.addPlayerToList(oAllUserData[i].iUserId,this.oListOfPlayer[0]);
+                this.getPlayerFromList(oAllUserData[i].iUserId).setPlayerInfo(oAllUserData[i].iUserId,true);
                 nTempCounter = 0;
-                PlayerManager.sOwnPlayerId = oOwnPlayerData.iUserId;
-                PlayerManager.playerList[0].setPlayerData(oAllUserData[i].iUserId,oAllUserData[i].eState,oAllUserData[i].sAvatar,oAllUserData[i].sUserName,true);
             }else{
-                PlayerManager.playerList[i+nTempCounter].setPlayerData(oAllUserData[i].iUserId,oAllUserData[i].eState,oAllUserData[i].sAvatar,oAllUserData[i].sUserName,false);
+                this.addPlayerToList(oAllUserData[i].iUserId,this.oListOfPlayer[i+nTempCounter]);
+                this.getPlayerFromList(oAllUserData[i].iUserId).setPlayerInfo(oAllUserData[i].iUserId,false);
             }
         }
     }
 
     setPlayerState(oAllUserData){
-        var nTempCounter = 1;
-        console.log("PlayerManager GamePlayerStateDataHandler");
         for(var i=0; i< oAllUserData.length; i++){
-            if(oAllUserData[i].iUserId == PlayerManager.sOwnPlayerId){
-                nTempCounter = 0;
-                PlayerManager.playerList[0].setStatusForPlayer(oAllUserData[i].eState);
-            }else{
-                PlayerManager.playerList[i+nTempCounter].setStatusForOpp(oAllUserData[i].eState);
-            }
+            this.getPlayerFromList(oAllUserData[i].iUserId).setPlayerState(oAllUserData[i].eState);
         }
     }
 }

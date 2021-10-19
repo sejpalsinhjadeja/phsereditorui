@@ -61,7 +61,7 @@ class SocketHandler {
             console.log("Table resGameState",resGameState);
         });
         this.oTableSocketConn.on("resSeatChange", (resSeatChange) => {
-            //console.log("Table resSeatChange",resSeatChange);
+            console.log("Table resSeatChange",resSeatChange);
         });
         this.oTableSocketConn.on("resGameInitilizeTimer", (resGameInitilizeTimer) => {
             console.log("Table resGameInitilizeTimer",resGameInitilizeTimer);

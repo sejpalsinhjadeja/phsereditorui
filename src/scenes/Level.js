@@ -286,11 +286,6 @@ class Level extends Phaser.Scene {
 		preview.scaleX = 1.256467453503484;
 		preview.scaleY = 1.1807109727293363;
 		preview.visible = false;
-		preview.alpha = 0.6;
-		preview.alphaTopLeft = 0.6;
-		preview.alphaTopRight = 0.6;
-		preview.alphaBottomLeft = 0.6;
-		preview.alphaBottomRight = 0.6;
 		header.add(preview);
 
 		// capture
@@ -364,15 +359,15 @@ class Level extends Phaser.Scene {
 
 
 		this.editorCreate();
-		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0Mjk0MDU2fQ.dlnYEDC_N6ROlvWwvOqmOp003VapRB7_nv4HSmCc48A";
-		this.sTableId = "6169598ad811ba3dc56191b3";
+		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTQzYzMxMDU2ZjdhNTdkOWUzNzU2YTUiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0NjE3NzA3fQ.18llgX2JOy87Vv6O0Y4psvZYg3zd8C2V3SAVMXG8e9s";
+		this.sTableId = "616e49b4271e835ca24bd7b8";
 		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
 		let oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
-		this.oPlayerManager = new PlayerManager(oPlayerList,2);
+		this.oPlayerManager = new PlayerManager(oPlayerList);
 
-		this.tempCard = new BaseCardPrefab(this, 0, 0);
-		this.tempCard.setCardData(5,eCardTypeEnum.Spade);
-		this.userhand.add(this.tempCard);
+		//this.tempCard = new BaseCardPrefab(this, 0, 0);
+		//this.tempCard.setCardData(5,eCardTypeEnum.Spade);
+		//this.userhand.add(this.tempCard);
 
 	}
 
