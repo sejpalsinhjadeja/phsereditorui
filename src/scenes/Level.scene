@@ -2,6 +2,7 @@
     "id": "01aefa93-6044-4159-8358-7e91310aa05f",
     "sceneType": "SCENE",
     "settings": {
+        "javaScriptInitFieldsInConstructor": true,
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
         "sceneKey": "Level",
@@ -314,6 +315,114 @@
                             "nestedPrefabs": []
                         },
                         {
+                            "prefabId": "666489eb-2bd2-47df-b105-e66ed6ba2dd0",
+                            "id": "74084f94-0503-4366-9711-90a9856b9c3f",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "visible"
+                            ],
+                            "label": "our_player_high_card",
+                            "components": [],
+                            "y": 48,
+                            "visible": false,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "666489eb-2bd2-47df-b105-e66ed6ba2dd0",
+                            "id": "afedb6db-3f8e-4545-9ab1-0e8351e45b11",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "scaleX",
+                                "scaleY",
+                                "visible"
+                            ],
+                            "label": "opp_1_high_card",
+                            "components": [],
+                            "y": -226,
+                            "scaleX": 0.7,
+                            "scaleY": 0.7,
+                            "visible": false,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "666489eb-2bd2-47df-b105-e66ed6ba2dd0",
+                            "id": "523d616f-81b8-4f37-af48-04a37692a640",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "scaleX",
+                                "scaleY",
+                                "visible"
+                            ],
+                            "label": "opp_2_high_card",
+                            "components": [],
+                            "x": -700,
+                            "y": -120,
+                            "scaleX": 0.7,
+                            "scaleY": 0.7,
+                            "visible": false,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "666489eb-2bd2-47df-b105-e66ed6ba2dd0",
+                            "id": "b12352d7-6887-4e9c-bc36-602ea639f467",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "scaleX",
+                                "scaleY",
+                                "visible"
+                            ],
+                            "label": "opp_3_high_card",
+                            "components": [],
+                            "x": 700,
+                            "y": -120,
+                            "scaleX": 0.7,
+                            "scaleY": 0.7,
+                            "visible": false,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "666489eb-2bd2-47df-b105-e66ed6ba2dd0",
+                            "id": "9f140b28-4ddb-4146-86bb-04219608b31b",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "scaleX",
+                                "scaleY",
+                                "visible"
+                            ],
+                            "label": "opp_4_high_card",
+                            "components": [],
+                            "x": -450,
+                            "y": -250,
+                            "scaleX": 0.7,
+                            "scaleY": 0.7,
+                            "visible": false,
+                            "nestedPrefabs": []
+                        },
+                        {
+                            "prefabId": "666489eb-2bd2-47df-b105-e66ed6ba2dd0",
+                            "id": "50d3f5e4-392e-41d6-a3a0-1edc0115df5c",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "scaleX",
+                                "scaleY",
+                                "visible"
+                            ],
+                            "label": "opp_5_high_card",
+                            "components": [],
+                            "x": 450,
+                            "y": -250,
+                            "scaleX": 0.7,
+                            "scaleY": 0.7,
+                            "visible": false,
+                            "nestedPrefabs": []
+                        },
+                        {
                             "type": "Container",
                             "id": "7eccc758-1c8d-48db-aac5-c80dcfcc0adf",
                             "label": "userhand",
@@ -573,7 +682,12 @@
                     "y": 550,
                     "scaleX": 1.256467453503484,
                     "scaleY": 1.1807109727293363,
-                    "visible": false
+                    "visible": false,
+                    "alpha": 0.5,
+                    "alphaTopLeft": 0.5,
+                    "alphaTopRight": 0.5,
+                    "alphaBottomLeft": 0.5,
+                    "alphaBottomRight": 0.5
                 },
                 {
                     "type": "Image",
@@ -587,12 +701,7 @@
                     "y": 560,
                     "scaleX": 1.250639250681945,
                     "scaleY": 1.2110077059710849,
-                    "visible": false,
-                    "alpha": 0.6,
-                    "alphaTopLeft": 0.6,
-                    "alphaTopRight": 0.6,
-                    "alphaBottomLeft": 0.6,
-                    "alphaBottomRight": 0.6
+                    "visible": false
                 }
             ]
         }

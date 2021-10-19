@@ -165,6 +165,15 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		}
 		this.setUserProfilePic(sAvtar);
 	}
+
+	setHighCardPrefab(oHightCardPrefab){
+		this.oHighCardPrefab = oHightCardPrefab;
+	}
+
+	showHighCard(nValue, eSuit, isJoker,nLable, isHigh){
+		this.oHighCardPrefab.setCardData(nValue, eSuit, isJoker,nLable);
+		this.oHighCardPrefab.visible = true;
+	}
 	// Write your code here.
 
 	/* END-USER-CODE */

@@ -44,4 +44,10 @@ class PlayerManager{
             this.getPlayerFromList(oAllUserData[i].iUserId).setPlayerState(oAllUserData[i].eState);
         }
     }
+
+    setPlayerHighCard(oHighCardData){
+        for(var i=0; i< oHighCardData.length; i++){
+            this.getPlayerFromList(oHighCardData[i].iUserId).showHighCard(oHighCardData[i].nValue,oHighCardData[i].eSuit,oHighCardData[i].isJoker,oHighCardData[i].nLable,oHighCardData[i].isHigh);
+        }
+    }
 }

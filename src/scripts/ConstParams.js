@@ -1,11 +1,11 @@
 window.sRootUrl = "https://stag.rummy24.com";
 
 
-window.eCardTypeEnum = {
-  Diamond: "Diamond",
-  Club: "Club",
-  Heart: "Heart",
-  Spade: "Spade"
+window.eSuitEnum = {
+  Diamond: "d",
+  Club: "c",
+  Heart: "h",
+  Spade: "s"
 };
 
 

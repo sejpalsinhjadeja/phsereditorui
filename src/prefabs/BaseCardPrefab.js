@@ -45,32 +45,38 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 		this.upper_small_img = upper_small_img;
 		this.lower_big_img = lower_big_img;
 		this.card_number_txt = card_number_txt;
+		this.joker_img = joker_img;
 		/* END-USER-CTR-CODE */
 	}
 
 	/* START-USER-CODE */
 	updateCardUi(){
-		if(this.eCardType == eCardTypeEnum.Diamond){
+		this.joker_img.visible = this.isJoker;
+		if(this.eSuit == eSuitEnum.Diamond){
 			this.upper_small_img.setTexture('d');
 			this.lower_big_img.setTexture('d');
 		}
-		if(this.eCardType == eCardTypeEnum.Club){
+		if(this.eSuit == eSuitEnum.Club){
 			this.upper_small_img.setTexture('c');
 			this.lower_big_img.setTexture('c');
 		}
-		if(this.eCardType == eCardTypeEnum.Heart){
+		if(this.eSuit == eSuitEnum.Heart){
 			this.upper_small_img.setTexture('h');
 			this.lower_big_img.setTexture('h');
 		}
-		if(this.eCardType == eCardTypeEnum.Spade){
+		if(this.eSuit == eSuitEnum.Spade){
 			this.upper_small_img.setTexture('s');
 			this.lower_big_img.setTexture('s');
 		}
+		this.upper_small_img.text = this.nLable;
+		this.card_number_txt.text = this.nLable;
 	}
 
-	setCardData(nCardVal, eCardType){
-		this.nCardVal = nCardVal;
-		this.eCardType = eCardType;
+	setCardData(nValue, eSuit, isJoker,nLable){
+		this.nValue = nValue;
+		this.eSuit = eSuit;
+		this.isJoker = isJoker;
+		this.nLable = nLable;
 		this.updateCardUi();
 	}
 

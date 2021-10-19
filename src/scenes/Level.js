@@ -8,6 +8,20 @@ class Level extends Phaser.Scene {
 	constructor() {
 		super("Level");
 
+		/** @type {PlayerProfileForTable} */
+		this.our_player;
+		/** @type {PlayerProfileForTable} */
+		this.opp_1;
+		/** @type {PlayerProfileForTable} */
+		this.opp_2;
+		/** @type {PlayerProfileForTable} */
+		this.opp_3;
+		/** @type {PlayerProfileForTable} */
+		this.opp_4;
+		/** @type {PlayerProfileForTable} */
+		this.opp_5;
+
+
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 		/* END-USER-CTR-CODE */
@@ -152,6 +166,46 @@ class Level extends Phaser.Scene {
 		opp_5.visible = false;
 		game_table.add(opp_5);
 
+		// our_player_high_card
+		const our_player_high_card = new BaseCardPrefab(this, 0, 48);
+		our_player_high_card.visible = false;
+		game_table.add(our_player_high_card);
+
+		// opp_1_high_card
+		const opp_1_high_card = new BaseCardPrefab(this, 0, -226);
+		opp_1_high_card.scaleX = 0.7;
+		opp_1_high_card.scaleY = 0.7;
+		opp_1_high_card.visible = false;
+		game_table.add(opp_1_high_card);
+
+		// opp_2_high_card
+		const opp_2_high_card = new BaseCardPrefab(this, -700, -120);
+		opp_2_high_card.scaleX = 0.7;
+		opp_2_high_card.scaleY = 0.7;
+		opp_2_high_card.visible = false;
+		game_table.add(opp_2_high_card);
+
+		// opp_3_high_card
+		const opp_3_high_card = new BaseCardPrefab(this, 700, -120);
+		opp_3_high_card.scaleX = 0.7;
+		opp_3_high_card.scaleY = 0.7;
+		opp_3_high_card.visible = false;
+		game_table.add(opp_3_high_card);
+
+		// opp_4_high_card
+		const opp_4_high_card = new BaseCardPrefab(this, -450, -250);
+		opp_4_high_card.scaleX = 0.7;
+		opp_4_high_card.scaleY = 0.7;
+		opp_4_high_card.visible = false;
+		game_table.add(opp_4_high_card);
+
+		// opp_5_high_card
+		const opp_5_high_card = new BaseCardPrefab(this, 450, -250);
+		opp_5_high_card.scaleX = 0.7;
+		opp_5_high_card.scaleY = 0.7;
+		opp_5_high_card.visible = false;
+		game_table.add(opp_5_high_card);
+
 		// userhand
 		const userhand = this.add.container(0, 0);
 		game_table.add(userhand);
@@ -286,6 +340,11 @@ class Level extends Phaser.Scene {
 		preview.scaleX = 1.256467453503484;
 		preview.scaleY = 1.1807109727293363;
 		preview.visible = false;
+		preview.alpha = 0.5;
+		preview.alphaTopLeft = 0.5;
+		preview.alphaTopRight = 0.5;
+		preview.alphaBottomLeft = 0.5;
+		preview.alphaBottomRight = 0.5;
 		header.add(preview);
 
 		// capture
@@ -293,11 +352,6 @@ class Level extends Phaser.Scene {
 		capture.scaleX = 1.250639250681945;
 		capture.scaleY = 1.2110077059710849;
 		capture.visible = false;
-		capture.alpha = 0.6;
-		capture.alphaTopLeft = 0.6;
-		capture.alphaTopRight = 0.6;
-		capture.alphaBottomLeft = 0.6;
-		capture.alphaBottomRight = 0.6;
 		header.add(capture);
 
 		this.our_player = our_player;
@@ -307,6 +361,13 @@ class Level extends Phaser.Scene {
 		this.opp_4 = opp_4;
 		this.opp_5 = opp_5;
 
+		this.our_player.setHighCardPrefab(our_player_high_card);
+		this.opp_1.setHighCardPrefab(opp_1_high_card);
+		this.opp_2.setHighCardPrefab(opp_2_high_card);
+		this.opp_3.setHighCardPrefab(opp_3_high_card);
+		this.opp_4.setHighCardPrefab(opp_4_high_card);
+		this.opp_5.setHighCardPrefab(opp_5_high_card);
+		
 		this.player_name_txt = player_name_txt;
 		this.player_profile_img = player_profile_img;
 		this.player_balance_txt = player_balance_txt;
@@ -323,23 +384,19 @@ class Level extends Phaser.Scene {
 		this.events.emit("scene-awake");
 	}
 
-	/** @type {PlayerProfileForTable} */
-	our_player;
-	/** @type {PlayerProfileForTable} */
-	opp_1;
-	/** @type {PlayerProfileForTable} */
-	opp_2;
-	/** @type {PlayerProfileForTable} */
-	opp_3;
-	/** @type {PlayerProfileForTable} */
-	opp_4;
-	/** @type {PlayerProfileForTable} */
-	opp_5;
 
 	/* START-USER-CODE */
 
 	// Write your code here
 	createTemp(){
+
+		this.our_player.setHighCardPrefab(our_player_high_card);
+		this.opp_1.setHighCardPrefab(opp_1_high_card);
+		this.opp_2.setHighCardPrefab(opp_2_high_card);
+		this.opp_3.setHighCardPrefab(opp_3_high_card);
+		this.opp_4.setHighCardPrefab(opp_4_high_card);
+		this.opp_5.setHighCardPrefab(opp_5_high_card);
+
 		this.player_name_txt = player_name_txt;
 		this.player_profile_img = player_profile_img;
 		this.player_balance_txt = player_balance_txt;
@@ -353,14 +410,15 @@ class Level extends Phaser.Scene {
 		this.table_info_txt = table_info_txt;
 		this.table_info_lable = table_info_lable;
 
+
 	}
 
 	create() {
 
 
 		this.editorCreate();
-		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTQzYzMxMDU2ZjdhNTdkOWUzNzU2YTUiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0NjE3NzA3fQ.18llgX2JOy87Vv6O0Y4psvZYg3zd8C2V3SAVMXG8e9s";
-		this.sTableId = "616e49b4271e835ca24bd7b8";
+		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0NjQ0ODUyfQ.wEGtQUzb5GNO50SGyqNWtvQrmCyVLrAin9C2LAYoSOI";
+		this.sTableId = "616eb80809204f6b39c95991";
 		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
 		let oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
 		this.oPlayerManager = new PlayerManager(oPlayerList);
@@ -421,6 +479,10 @@ class Level extends Phaser.Scene {
 		if(nTimerVal<=0){
 			this.hideTableInfo();
 		}
+	}
+
+	showHighCardData(oHighCards){
+		this.oPlayerManager.setPlayerHighCard(oHighCards);
 	}
 
 	/* END-USER-CODE */

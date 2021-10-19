@@ -79,6 +79,7 @@ class SocketHandler {
         });
         this.oTableSocketConn.on("resHighCards", (resHighCards) => {
             console.log("Table resHighCards",resHighCards);
+            this.oGameObj.showHighCardData(resHighCards);
         });
         this.oTableSocketConn.on("resClosedCard", (resClosedCard) => {
             console.log("Table resClosedCard",resClosedCard);
