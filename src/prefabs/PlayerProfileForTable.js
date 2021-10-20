@@ -8,6 +8,36 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 	constructor(scene, x, y) {
 		super(scene, x ?? 0, y ?? 0);
 
+		// turn_timer
+		const turn_timer = scene.add.container(95, -35);
+		this.add(turn_timer);
+
+		// timerbg
+		const timerbg = scene.add.image(0, 0, "timerbg");
+		timerbg.scaleX = 0.5;
+		timerbg.scaleY = 0.5;
+		turn_timer.add(timerbg);
+
+		// timer
+		const timer = scene.add.image(-5, 22, "timer");
+		timer.scaleX = 0.5;
+		timer.scaleY = 0.5;
+		turn_timer.add(timer);
+
+		// small_timer_txt
+		const small_timer_txt = scene.add.text(47, 25, "", {});
+		small_timer_txt.setOrigin(0.5, 0.5);
+		small_timer_txt.text = "20";
+		small_timer_txt.setStyle({"color":"#000000ff","fontFamily":"OswaldBold","fontSize":"35px"});
+		turn_timer.add(small_timer_txt);
+
+		// big_timer_txt
+		const big_timer_txt = scene.add.text(47, -25, "", {});
+		big_timer_txt.setOrigin(0.5, 0.5);
+		big_timer_txt.text = "20";
+		big_timer_txt.setStyle({"fontFamily":"OswaldBold","fontSize":"35px"});
+		turn_timer.add(big_timer_txt);
+
 		// circle
 		const circle = scene.add.image(0, 0, "circle");
 		circle.scaleX = 0.73;

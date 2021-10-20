@@ -352,6 +352,11 @@ class Level extends Phaser.Scene {
 		capture.scaleX = 1.250639250681945;
 		capture.scaleY = 1.2110077059710849;
 		capture.visible = false;
+		capture.alpha = 0.3;
+		capture.alphaTopLeft = 0.3;
+		capture.alphaTopRight = 0.3;
+		capture.alphaBottomLeft = 0.3;
+		capture.alphaBottomRight = 0.3;
 		header.add(capture);
 
 		this.our_player = our_player;
@@ -360,25 +365,6 @@ class Level extends Phaser.Scene {
 		this.opp_3 = opp_3;
 		this.opp_4 = opp_4;
 		this.opp_5 = opp_5;
-		this.our_player.setHighCardPrefab(our_player_high_card);
-		this.opp_1.setHighCardPrefab(opp_1_high_card);
-		this.opp_2.setHighCardPrefab(opp_2_high_card);
-		this.opp_3.setHighCardPrefab(opp_3_high_card);
-		this.opp_4.setHighCardPrefab(opp_4_high_card);
-		this.opp_5.setHighCardPrefab(opp_5_high_card);
-
-		this.player_name_txt = player_name_txt;
-		this.player_profile_img = player_profile_img;
-		this.player_balance_txt = player_balance_txt;
-		this.table_id_txt = table_id_txt;
-		this.point_in_rupee_txt = point_in_rupee_txt;
-		this.game_type_txt = game_type_txt;
-		this.maskImg = mask;
-		this.player_Profile = player_Profile;
-		this.userhand = userhand;
-
-		this.table_info_txt = table_info_txt;
-		this.table_info_lable = table_info_lable;
 
 		this.events.emit("scene-awake");
 	}
@@ -466,7 +452,7 @@ class Level extends Phaser.Scene {
 	gameStateDataHandler(oGameStateData){
 		this.oPlayerManager.setPlayerData(oGameStateData.participant,oGameStateData.participants);
 		let oOwnPlayerData = oGameStateData.participant;
-		this.setHeaderData(oOwnPlayerData.sUserName,149.24,"Table Id : #"+oOwnPlayerData.iTableId.substring(0,9),"Point Rummy - 2 Deck ","₹ "+oOwnPlayerData.nBalance);
+		this.setHeaderData(oOwnPlayerData.sUserName,this.nChips,"Table Id : #"+oOwnPlayerData.iTableId.substring(0,9),"Point Rummy - 2 Deck ","₹ "+oOwnPlayerData.nBalance);
 	}
 
 	gamePlayerStateDataHandler(oPlayerStateData){

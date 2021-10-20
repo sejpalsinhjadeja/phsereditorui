@@ -68,6 +68,14 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 			this.upper_small_img.setTexture('s');
 			this.lower_big_img.setTexture('s');
 		}
+		if(this.eSuit == eSuitEnum.Spade || this.eSuit == eSuitEnum.Club)
+		{
+			this.upper_small_img.setTint(0x000000);
+			this.card_number_txt.setTint(0x000000);
+		}else{
+			this.upper_small_img.setTint(0xFF0000);
+			this.card_number_txt.setTint(0xFF0000);
+		}
 		this.upper_small_img.text = this.nLable;
 		this.card_number_txt.text = this.nLable;
 	}

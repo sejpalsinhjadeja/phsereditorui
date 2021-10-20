@@ -16,6 +16,63 @@
             "components": [],
             "list": [
                 {
+                    "type": "Container",
+                    "id": "82a3de20-e1c4-4ea4-accc-ee2f0f4532f7",
+                    "label": "turn_timer",
+                    "components": [],
+                    "x": 95,
+                    "y": -35,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "259c9a5b-ebd4-4825-b82f-e924a3b23db9",
+                            "label": "timerbg",
+                            "components": [],
+                            "texture": {
+                                "key": "timerbg"
+                            },
+                            "scaleX": 0.5,
+                            "scaleY": 0.5
+                        },
+                        {
+                            "type": "Image",
+                            "id": "38ab678c-b09b-492f-9b7d-d489581e6041",
+                            "label": "timer",
+                            "components": [],
+                            "texture": {
+                                "key": "timer"
+                            },
+                            "x": -5,
+                            "y": 22,
+                            "scaleX": 0.5,
+                            "scaleY": 0.5
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5d2d648b-904f-4727-be2e-2ef4ff93ec6a",
+                            "label": "small_timer_txt",
+                            "components": [],
+                            "x": 47,
+                            "y": 25,
+                            "text": "20",
+                            "fontFamily": "OswaldBold",
+                            "fontSize": "35px",
+                            "color": "#000000ff"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "36ffbd08-10c8-4c46-a994-04200b914a77",
+                            "label": "big_timer_txt",
+                            "components": [],
+                            "x": 47,
+                            "y": -25,
+                            "text": "20",
+                            "fontFamily": "OswaldBold",
+                            "fontSize": "35px"
+                        }
+                    ]
+                },
+                {
                     "type": "Image",
                     "id": "6ccb6309-6865-407c-9fad-010e0bb65092",
                     "label": "circle",

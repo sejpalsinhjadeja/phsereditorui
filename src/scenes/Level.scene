@@ -701,7 +701,12 @@
                     "y": 560,
                     "scaleX": 1.250639250681945,
                     "scaleY": 1.2110077059710849,
-                    "visible": false
+                    "visible": false,
+                    "alpha": 0.3,
+                    "alphaTopLeft": 0.3,
+                    "alphaTopRight": 0.3,
+                    "alphaBottomLeft": 0.3,
+                    "alphaBottomRight": 0.3
                 }
             ]
         }

@@ -87,6 +87,11 @@
                 "key": "defaultProfile"
             },
             {
+                "url": "assets/Sprites/detailsui.png",
+                "type": "image",
+                "key": "detailsui"
+            },
+            {
                 "url": "assets/Sprites/Disconnection Setting.png",
                 "type": "image",
                 "key": "Disconnection Setting"
@@ -100,6 +105,16 @@
                 "url": "assets/Sprites/h.png",
                 "type": "image",
                 "key": "h"
+            },
+            {
+                "url": "assets/Sprites/highlightedbtn.png",
+                "type": "image",
+                "key": "highlightedbtn"
+            },
+            {
+                "url": "assets/Sprites/highlightedjoinbtn.png",
+                "type": "image",
+                "key": "highlightedjoinbtn"
             },
             {
                 "url": "assets/Sprites/Joker.png",
@@ -312,6 +327,16 @@
                 "url": "assets/Sprites/Time-counter.png",
                 "type": "image",
                 "key": "Time-counter"
+            },
+            {
+                "url": "assets/Sprites/timer.png",
+                "type": "image",
+                "key": "timer"
+            },
+            {
+                "url": "assets/Sprites/timerbg.png",
+                "type": "image",
+                "key": "timerbg"
             },
             {
                 "url": "src/scripts/UserHand.js",
