@@ -360,14 +360,13 @@ class Level extends Phaser.Scene {
 		this.opp_3 = opp_3;
 		this.opp_4 = opp_4;
 		this.opp_5 = opp_5;
-
 		this.our_player.setHighCardPrefab(our_player_high_card);
 		this.opp_1.setHighCardPrefab(opp_1_high_card);
 		this.opp_2.setHighCardPrefab(opp_2_high_card);
 		this.opp_3.setHighCardPrefab(opp_3_high_card);
 		this.opp_4.setHighCardPrefab(opp_4_high_card);
 		this.opp_5.setHighCardPrefab(opp_5_high_card);
-		
+
 		this.player_name_txt = player_name_txt;
 		this.player_profile_img = player_profile_img;
 		this.player_balance_txt = player_balance_txt;
@@ -386,6 +385,12 @@ class Level extends Phaser.Scene {
 
 
 	/* START-USER-CODE */
+
+	init(data){
+		this.sAuthToken = data.sAuthToken;
+		this.sTableId = data.sTableId;
+		this.nChips = data.nChips;
+	}
 
 	// Write your code here
 	createTemp(){
@@ -417,19 +422,16 @@ class Level extends Phaser.Scene {
 
 
 		this.editorCreate();
-		this.sAuthToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0NjQ0ODUyfQ.wEGtQUzb5GNO50SGyqNWtvQrmCyVLrAin9C2LAYoSOI";
-		this.sTableId = "616eb80809204f6b39c95991";
-		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
 		let oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
 		this.oPlayerManager = new PlayerManager(oPlayerList);
+		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
+
 
 		//this.tempCard = new BaseCardPrefab(this, 0, 0);
 		//this.tempCard.setCardData(5,eCardTypeEnum.Spade);
 		//this.userhand.add(this.tempCard);
 
 	}
-
-
 
 	setHeaderData(sUserName,sUserBalance,sTableId,sGameType,sPoints){
 		if(sUserName.length > 12)
@@ -484,6 +486,10 @@ class Level extends Phaser.Scene {
 	showHighCardData(oHighCards){
 		this.oPlayerManager.setPlayerHighCard(oHighCards);
 	}
+
+	setNewPlayerData(oUserJoinData){
+        this.oPlayerManager.setNewPlayerData(oUserJoinData);
+    }
 
 	/* END-USER-CODE */
 }

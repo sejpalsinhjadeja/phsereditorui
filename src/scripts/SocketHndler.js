@@ -53,6 +53,7 @@ class SocketHandler {
         this.oTableSocketConn.on("resUserJoined", (resUserJoined) => {
             console.log("Table resUserJoined",resUserJoined);
             this.oGameObj.hideTableInfo();
+            this.oGameObj.setNewPlayerData(resUserJoined);
         });
         this.oTableSocketConn.on("resGameState", (resGameState) => {
             // Set user profile and user name

@@ -4,10 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	
+
 	<title>Rummy24</title>
-	<script src="https://stag.rummy24.com/socket.io/socket.io.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="src/scripts/ConstParams.js"></script>
+	
+	<script src="https://stag.rummy24.com/socket.io/socket.io.js"></script>
 	<script src="lib/phaser.min.js"></script>
 	<script src="src/components/UserComponent.js"></script>
 	<script src="src/components/PushOnClick.js"></script>
@@ -15,28 +19,30 @@
 	<script src="src/scenes/Preload.js"></script>
 	<script src="src/scenes/Level.js"></script>
 	<script src="src/main.js"></script>
-	<link rel="stylesheet preload" as="font" href="assets/Font/ANTONIO-REGULAR_0.TTF" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/0_Oswald-ExtraLight.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/1_Oswald-Light.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/2_Oswald-Regular.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/3_Oswald-Medium.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/4_Oswald-SemiBold.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/5_Oswald-Bold.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/grandnational.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/grandnationalcond.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/grandnationalcondital.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/grandnationalsemital.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/grandnationalsuperital.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Black.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Bold.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Italic.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Light.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Medium.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Regular.ttf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/Titillium-Black.otf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/Titillium-Bold.otf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/Titillium-BoldItalic.otf" type="font/ttf" crossorigin/>
-	<link rel="stylesheet preload" as="font" href="assets/Font/Titillium-Regular.otf" type="font/ttf" crossorigin/>
+
+	<link rel="stylesheet preload" as="font" href="assets/Font/ANTONIO-REGULAR_0.TTF" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/0_Oswald-ExtraLight.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/1_Oswald-Light.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/2_Oswald-Regular.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/3_Oswald-Medium.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/4_Oswald-SemiBold.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/5_Oswald-Bold.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/grandnational.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/grandnationalcond.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/grandnationalcondital.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/grandnationalsemital.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/grandnationalsuperital.ttf" type="font/ttf"
+		crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Black.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Bold.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Italic.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Light.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Medium.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/Roboto-Regular.ttf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/Titillium-Black.otf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/Titillium-Bold.otf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/Titillium-BoldItalic.otf" type="font/ttf" crossorigin />
+	<link rel="stylesheet preload" as="font" href="assets/Font/Titillium-Regular.otf" type="font/ttf" crossorigin />
 	<link rel="stylesheet" href="assets/Css/font.css">
 
 	<style>
@@ -50,6 +56,20 @@
 </head>
 
 <body>
+	<div id="phaser-game"> 
+	<div class="container" id="enterform">
+		<center>
+			<h2>Join Rummy 24 table</h2>
+		</center>
+		<div class="form-group">
+			<input type="text" class="form-control" id="Authorization" value="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTRhYzNmMDkyNWVhODY0MjAxYTNhMTIiLCJlVXNlclR5cGUiOiJ1c2VyIiwiaWF0IjoxNjM0NjQ0ODUyfQ.wEGtQUzb5GNO50SGyqNWtvQrmCyVLrAin9C2LAYoSOI" placeholder="Enter Auth Token">
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" id="iProtoId" value="61276b7e8355564641e66e0e" placeholder="Enter iProtoId">
+		</div>
+		<center><button type="submit" id="submit" class="btn btn-default">Submit</button></center>
+	</div>
+	</div>
 </body>
 
 </html>

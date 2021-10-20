@@ -14,6 +14,16 @@ class PlayerManager{
         return PlayerManager.playerList.get(sPlayerId);
     }
 
+    getUserCounter(){
+        return PlayerManager.playerList.size;
+    }
+
+    setNewPlayerData(oUserJoinData){
+        this.addPlayerToList(oUserJoinData.iUserId,this.oListOfPlayer[this.getUserCounter()]);
+        this.getPlayerFromList(oUserJoinData.iUserId).setPlayerInfo(oUserJoinData.iUserId,false);
+        this.getPlayerFromList(oUserJoinData.iUserId).setPlayerData(oUserJoinData.eState,oUserJoinData.sAvatar,oUserJoinData.sUserName);
+    }
+
 
     setPlayerData(oOwnPlayerData,oAllUserData){
         if(PlayerManager.isPlayerAdded == false){

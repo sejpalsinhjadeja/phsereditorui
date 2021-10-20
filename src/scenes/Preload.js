@@ -41,6 +41,12 @@ class Preload extends Phaser.Scene {
 
 	/* START-USER-CODE */
 
+	init(data){
+		this.sAuthToken = data.sAuthToken;
+		this.sTableId = data.sTableId;
+		this.nChips = data.nChips;
+	}
+
 	// Write your code here
 
 	preload() {
@@ -49,7 +55,7 @@ class Preload extends Phaser.Scene {
 
 		this.editorPreload();
 
-		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Level"));
+		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Level", { sAuthToken: this.sAuthToken,sTableId:this.sTableId,nChips:this.nChips }));
 	}
 
 	/* END-USER-CODE */
