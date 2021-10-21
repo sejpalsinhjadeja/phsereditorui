@@ -8,6 +8,10 @@ class Level extends Phaser.Scene {
 	constructor() {
 		super("Level");
 
+		/** @type {Phaser.GameObjects.Container} */
+		this.table_info_lable;
+		/** @type {Phaser.GameObjects.Text} */
+		this.table_info_txt;
 		/** @type {PlayerProfileForTable} */
 		this.our_player;
 		/** @type {PlayerProfileForTable} */
@@ -20,6 +24,34 @@ class Level extends Phaser.Scene {
 		this.opp_4;
 		/** @type {PlayerProfileForTable} */
 		this.opp_5;
+		/** @type {BaseCardPrefab} */
+		this.our_player_high_card;
+		/** @type {BaseCardPrefab} */
+		this.opp_1_high_card;
+		/** @type {BaseCardPrefab} */
+		this.opp_2_high_card;
+		/** @type {BaseCardPrefab} */
+		this.opp_3_high_card;
+		/** @type {BaseCardPrefab} */
+		this.opp_4_high_card;
+		/** @type {BaseCardPrefab} */
+		this.opp_5_high_card;
+		/** @type {Phaser.GameObjects.Container} */
+		this.userhand;
+		/** @type {Phaser.GameObjects.Text} */
+		this.point_in_rupee_txt;
+		/** @type {Phaser.GameObjects.Text} */
+		this.game_type_txt;
+		/** @type {Phaser.GameObjects.Text} */
+		this.table_id_txt;
+		/** @type {Phaser.GameObjects.Text} */
+		this.player_balance_txt;
+		/** @type {Phaser.GameObjects.Text} */
+		this.player_name_txt;
+		/** @type {Phaser.GameObjects.Image} */
+		this.player_profile_img;
+		/** @type {Phaser.GameObjects.Image} */
+		this.maskImg;
 
 
 		/* START-USER-CTR-CODE */
@@ -328,12 +360,12 @@ class Level extends Phaser.Scene {
 		profileMask_1.scaleY = 0.65;
 		player_Profile.add(profileMask_1);
 
-		// mask
-		const mask = this.add.image(54, 50, "mask 1");
-		mask.scaleX = 0.5;
-		mask.scaleY = 0.5;
-		mask.visible = false;
-		header.add(mask);
+		// maskImg
+		const maskImg = this.add.image(54, 50, "mask 1");
+		maskImg.scaleX = 0.5;
+		maskImg.scaleY = 0.5;
+		maskImg.visible = false;
+		header.add(maskImg);
 
 		// preview
 		const preview = this.add.image(1032, 550, "preview");
@@ -359,32 +391,28 @@ class Level extends Phaser.Scene {
 		capture.alphaBottomRight = 0.3;
 		header.add(capture);
 
+		this.table_info_lable = table_info_lable;
+		this.table_info_txt = table_info_txt;
 		this.our_player = our_player;
 		this.opp_1 = opp_1;
 		this.opp_2 = opp_2;
 		this.opp_3 = opp_3;
 		this.opp_4 = opp_4;
 		this.opp_5 = opp_5;
-
-		this.our_player.setHighCardPrefab(our_player_high_card);
-		this.opp_1.setHighCardPrefab(opp_1_high_card);
-		this.opp_2.setHighCardPrefab(opp_2_high_card);
-		this.opp_3.setHighCardPrefab(opp_3_high_card);
-		this.opp_4.setHighCardPrefab(opp_4_high_card);
-		this.opp_5.setHighCardPrefab(opp_5_high_card);
-
-		this.player_name_txt = player_name_txt;
-		this.player_profile_img = player_profile_img;
-		this.player_balance_txt = player_balance_txt;
-		this.table_id_txt = table_id_txt;
+		this.our_player_high_card = our_player_high_card;
+		this.opp_1_high_card = opp_1_high_card;
+		this.opp_2_high_card = opp_2_high_card;
+		this.opp_3_high_card = opp_3_high_card;
+		this.opp_4_high_card = opp_4_high_card;
+		this.opp_5_high_card = opp_5_high_card;
+		this.userhand = userhand;
 		this.point_in_rupee_txt = point_in_rupee_txt;
 		this.game_type_txt = game_type_txt;
-		this.maskImg = mask;
-		this.player_Profile = player_Profile;
-		this.userhand = userhand;
-
-		this.table_info_txt = table_info_txt;
-		this.table_info_lable = table_info_lable;
+		this.table_id_txt = table_id_txt;
+		this.player_balance_txt = player_balance_txt;
+		this.player_name_txt = player_name_txt;
+		this.player_profile_img = player_profile_img;
+		this.maskImg = maskImg;
 
 		this.events.emit("scene-awake");
 	}
@@ -398,36 +426,15 @@ class Level extends Phaser.Scene {
 		this.nChips = data.nChips;
 	}
 
-	// Write your code here
-	createTemp(){
-
-		this.our_player.setHighCardPrefab(our_player_high_card);
-		this.opp_1.setHighCardPrefab(opp_1_high_card);
-		this.opp_2.setHighCardPrefab(opp_2_high_card);
-		this.opp_3.setHighCardPrefab(opp_3_high_card);
-		this.opp_4.setHighCardPrefab(opp_4_high_card);
-		this.opp_5.setHighCardPrefab(opp_5_high_card);
-
-		this.player_name_txt = player_name_txt;
-		this.player_profile_img = player_profile_img;
-		this.player_balance_txt = player_balance_txt;
-		this.table_id_txt = table_id_txt;
-		this.point_in_rupee_txt = point_in_rupee_txt;
-		this.game_type_txt = game_type_txt;
-		this.maskImg = mask;
-		this.player_Profile = player_Profile;
-		this.userhand = userhand;
-
-		this.table_info_txt = table_info_txt;
-		this.table_info_lable = table_info_lable;
-
-
-	}
 
 	create() {
-
-
 		this.editorCreate();
+		this.our_player.setHighCardPrefab(this.our_player_high_card);
+		this.opp_1.setHighCardPrefab(this.opp_1_high_card);
+		this.opp_2.setHighCardPrefab(this.opp_2_high_card);
+		this.opp_3.setHighCardPrefab(this.opp_3_high_card);
+		this.opp_4.setHighCardPrefab(this.opp_4_high_card);
+		this.opp_5.setHighCardPrefab(this.opp_5_high_card);
 		let oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
 		this.oPlayerManager = new PlayerManager(oPlayerList);
 		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
