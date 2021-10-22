@@ -12,6 +12,8 @@ class Level extends Phaser.Scene {
 		this.table_info_lable;
 		/** @type {Phaser.GameObjects.Text} */
 		this.table_info_txt;
+		/** @type {Phaser.GameObjects.Container} */
+		this.userhand;
 		/** @type {PlayerProfileForTable} */
 		this.our_player;
 		/** @type {PlayerProfileForTable} */
@@ -36,8 +38,6 @@ class Level extends Phaser.Scene {
 		this.opp_4_high_card;
 		/** @type {BaseCardPrefab} */
 		this.opp_5_high_card;
-		/** @type {Phaser.GameObjects.Container} */
-		this.userhand;
 		/** @type {Phaser.GameObjects.Text} */
 		this.point_in_rupee_txt;
 		/** @type {Phaser.GameObjects.Text} */
@@ -160,6 +160,10 @@ class Level extends Phaser.Scene {
 		table_info_txt.setStyle({"align":"center","fontFamily":"Roboto-Regular","fontSize":"20px"});
 		table_info_lable.add(table_info_txt);
 
+		// userhand
+		const userhand = this.add.container(0, 0);
+		game_table.add(userhand);
+
 		// our_player
 		const our_player = new PlayerProfileForTable(this, 7, 299);
 		game_table.add(our_player);
@@ -237,10 +241,6 @@ class Level extends Phaser.Scene {
 		opp_5_high_card.scaleY = 0.7;
 		opp_5_high_card.visible = false;
 		game_table.add(opp_5_high_card);
-
-		// userhand
-		const userhand = this.add.container(0, 0);
-		game_table.add(userhand);
 
 		// Header
 		const header = this.add.container(0, -1);
@@ -393,6 +393,7 @@ class Level extends Phaser.Scene {
 
 		this.table_info_lable = table_info_lable;
 		this.table_info_txt = table_info_txt;
+		this.userhand = userhand;
 		this.our_player = our_player;
 		this.opp_1 = opp_1;
 		this.opp_2 = opp_2;
@@ -405,7 +406,6 @@ class Level extends Phaser.Scene {
 		this.opp_3_high_card = opp_3_high_card;
 		this.opp_4_high_card = opp_4_high_card;
 		this.opp_5_high_card = opp_5_high_card;
-		this.userhand = userhand;
 		this.point_in_rupee_txt = point_in_rupee_txt;
 		this.game_type_txt = game_type_txt;
 		this.table_id_txt = table_id_txt;
@@ -438,10 +438,10 @@ class Level extends Phaser.Scene {
 		let oPlayerList = [this.our_player,this.opp_1,this.opp_2,this.opp_3,this.opp_4,this.opp_5];
 		this.oPlayerManager = new PlayerManager(oPlayerList);
 		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
+		this.oUserHand = new UserHand(this);
 
 
-		//this.tempCard = new BaseCardPrefab(this, 0, 0);
-		//this.tempCard.setCardData(5,eCardTypeEnum.Spade);
+		//this.tempCard = new BaseCardPrefab(this, 30, 0);
 		//this.userhand.add(this.tempCard);
 
 	}
@@ -500,9 +500,22 @@ class Level extends Phaser.Scene {
 		this.oPlayerManager.setPlayerHighCard(oHighCards);
 	}
 
+	hideHighCardData(){
+		this.oPlayerManager.hideHighCardData();
+	}
+
 	setNewPlayerData(oUserJoinData){
         this.oPlayerManager.setNewPlayerData(oUserJoinData);
     }
+
+	updateUserHand(resHand){
+		console.log("Level updateUserHand");
+		this.oUserHand.updateHandCardData(resHand);
+	}
+
+	addCardToHand(tempCard){
+		this.userhand.add(tempCard);
+	}
 
 	/* END-USER-CODE */
 }

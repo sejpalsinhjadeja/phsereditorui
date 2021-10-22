@@ -70,6 +70,7 @@ class SocketHandler {
         });
         this.oTableSocketConn.on("resHand", (resHand) => {
             console.log("Table resHand",resHand);
+            this.oGameObj.updateUserHand(resHand);
         });
         this.oTableSocketConn.on("resAutoDiscard", (resAutoDiscard) => {
             console.log("Table resAutoDiscard",resAutoDiscard);
@@ -87,6 +88,7 @@ class SocketHandler {
         });
         this.oTableSocketConn.on("resWildJoker", (resWildJoker) => {
             console.log("Table resWildJoker",resWildJoker);
+            this.oGameObj.hideHighCardData();
         });
         this.oTableSocketConn.on("resPlayerTurn", (resPlayerTurn) => {
             console.log("Table resPlayerTurn",resPlayerTurn);

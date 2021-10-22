@@ -201,8 +201,12 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 	}
 
 	showHighCard(nValue, eSuit, isJoker,nLable, isHigh){
-		this.oHighCardPrefab.setCardData(nValue, eSuit, isJoker,nLable);
+		this.oHighCardPrefab.setCardDataForHighCard(nValue, eSuit, isJoker,nLable);
 		this.oHighCardPrefab.visible = true;
+	}
+
+	hideHighCard(){
+		this.oHighCardPrefab.visible = false;
 	}
 	// Write your code here.
 

@@ -204,6 +204,14 @@
                             ]
                         },
                         {
+                            "type": "Container",
+                            "id": "7eccc758-1c8d-48db-aac5-c80dcfcc0adf",
+                            "label": "userhand",
+                            "scope": "PUBLIC",
+                            "components": [],
+                            "list": []
+                        },
+                        {
                             "prefabId": "1b6608c4-1709-4587-be1a-b2580392c5c9",
                             "id": "aa1265ed-c9d0-4e41-b099-4a5d62a8cb37",
                             "unlock": [
@@ -429,14 +437,6 @@
                             "scaleY": 0.7,
                             "visible": false,
                             "nestedPrefabs": []
-                        },
-                        {
-                            "type": "Container",
-                            "id": "7eccc758-1c8d-48db-aac5-c80dcfcc0adf",
-                            "label": "userhand",
-                            "scope": "CLASS",
-                            "components": [],
-                            "list": []
                         }
                     ]
                 }

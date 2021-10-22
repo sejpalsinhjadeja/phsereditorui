@@ -50,8 +50,9 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 	}
 
 	/* START-USER-CODE */
-	updateCardUi(){
+	updateCardUi(card_use_type){
 		this.joker_img.visible = this.isJoker;
+		this.card_use_type = card_use_type;
 		if(this.eSuit == eSuitEnum.Diamond){
 			this.upper_small_img.setTexture('d');
 			this.lower_big_img.setTexture('d');
@@ -80,14 +81,32 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 		this.card_number_txt.text = this.nLable;
 	}
 
+	setCardDataForHighCard(nValue, eSuit, isJoker,nLable){
+		this.nValue = nValue;
+		this.eSuit = eSuit;
+		this.isJoker = isJoker;
+		this.nLable = nLable;
+		this.updateCardUi("highcard");
+	}
+
 	setCardData(nValue, eSuit, isJoker,nLable){
 		this.nValue = nValue;
 		this.eSuit = eSuit;
 		this.isJoker = isJoker;
 		this.nLable = nLable;
-		this.updateCardUi();
+		this.updateCardUi("normal");
 	}
 
+	setCardDataForHandCard(oCardData){
+		this.nValue = oCardData.nValue;
+		this.eSuit = oCardData.eSuit;
+		this.isJoker = oCardData.isJoker;
+		this.nLable = oCardData.nLable;
+		this.nGroupId = oCardData.nGroupId;
+		this.sId = oCardData._id;
+		this.updateCardUi("handcard");
+		this.visible = true;
+	}
 	// Write your code here.
 
 	/* END-USER-CODE */

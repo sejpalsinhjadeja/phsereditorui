@@ -60,4 +60,9 @@ class PlayerManager{
             this.getPlayerFromList(oHighCardData[i].iUserId).showHighCard(oHighCardData[i].nValue,oHighCardData[i].eSuit,oHighCardData[i].isJoker,oHighCardData[i].nLable,oHighCardData[i].isHigh);
         }
     }
+    hideHighCardData(){
+        for (const [key, value] of PlayerManager.playerList) {
+            value.hideHighCard();
+        }
+    }
 }
