@@ -143,6 +143,40 @@
                             "scaleY": 0.08
                         }
                     ]
+                },
+                {
+                    "type": "Container",
+                    "id": "d45ffb45-0989-4224-a7b6-a5b0cd5f514f",
+                    "label": "drop_btn",
+                    "scope": "CLASS",
+                    "components": [],
+                    "x": 930,
+                    "y": -30,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "0825235f-17bb-433e-a43e-60a54d09483b",
+                            "label": "highlightedbtn",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "highlightedbtn"
+                            },
+                            "scaleX": 0.35,
+                            "scaleY": 0.5
+                        },
+                        {
+                            "type": "Text",
+                            "id": "6ee0ce66-bc04-4ac4-ab84-c6d9b4244873",
+                            "label": "text_2",
+                            "components": [],
+                            "text": "Drop",
+                            "fontFamily": "grandnationalsuperital",
+                            "fontSize": "50px",
+                            "fontStyle": "bold",
+                            "color": "#050c7fff"
+                        }
+                    ]
                 }
             ]
         },

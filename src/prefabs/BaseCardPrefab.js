@@ -8,36 +8,45 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 	constructor(scene, x, y) {
 		super(scene, x ?? 0, y ?? 0);
 
+		// card_bgh
+		const card_bgh = scene.add.image(0, 0, "cardbgh");
+		card_bgh.scaleX = 0.41;
+		card_bgh.scaleY = 0.38;
+		card_bgh.visible = false;
+		this.add(card_bgh);
+
 		// card_bg
-		const card_bg = scene.add.image(0, 0, "Card");
-		card_bg.scaleX = 1.4064999411287824;
-		card_bg.scaleY = 1.8632437492674367;
+		const card_bg = scene.add.image(0, 0, "cardbg");
+		card_bg.scaleX = 0.4;
+		card_bg.scaleY = 0.37;
 		this.add(card_bg);
 
 		// upper_small_img
-		const upper_small_img = scene.add.image(-57, -7, "d");
+		const upper_small_img = scene.add.image(-63, -19, "s");
 		upper_small_img.scaleX = 0.36;
 		upper_small_img.scaleY = 0.36;
 		this.add(upper_small_img);
 
 		// lower_big_img
-		const lower_big_img = scene.add.image(32, 53, "d");
-		lower_big_img.scaleX = 0.8;
-		lower_big_img.scaleY = 0.8;
+		const lower_big_img = scene.add.image(26, 68, "s");
+		lower_big_img.scaleX = 0.9;
+		lower_big_img.scaleY = 0.9;
 		this.add(lower_big_img);
 
 		// joker_img
-		const joker_img = scene.add.image(-57, 40, "Joker");
-		joker_img.scaleX = 0.35;
-		joker_img.scaleY = 0.35;
+		const joker_img = scene.add.image(-63, 32, "Joker");
+		joker_img.scaleX = 0.3;
+		joker_img.scaleY = 0.3;
 		this.add(joker_img);
 
 		// card_number_txt
-		const card_number_txt = scene.add.text(-55, -75, "", {});
-		card_number_txt.setOrigin(0.5, 0.5);
+		const card_number_txt = scene.add.text(-85, -86, "", {});
+		card_number_txt.setOrigin(0, 0.5);
 		card_number_txt.text = "5";
-		card_number_txt.setStyle({"color":"#a30303ff","fontFamily":"ANTONIO-REGULAR_0","fontSize":"80px"});
+		card_number_txt.setStyle({"color":"#000000ff","fontFamily":"ANTONIO-REGULAR_0","fontSize":"80px"});
 		this.add(card_number_txt);
+
+		this.card_bgh = card_bgh;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -48,6 +57,9 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 		this.joker_img = joker_img;
 		/* END-USER-CTR-CODE */
 	}
+
+	/** @type {Phaser.GameObjects.Image} */
+	card_bgh;
 
 	/* START-USER-CODE */
 	updateCardUi(card_use_type){
@@ -106,6 +118,10 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 		this.sId = oCardData._id;
 		this.updateCardUi("handcard");
 		this.visible = true;
+	}
+
+	cardHighilght(bIsHighlighted){
+		this.card_bgh.visible = bIsHighlighted;
 	}
 	// Write your code here.
 

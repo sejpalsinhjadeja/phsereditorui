@@ -22,6 +22,11 @@
                 "key": "BaseCardPrefab"
             },
             {
+                "url": "assets/Sprites/bgmasktimer.png",
+                "type": "image",
+                "key": "bgmasktimer"
+            },
+            {
                 "url": "assets/Sprites/BGPattern.png",
                 "type": "image",
                 "key": "BGPattern"
@@ -40,6 +45,26 @@
                 "url": "assets/Sprites/Card.png",
                 "type": "image",
                 "key": "Card"
+            },
+            {
+                "url": "assets/Sprites/cardback.png",
+                "type": "image",
+                "key": "cardback"
+            },
+            {
+                "url": "assets/Sprites/cardbackh.png",
+                "type": "image",
+                "key": "cardbackh"
+            },
+            {
+                "url": "assets/Sprites/cardbg.png",
+                "type": "image",
+                "key": "cardbg"
+            },
+            {
+                "url": "assets/Sprites/cardbgh.png",
+                "type": "image",
+                "key": "cardbgh"
             },
             {
                 "url": "src/scripts/CardData.js",

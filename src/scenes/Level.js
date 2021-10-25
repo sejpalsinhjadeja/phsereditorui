@@ -9,6 +9,10 @@ class Level extends Phaser.Scene {
 		super("Level");
 
 		/** @type {Phaser.GameObjects.Container} */
+		this.drop_btn;
+		/** @type {Phaser.GameObjects.Image} */
+		this.highlightedbtn;
+		/** @type {Phaser.GameObjects.Container} */
 		this.table_info_lable;
 		/** @type {Phaser.GameObjects.Text} */
 		this.table_info_txt;
@@ -129,6 +133,23 @@ class Level extends Phaser.Scene {
 		upper_circle.scaleX = 0.08;
 		upper_circle.scaleY = 0.08;
 		table_button_1.add(upper_circle);
+
+		// drop_btn
+		const drop_btn = this.add.container(930, -30);
+		footer.add(drop_btn);
+
+		// highlightedbtn
+		const highlightedbtn = this.add.image(0, 0, "highlightedbtn");
+		highlightedbtn.scaleX = 0.35;
+		highlightedbtn.scaleY = 0.5;
+		drop_btn.add(highlightedbtn);
+
+		// text_2
+		const text_2 = this.add.text(0, 0, "", {});
+		text_2.setOrigin(0.5, 0.5);
+		text_2.text = "Drop";
+		text_2.setStyle({"color":"#050c7fff","fontFamily":"grandnationalsuperital","fontSize":"50px","fontStyle":"bold"});
+		drop_btn.add(text_2);
 
 		// Body
 		const body = this.add.container(0, 0);
@@ -391,6 +412,8 @@ class Level extends Phaser.Scene {
 		capture.alphaBottomRight = 0.3;
 		header.add(capture);
 
+		this.drop_btn = drop_btn;
+		this.highlightedbtn = highlightedbtn;
 		this.table_info_lable = table_info_lable;
 		this.table_info_txt = table_info_txt;
 		this.userhand = userhand;
@@ -440,6 +463,8 @@ class Level extends Phaser.Scene {
 		this.oSocketConnection = new SocketHandler(this,this.sAuthToken,this.sTableId,sRootUrl);
 		this.oUserHand = new UserHand(this);
 
+
+		this.highlightedbtn.setInteractive().on("pointerdown",this.oSocketConnection.dropTableRes);
 
 		//this.tempCard = new BaseCardPrefab(this, 30, 0);
 		//this.userhand.add(this.tempCard);
@@ -516,6 +541,7 @@ class Level extends Phaser.Scene {
 	addCardToHand(tempCard){
 		this.userhand.add(tempCard);
 	}
+
 
 	/* END-USER-CODE */
 }

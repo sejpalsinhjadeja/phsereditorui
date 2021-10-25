@@ -38,6 +38,12 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		big_timer_txt.setStyle({"fontFamily":"OswaldBold","fontSize":"35px"});
 		turn_timer.add(big_timer_txt);
 
+		// bgmasktimer
+		const bgmasktimer = scene.add.image(0, 0, "bgmasktimer");
+		bgmasktimer.scaleX = 0.63;
+		bgmasktimer.scaleY = 0.63;
+		this.add(bgmasktimer);
+
 		// circle
 		const circle = scene.add.image(0, 0, "circle");
 		circle.scaleX = 0.73;
@@ -203,10 +209,12 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 	showHighCard(nValue, eSuit, isJoker,nLable, isHigh){
 		this.oHighCardPrefab.setCardDataForHighCard(nValue, eSuit, isJoker,nLable);
 		this.oHighCardPrefab.visible = true;
+		this.oHighCardPrefab.cardHighilght(isHigh);
 	}
 
 	hideHighCard(){
 		this.oHighCardPrefab.visible = false;
+		this.oHighCardPrefab.cardHighilght(false);
 	}
 	// Write your code here.
 

@@ -74,6 +74,17 @@
                 },
                 {
                     "type": "Image",
+                    "id": "ce6e683a-8998-45c8-abd4-414b87284fb8",
+                    "label": "bgmasktimer",
+                    "components": [],
+                    "texture": {
+                        "key": "bgmasktimer"
+                    },
+                    "scaleX": 0.63,
+                    "scaleY": 0.63
+                },
+                {
+                    "type": "Image",
                     "id": "6ccb6309-6865-407c-9fad-010e0bb65092",
                     "label": "circle",
                     "components": [],

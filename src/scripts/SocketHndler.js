@@ -4,6 +4,8 @@ class SocketHandler {
         this.sRootUrl = sRootUrl;
         this.sTableSocketUrl = sRootUrl+"/"+sTableId;
         this.oGameObj = oGameObj;
+        this.oRootSocketConn = io();
+        this.oTableSocketConn = io();
 
         // Root Socket conenction 
         this.oRootSocketConn = io(this.sRootUrl, {
@@ -119,5 +121,11 @@ class SocketHandler {
         });
         // Table Socket Connection Events - End
 
+    }
+
+    dropTableRes(){
+        console.log("DropTable Sent",this.oTableSocketConn);
+        this.oTableSocketConn.emit("reqDrop");
+        console.log("DropTable Sent");
     }
 }
