@@ -28,7 +28,7 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 		this.add(upper_small_img);
 
 		// lower_big_img
-		const lower_big_img = scene.add.image(26, 68, "s");
+		const lower_big_img = scene.add.image(26, 68, "h");
 		lower_big_img.scaleX = 0.9;
 		lower_big_img.scaleY = 0.9;
 		this.add(lower_big_img);
@@ -40,10 +40,10 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 		this.add(joker_img);
 
 		// card_number_txt
-		const card_number_txt = scene.add.text(-85, -86, "", {});
-		card_number_txt.setOrigin(0, 0.5);
+		const card_number_txt = scene.add.text(-59, -86, "", {});
+		card_number_txt.setOrigin(0.5, 0.5);
 		card_number_txt.text = "5";
-		card_number_txt.setStyle({"color":"#000000ff","fontFamily":"ANTONIO-REGULAR_0","fontSize":"80px"});
+		card_number_txt.setStyle({"align":"center","fontFamily":"ANTONIO-REGULAR_0","fontSize":"80px"});
 		this.add(card_number_txt);
 
 		this.card_bgh = card_bgh;
@@ -86,8 +86,8 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 			this.upper_small_img.setTint(0x000000);
 			this.card_number_txt.setTint(0x000000);
 		}else{
-			this.upper_small_img.setTint(0xFF0000);
-			this.card_number_txt.setTint(0xFF0000);
+			this.upper_small_img.setTint(0xbd1010ff);
+			this.card_number_txt.setTint(0xbd1010ff);
 		}
 		this.upper_small_img.text = this.nLable;
 		this.card_number_txt.text = this.nLable;
@@ -123,7 +123,7 @@ class BaseCardPrefab extends Phaser.GameObjects.Container {
 	cardHighilght(bIsHighlighted){
 		this.card_bgh.visible = bIsHighlighted;
 	}
-	// Write your code here.
+
 
 	/* END-USER-CODE */
 }

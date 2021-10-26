@@ -73,61 +73,6 @@
                     ]
                 },
                 {
-                    "type": "Image",
-                    "id": "ce6e683a-8998-45c8-abd4-414b87284fb8",
-                    "label": "bgmasktimer",
-                    "components": [],
-                    "texture": {
-                        "key": "bgmasktimer"
-                    },
-                    "scaleX": 0.63,
-                    "scaleY": 0.63
-                },
-                {
-                    "type": "Image",
-                    "id": "6ccb6309-6865-407c-9fad-010e0bb65092",
-                    "label": "circle",
-                    "components": [],
-                    "texture": {
-                        "key": "circle"
-                    },
-                    "scaleX": 0.73,
-                    "scaleY": 0.73
-                },
-                {
-                    "type": "Image",
-                    "id": "e7587276-a176-4df5-b37d-37e6bef6ca2b",
-                    "label": "defaultProfile_1",
-                    "components": [],
-                    "texture": {
-                        "key": "defaultProfile"
-                    },
-                    "scaleX": 1.6,
-                    "scaleY": 1.6
-                },
-                {
-                    "type": "Image",
-                    "id": "262292dc-a788-4598-8d2b-9e83f5fc99bc",
-                    "label": "profileMask",
-                    "components": [],
-                    "texture": {
-                        "key": "profileMask"
-                    },
-                    "scaleX": 1.6,
-                    "scaleY": 1.6
-                },
-                {
-                    "type": "Image",
-                    "id": "9378452d-e439-48c3-9951-b65ed21b6ee1",
-                    "label": "tH02_Golden_Ring_1",
-                    "components": [],
-                    "texture": {
-                        "key": "TH02_Golden-Ring"
-                    },
-                    "scaleX": 1.6,
-                    "scaleY": 1.6
-                },
-                {
                     "type": "Container",
                     "id": "859c6d41-62b7-4fad-9e33-f396efa2667b",
                     "label": "player_point_bg",
@@ -204,6 +149,83 @@
                     "text": "sejsinh01",
                     "fontFamily": "OswaldRegular",
                     "fontSize": "30px"
+                },
+                {
+                    "type": "Container",
+                    "id": "def19698-8052-42e5-a128-da79f3733684",
+                    "label": "profile_container",
+                    "components": [],
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "ce6e683a-8998-45c8-abd4-414b87284fb8",
+                            "label": "bgmasktimer",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "bgmasktimer"
+                            },
+                            "scaleX": 0.63,
+                            "scaleY": 0.63
+                        },
+                        {
+                            "type": "Image",
+                            "id": "6ccb6309-6865-407c-9fad-010e0bb65092",
+                            "label": "circle",
+                            "components": [],
+                            "texture": {
+                                "key": "circle"
+                            },
+                            "scaleX": 0.73,
+                            "scaleY": 0.73
+                        },
+                        {
+                            "type": "Image",
+                            "id": "e7587276-a176-4df5-b37d-37e6bef6ca2b",
+                            "label": "defaultProfile_1",
+                            "components": [],
+                            "texture": {
+                                "key": "defaultProfile"
+                            },
+                            "scaleX": 1.6,
+                            "scaleY": 1.6
+                        },
+                        {
+                            "type": "Image",
+                            "id": "262292dc-a788-4598-8d2b-9e83f5fc99bc",
+                            "label": "profileMask",
+                            "components": [],
+                            "texture": {
+                                "key": "profileMask"
+                            },
+                            "scaleX": 1.6,
+                            "scaleY": 1.6
+                        },
+                        {
+                            "type": "Image",
+                            "id": "9378452d-e439-48c3-9951-b65ed21b6ee1",
+                            "label": "tH02_Golden_Ring_1",
+                            "components": [],
+                            "texture": {
+                                "key": "TH02_Golden-Ring"
+                            },
+                            "scaleX": 1.6,
+                            "scaleY": 1.6
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "id": "5a8a043d-2bd6-4eb5-ba1e-760da70fe4fe",
+                    "label": "mask",
+                    "scope": "CLASS",
+                    "components": [],
+                    "texture": {
+                        "key": "mask"
+                    },
+                    "scaleX": 2,
+                    "scaleY": 2,
+                    "visible": false
                 }
             ]
         }

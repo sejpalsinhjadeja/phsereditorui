@@ -38,36 +38,6 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		big_timer_txt.setStyle({"fontFamily":"OswaldBold","fontSize":"35px"});
 		turn_timer.add(big_timer_txt);
 
-		// bgmasktimer
-		const bgmasktimer = scene.add.image(0, 0, "bgmasktimer");
-		bgmasktimer.scaleX = 0.63;
-		bgmasktimer.scaleY = 0.63;
-		this.add(bgmasktimer);
-
-		// circle
-		const circle = scene.add.image(0, 0, "circle");
-		circle.scaleX = 0.73;
-		circle.scaleY = 0.73;
-		this.add(circle);
-
-		// defaultProfile_1
-		const defaultProfile_1 = scene.add.image(0, 0, "defaultProfile");
-		defaultProfile_1.scaleX = 1.6;
-		defaultProfile_1.scaleY = 1.6;
-		this.add(defaultProfile_1);
-
-		// profileMask
-		const profileMask = scene.add.image(0, 0, "profileMask");
-		profileMask.scaleX = 1.6;
-		profileMask.scaleY = 1.6;
-		this.add(profileMask);
-
-		// tH02_Golden_Ring_1
-		const tH02_Golden_Ring_1 = scene.add.image(0, 0, "TH02_Golden-Ring");
-		tH02_Golden_Ring_1.scaleX = 1.6;
-		tH02_Golden_Ring_1.scaleY = 1.6;
-		this.add(tH02_Golden_Ring_1);
-
 		// player_point_bg
 		const player_point_bg = scene.add.container(-1, 120);
 		this.add(player_point_bg);
@@ -117,6 +87,50 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		opp_name_txt.setStyle({"fontFamily":"OswaldRegular","fontSize":"30px"});
 		this.add(opp_name_txt);
 
+		// profile_container
+		const profile_container = scene.add.container(0, 0);
+		this.add(profile_container);
+
+		// bgmasktimer
+		const bgmasktimer = scene.add.image(0, 0, "bgmasktimer");
+		bgmasktimer.scaleX = 0.63;
+		bgmasktimer.scaleY = 0.63;
+		profile_container.add(bgmasktimer);
+
+		// circle
+		const circle = scene.add.image(0, 0, "circle");
+		circle.scaleX = 0.73;
+		circle.scaleY = 0.73;
+		profile_container.add(circle);
+
+		// defaultProfile_1
+		const defaultProfile_1 = scene.add.image(0, 0, "defaultProfile");
+		defaultProfile_1.scaleX = 1.6;
+		defaultProfile_1.scaleY = 1.6;
+		profile_container.add(defaultProfile_1);
+
+		// profileMask
+		const profileMask = scene.add.image(0, 0, "profileMask");
+		profileMask.scaleX = 1.6;
+		profileMask.scaleY = 1.6;
+		profile_container.add(profileMask);
+
+		// tH02_Golden_Ring_1
+		const tH02_Golden_Ring_1 = scene.add.image(0, 0, "TH02_Golden-Ring");
+		tH02_Golden_Ring_1.scaleX = 1.6;
+		tH02_Golden_Ring_1.scaleY = 1.6;
+		profile_container.add(tH02_Golden_Ring_1);
+
+		// mask
+		const mask = scene.add.image(0, 0, "mask");
+		mask.scaleX = 2;
+		mask.scaleY = 2;
+		mask.visible = false;
+		this.add(mask);
+
+		this.bgmasktimer = bgmasktimer;
+		this.mask = mask;
+
 		/* START-USER-CTR-CODE */
 		this.oSceneObj = scene;
 		this.opp_status_txt = opp_status_txt;
@@ -129,6 +143,11 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
+
+	/** @type {Phaser.GameObjects.Image} */
+	bgmasktimer;
+	/** @type {Phaser.GameObjects.Image} */
+	mask;
 
 	/* START-USER-CODE */
 	showTimerCountDown(timeLeft){

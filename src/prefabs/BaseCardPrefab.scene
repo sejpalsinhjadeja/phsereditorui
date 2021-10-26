@@ -58,7 +58,7 @@
                     "label": "lower_big_img",
                     "components": [],
                     "texture": {
-                        "key": "s"
+                        "key": "h"
                     },
                     "x": 26,
                     "y": 68,
@@ -83,13 +83,12 @@
                     "id": "b1240107-9c5c-412e-bca4-fd70fbc6095e",
                     "label": "card_number_txt",
                     "components": [],
-                    "x": -85,
+                    "x": -59,
                     "y": -86,
-                    "originX": 0,
                     "text": "5",
+                    "align": "center",
                     "fontFamily": "ANTONIO-REGULAR_0",
-                    "fontSize": "80px",
-                    "color": "#000000ff"
+                    "fontSize": "80px"
                 }
             ]
         }
