@@ -359,6 +359,11 @@
                 "key": "timer"
             },
             {
+                "url": "assets/Sprites/Timer-bar.png",
+                "type": "image",
+                "key": "Timer-bar"
+            },
+            {
                 "url": "assets/Sprites/timerbg.png",
                 "type": "image",
                 "key": "timerbg"

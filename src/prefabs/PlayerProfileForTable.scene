@@ -19,6 +19,7 @@
                     "type": "Container",
                     "id": "82a3de20-e1c4-4ea4-accc-ee2f0f4532f7",
                     "label": "turn_timer",
+                    "scope": "CLASS",
                     "components": [],
                     "x": 95,
                     "y": -35,
@@ -73,59 +74,73 @@
                     ]
                 },
                 {
-                    "type": "Image",
-                    "id": "ce6e683a-8998-45c8-abd4-414b87284fb8",
-                    "label": "bgmasktimer",
+                    "type": "Container",
+                    "id": "76645c35-e6c2-4629-a0e0-8a5e970ef79f",
+                    "label": "player_profile",
+                    "scope": "CLASS",
                     "components": [],
-                    "texture": {
-                        "key": "bgmasktimer"
-                    },
-                    "scaleX": 0.63,
-                    "scaleY": 0.63
-                },
-                {
-                    "type": "Image",
-                    "id": "6ccb6309-6865-407c-9fad-010e0bb65092",
-                    "label": "circle",
-                    "components": [],
-                    "texture": {
-                        "key": "circle"
-                    },
-                    "scaleX": 0.73,
-                    "scaleY": 0.73
-                },
-                {
-                    "type": "Image",
-                    "id": "e7587276-a176-4df5-b37d-37e6bef6ca2b",
-                    "label": "defaultProfile_1",
-                    "components": [],
-                    "texture": {
-                        "key": "defaultProfile"
-                    },
-                    "scaleX": 1.6,
-                    "scaleY": 1.6
-                },
-                {
-                    "type": "Image",
-                    "id": "262292dc-a788-4598-8d2b-9e83f5fc99bc",
-                    "label": "profileMask",
-                    "components": [],
-                    "texture": {
-                        "key": "profileMask"
-                    },
-                    "scaleX": 1.6,
-                    "scaleY": 1.6
-                },
-                {
-                    "type": "Image",
-                    "id": "9378452d-e439-48c3-9951-b65ed21b6ee1",
-                    "label": "tH02_Golden_Ring_1",
-                    "components": [],
-                    "texture": {
-                        "key": "TH02_Golden-Ring"
-                    },
-                    "scaleX": 1.6,
-                    "scaleY": 1.6
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "ce6e683a-8998-45c8-abd4-414b87284fb8",
+                            "label": "bgmasktimer",
+                            "scope": "CLASS",
+                            "components": [],
+                            "texture": {
+                                "key": "Timer-bar"
+                            },
+                            "scaleX": 1.8,
+                            "scaleY": 1.8,
+                            "tintTopLeft": "#00ff00",
+                            "tintTopRight": "#00ff00",
+                            "tintBottomLeft": "#00ff00",
+                            "tintBottomRight": "#00ff00"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "6ccb6309-6865-407c-9fad-010e0bb65092",
+                            "label": "circle",
+                            "components": [],
+                            "texture": {
+                                "key": "circle"
+                            },
+                            "scaleX": 0.73,
+                            "scaleY": 0.73
+                        },
+                        {
+                            "type": "Image",
+                            "id": "e7587276-a176-4df5-b37d-37e6bef6ca2b",
+                            "label": "defaultProfile_1",
+                            "components": [],
+                            "texture": {
+                                "key": "defaultProfile"
+                            },
+                            "scaleX": 1.6,
+                            "scaleY": 1.6
+                        },
+                        {
+                            "type": "Image",
+                            "id": "262292dc-a788-4598-8d2b-9e83f5fc99bc",
+                            "label": "profileMask",
+                            "components": [],
+                            "texture": {
+                                "key": "profileMask"
+                            },
+                            "scaleX": 1.6,
+                            "scaleY": 1.6
+                        },
+                        {
+                            "type": "Image",
+                            "id": "9378452d-e439-48c3-9951-b65ed21b6ee1",
+                            "label": "tH02_Golden_Ring_1",
+                            "components": [],
+                            "texture": {
+                                "key": "TH02_Golden-Ring"
+                            },
+                            "scaleX": 1.6,
+                            "scaleY": 1.6
+                        }
+                    ]
                 },
                 {
                     "type": "Container",
@@ -159,51 +174,59 @@
                     ]
                 },
                 {
-                    "type": "Text",
-                    "id": "78f1b96e-58dd-42ed-a0d8-a19ca4763a6b",
-                    "label": "player_status_txt",
-                    "components": [],
-                    "y": 65,
-                    "visible": false,
-                    "text": "playing",
-                    "align": "justify",
-                    "fontFamily": "OswaldRegular",
-                    "fontSize": "15px"
-                },
-                {
-                    "type": "Text",
-                    "id": "31153c47-ab50-4fef-91f6-1720e5bed39d",
-                    "label": "you_txt",
-                    "components": [],
-                    "y": 40,
-                    "visible": false,
-                    "text": "YOU",
-                    "align": "justify",
-                    "fontFamily": "OswaldRegular",
-                    "fontSize": "25px"
-                },
-                {
-                    "type": "Text",
-                    "id": "7458ffac-98f0-4ab6-bdf4-08c42e340387",
-                    "label": "opp_status_txt",
-                    "components": [],
-                    "y": 55,
-                    "visible": false,
-                    "text": "playing",
-                    "align": "justify",
-                    "fontFamily": "OswaldRegular",
-                    "fontSize": "25px"
-                },
-                {
-                    "type": "Text",
-                    "id": "a0e541fd-6b8b-48e5-ac03-7856e3e8f1b0",
-                    "label": "opp_name_txt",
+                    "type": "Container",
+                    "id": "d09a7e4d-dcde-4ea6-a19d-09554db5d318",
+                    "label": "info_texts",
                     "components": [],
                     "y": -120,
-                    "visible": false,
-                    "text": "sejsinh01",
-                    "fontFamily": "OswaldRegular",
-                    "fontSize": "30px"
+                    "list": [
+                        {
+                            "type": "Text",
+                            "id": "78f1b96e-58dd-42ed-a0d8-a19ca4763a6b",
+                            "label": "player_status_txt",
+                            "components": [],
+                            "y": 185,
+                            "visible": false,
+                            "text": "playing",
+                            "align": "justify",
+                            "fontFamily": "OswaldRegular",
+                            "fontSize": "15px"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "31153c47-ab50-4fef-91f6-1720e5bed39d",
+                            "label": "you_txt",
+                            "components": [],
+                            "y": 160,
+                            "visible": false,
+                            "text": "YOU",
+                            "align": "justify",
+                            "fontFamily": "OswaldRegular",
+                            "fontSize": "25px"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "7458ffac-98f0-4ab6-bdf4-08c42e340387",
+                            "label": "opp_status_txt",
+                            "components": [],
+                            "y": 175,
+                            "visible": false,
+                            "text": "playing",
+                            "align": "justify",
+                            "fontFamily": "OswaldRegular",
+                            "fontSize": "25px"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "a0e541fd-6b8b-48e5-ac03-7856e3e8f1b0",
+                            "label": "opp_name_txt",
+                            "components": [],
+                            "visible": false,
+                            "text": "sejsinh01",
+                            "fontFamily": "OswaldRegular",
+                            "fontSize": "30px"
+                        }
+                    ]
                 }
             ]
         }

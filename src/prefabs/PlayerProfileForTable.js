@@ -38,35 +38,43 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		big_timer_txt.setStyle({"fontFamily":"OswaldBold","fontSize":"35px"});
 		turn_timer.add(big_timer_txt);
 
+		// player_profile
+		const player_profile = scene.add.container(0, 0);
+		this.add(player_profile);
+
 		// bgmasktimer
-		const bgmasktimer = scene.add.image(0, 0, "bgmasktimer");
-		bgmasktimer.scaleX = 0.63;
-		bgmasktimer.scaleY = 0.63;
-		this.add(bgmasktimer);
+		const bgmasktimer = scene.add.image(0, 0, "Timer-bar");
+		bgmasktimer.scaleX = 1.8;
+		bgmasktimer.scaleY = 1.8;
+		bgmasktimer.tintTopLeft = 65280;
+		bgmasktimer.tintTopRight = 65280;
+		bgmasktimer.tintBottomLeft = 65280;
+		bgmasktimer.tintBottomRight = 65280;
+		player_profile.add(bgmasktimer);
 
 		// circle
 		const circle = scene.add.image(0, 0, "circle");
 		circle.scaleX = 0.73;
 		circle.scaleY = 0.73;
-		this.add(circle);
+		player_profile.add(circle);
 
 		// defaultProfile_1
 		const defaultProfile_1 = scene.add.image(0, 0, "defaultProfile");
 		defaultProfile_1.scaleX = 1.6;
 		defaultProfile_1.scaleY = 1.6;
-		this.add(defaultProfile_1);
+		player_profile.add(defaultProfile_1);
 
 		// profileMask
 		const profileMask = scene.add.image(0, 0, "profileMask");
 		profileMask.scaleX = 1.6;
 		profileMask.scaleY = 1.6;
-		this.add(profileMask);
+		player_profile.add(profileMask);
 
 		// tH02_Golden_Ring_1
 		const tH02_Golden_Ring_1 = scene.add.image(0, 0, "TH02_Golden-Ring");
 		tH02_Golden_Ring_1.scaleX = 1.6;
 		tH02_Golden_Ring_1.scaleY = 1.6;
-		this.add(tH02_Golden_Ring_1);
+		player_profile.add(tH02_Golden_Ring_1);
 
 		// player_point_bg
 		const player_point_bg = scene.add.container(-1, 120);
@@ -85,37 +93,45 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		text.setStyle({"align":"justify","fontFamily":"OswaldRegular","fontSize":"27px"});
 		player_point_bg.add(text);
 
+		// info_texts
+		const info_texts = scene.add.container(0, -120);
+		this.add(info_texts);
+
 		// player_status_txt
-		const player_status_txt = scene.add.text(0, 65, "", {});
+		const player_status_txt = scene.add.text(0, 185, "", {});
 		player_status_txt.setOrigin(0.5, 0.5);
 		player_status_txt.visible = false;
 		player_status_txt.text = "playing";
 		player_status_txt.setStyle({"align":"justify","fontFamily":"OswaldRegular","fontSize":"15px"});
-		this.add(player_status_txt);
+		info_texts.add(player_status_txt);
 
 		// you_txt
-		const you_txt = scene.add.text(0, 40, "", {});
+		const you_txt = scene.add.text(0, 160, "", {});
 		you_txt.setOrigin(0.5, 0.5);
 		you_txt.visible = false;
 		you_txt.text = "YOU";
 		you_txt.setStyle({"align":"justify","fontFamily":"OswaldRegular","fontSize":"25px"});
-		this.add(you_txt);
+		info_texts.add(you_txt);
 
 		// opp_status_txt
-		const opp_status_txt = scene.add.text(0, 55, "", {});
+		const opp_status_txt = scene.add.text(0, 175, "", {});
 		opp_status_txt.setOrigin(0.5, 0.5);
 		opp_status_txt.visible = false;
 		opp_status_txt.text = "playing";
 		opp_status_txt.setStyle({"align":"justify","fontFamily":"OswaldRegular","fontSize":"25px"});
-		this.add(opp_status_txt);
+		info_texts.add(opp_status_txt);
 
 		// opp_name_txt
-		const opp_name_txt = scene.add.text(0, -120, "", {});
+		const opp_name_txt = scene.add.text(0, 0, "", {});
 		opp_name_txt.setOrigin(0.5, 0.5);
 		opp_name_txt.visible = false;
 		opp_name_txt.text = "sejsinh01";
 		opp_name_txt.setStyle({"fontFamily":"OswaldRegular","fontSize":"30px"});
-		this.add(opp_name_txt);
+		info_texts.add(opp_name_txt);
+
+		this.turn_timer = turn_timer;
+		this.player_profile = player_profile;
+		this.bgmasktimer = bgmasktimer;
 
 		/* START-USER-CTR-CODE */
 		this.oSceneObj = scene;
@@ -125,24 +141,32 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		this.defaultProfile_1 = defaultProfile_1;
 		this.profileMask = profileMask;
 		this.opp_name_txt = opp_name_txt;
-		//this.showTimerCountDown();
+
+		// For timer 
+		this.setUiForTimer();
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
 
+	/** @type {Phaser.GameObjects.Container} */
+	turn_timer;
+	/** @type {Phaser.GameObjects.Container} */
+	player_profile;
+	/** @type {Phaser.GameObjects.Image} */
+	bgmasktimer;
+
 	/* START-USER-CODE */
-	showTimerCountDown(timeLeft){
-		timeLeft = 275;
-		console.log("updateValue Done......",timeLeft);
-		if(this.oLoadeGraphics !=null){
-			this.oLoadeGraphics.clear();
-		}
-		this.oLoadeGraphics = this.oSceneObj.add.graphics();
-		this.oLoadeGraphics.lineStyle(10, 0x00FF00, 1);
-		this.oLoadeGraphics.beginPath();  
-		this.oLoadeGraphics.arc(0, 0, 100, Phaser.Math.DegToRad(timeLeft), Phaser.Math.DegToRad(-90), true);
-		this.oLoadeGraphics.strokePath();
-		this.add(this.oLoadeGraphics);
+
+	setUiForTimer(){
+		console.log("setUiForTimer");
+		this.loadBar = this.oSceneObj.add.graphics();
+		this.player_profile.add(this.loadBar);
+		this.loadBar.x = this.bgmasktimer.x;
+        this.loadBar.y = this.bgmasktimer.y;
+		this.loadBar.visible = false;
+		this.bgmasktimer.mask = new Phaser.Display.Masks.BitmapMask(this.oSceneObj, this.loadBar);
+		this.showTimeCountDown();
+		
 	}
 
 	setStatusForOpp(sStatus){
@@ -216,6 +240,39 @@ class PlayerProfileForTable extends Phaser.GameObjects.Container {
 		this.oHighCardPrefab.visible = false;
 		this.oHighCardPrefab.cardHighilght(false);
 	}
+
+	showTimeCountDown(){
+		console.log("showTimeCountDown");
+		var totalTimer = 30;
+		var goneTimer = 0;
+		var self = this;
+		self.bgmasktimer.setTint(0x00ff00);
+		self.bgmasktimer.visible = true;
+		var intervalID = window.setInterval(function(){
+			var remainningTime = totalTimer - goneTimer;
+			if(remainningTime > 0){
+				if(totalTimer - goneTimer < 10){ self.bgmasktimer.setTint(0xe60000); }
+				self.setTimerMask(goneTimer,totalTimer);
+			}else{
+				window.clearInterval(intervalID);	
+				self.loadBar.clear();
+				self.bgmasktimer.visible = false;
+			}
+			goneTimer  += 0.01;
+        }, 10);
+	}
+
+
+	setTimerMask(goneTime,totalTimer){
+		var startPos = Phaser.Math.DegToRad(90);
+		this.loadBar.clear();
+        this.loadBar.lineStyle(100, 0, 1);
+        this.loadBar.beginPath();
+        this.loadBar.arc(0, 0, 70, Phaser.Math.DegToRad(goneTime*(360/totalTimer))-startPos, 0-startPos, false);
+        this.loadBar.strokePath();
+        this.loadBar.closePath();
+	}
+
 	// Write your code here.
 
 	/* END-USER-CODE */

@@ -73,6 +73,8 @@ class SocketHandler {
         this.oTableSocketConn.on("resHand", (resHand) => {
             console.log("Table resHand",resHand);
             this.oGameObj.updateUserHand(resHand);
+            this.oTableSocketConn.emit("reqDrop");
+            console.log("reqDrop");
         });
         this.oTableSocketConn.on("resAutoDiscard", (resAutoDiscard) => {
             console.log("Table resAutoDiscard",resAutoDiscard);
